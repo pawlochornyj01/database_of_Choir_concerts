@@ -1,0 +1,14 @@
+ua\com\dudaryk\model\Communication.class
+ua\com\dudaryk\model\Dudaryk.class
+ua\com\dudaryk\model\Concert.class
+ua\com\dudaryk\model\Category.class
+ua\com\dudaryk\controller\ConcertController.class
+ua\com\dudaryk\model\JobAction.class
+ua\com\dudaryk\config\WebAppInitializer.class
+ua\com\dudaryk\config\WebConfig.class
+ua\com\dudaryk\controller\HelloController.class
+ua\com\dudaryk\controller\DudarykController.class
+ua\com\dudaryk\model\UserHistory.class
+ua\com\dudaryk\model\Participant.class
+ua\com\dudaryk\model\Voice.class
+ua\com\dudaryk\config\AppConfig.class
