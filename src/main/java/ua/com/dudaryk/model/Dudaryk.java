@@ -1,13 +1,14 @@
 package ua.com.dudaryk.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "dudaryk")
-class Dudaryk {
+public class Dudaryk implements Serializable {
 
     @Id
     @GeneratedValue
