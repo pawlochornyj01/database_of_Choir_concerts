@@ -1,11 +1,12 @@
 package ua.com.dudaryk.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "communication")
-class Communication {
+public class Communication implements Serializable {
 
     @Id
     @GeneratedValue

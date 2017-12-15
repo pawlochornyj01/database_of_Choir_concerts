@@ -7,7 +7,7 @@ public interface IGenericDAO<T extends Serializable> {
 
     T findById(Long id);
 
-    List<T> findAll();
+    List findAll();
 
     void create(T entity);
 

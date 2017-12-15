@@ -2,12 +2,13 @@ package ua.com.dudaryk.model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "participant")
-class Participant {
+public class Participant implements Serializable {
 
 
     @Id
@@ -15,7 +16,7 @@ class Participant {
     @Column(name = "PARTICIPANT_ID")
     private int participantId;
 
-    @ManyToMany(mappedBy = "dudaryks")
+    @ManyToMany(mappedBy = "participants")
     private List<Concert> concerts = new ArrayList<>();
 
     @Column(name = "NAME")

@@ -1,12 +1,15 @@
 package ua.com.dudaryk.repository;
 
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Voice;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class DudarykDAOImpl<Dudaryk extends Serializable> extends AbstractDAO<Dudaryk> implements DudarykDAO, IGenericDAO<Dudaryk> {
+@Repository("dudarykDAO")
+@Transactional
+public class DudarykDAOImpl<Dudaryk extends Serializable> extends AbstractGenericDAOImpl<Dudaryk> implements DudarykDAO {
 
     @Override
     public void setClazz(Class<Dudaryk> clazzToSet) {
@@ -38,6 +41,13 @@ public class DudarykDAOImpl<Dudaryk extends Serializable> extends AbstractDAO<Du
     @Override
     public List findAction() {
         String sql = "select Dudaryk from dudaryk  where Dudaryk.IS_ACTION=" + true;
+        return entityManager.createQuery(sql).getResultList();
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List findByConcert(Long id) {
+        String sql = "select Dudaryk from dudaryk  where Dudaryk.CONCERT_ID=" + id;
         return entityManager.createQuery(sql).getResultList();
     }
 }

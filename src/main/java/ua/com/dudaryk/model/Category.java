@@ -2,10 +2,11 @@ package ua.com.dudaryk.model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "category")
-class Category {
+public class Category implements Serializable {
 
     @Id
     @GeneratedValue

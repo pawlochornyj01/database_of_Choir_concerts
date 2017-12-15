@@ -1,18 +1,15 @@
 package ua.com.dudaryk.repository;
 
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.model.Concert;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class ConcertDAOImpl<Concert extends Serializable> extends AbstractDAO<Concert> implements ConcertDAO, IGenericDAO<Concert> {
-
-//    @PersistenceContext
-//    private EntityManager entityManager;
+@Repository("concertDAO")
+@Transactional
+public class ConcertDAOImpl<Concert extends Serializable> extends AbstractGenericDAOImpl<Concert> implements ConcertDAO {
 
 
     @Override
@@ -30,11 +27,19 @@ public class ConcertDAOImpl<Concert extends Serializable> extends AbstractDAO<Co
 
     @Transactional(readOnly = true)
     @Override
-    public List findByDATE(LocalDateTime date) {
+    public List findByDate(LocalDateTime date) {
 
         String sql = "select Concert from concert  where Concert.DATE=" + date;
         return entityManager.createQuery(sql).getResultList();
 
+    }
+
+    //???
+    @Transactional(readOnly = true)
+    @Override
+    public List findByParticipant(Long id) {
+        String sql = "select Concert from concert  where Concert.PARTICIPANT_ID=" + id;
+        return entityManager.createQuery(sql).getResultList();
     }
 
 
