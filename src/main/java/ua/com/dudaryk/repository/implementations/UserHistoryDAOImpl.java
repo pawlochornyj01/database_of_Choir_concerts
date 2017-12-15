@@ -1,15 +1,15 @@
-package ua.com.dudaryk.repository.realizations;
+package ua.com.dudaryk.repository.implementations;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.repository.AbstractGenericDAOImpl;
+import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 
 import java.util.List;
 
 @Repository
 @Transactional
-public class UserHistoryDAOImpl<UserHistory> extends AbstractGenericDAOImpl<UserHistory> implements UserHistoryDAO {
+public class UserHistoryDAOImpl<UserHistory> extends AbstractDAOImpl<UserHistory> implements UserHistoryDAO {
 
 
     @Override

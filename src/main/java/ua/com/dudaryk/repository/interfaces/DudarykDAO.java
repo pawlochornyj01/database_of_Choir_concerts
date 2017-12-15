@@ -1,5 +1,7 @@
 package ua.com.dudaryk.repository.interfaces;
 
+import ua.com.dudaryk.model.Voice;
+
 import java.util.List;
 
 public interface DudarykDAO<T> {
@@ -8,7 +10,7 @@ public interface DudarykDAO<T> {
 
     List<T> findByLastName(String lastName);
 
-    List<T> findByVoice(String voice);
+    List<T> findByVoice(Voice voice);
 
     List<T> findAction();
 

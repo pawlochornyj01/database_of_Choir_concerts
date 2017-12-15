@@ -1,8 +1,8 @@
-package ua.com.dudaryk.repository.realizations;
+package ua.com.dudaryk.repository.implementations;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.repository.AbstractGenericDAOImpl;
+import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 
 import java.time.LocalDateTime;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class CommunicationDAOImpl<Communication> extends AbstractGenericDAOImpl<Communication> implements CommunicationDAO {
+public class AbstractDAOImpl<Communication> extends AbstractDAOImpl<Communication> implements CommunicationDAO {
 
     @Override
     public void setClazz(Class<Communication> clazzToSet) {

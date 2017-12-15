@@ -28,8 +28,8 @@ public class UserHistory implements Serializable {
     private String description;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "WORK_STATUS")
-    private WORK_STATUS action;
+    @Column(name = "WorkingStatus")
+    private WorkingStatus action;
 
     public Dudaryk getDudaryk() {
         return dudaryk;
@@ -47,7 +47,6 @@ public class UserHistory implements Serializable {
     public void setUserHistoryId(int userHistoryId) {
         this.userHistoryId = userHistoryId;
     }
-
 
     public LocalDateTime getDate() {
         return date;
@@ -73,11 +72,11 @@ public class UserHistory implements Serializable {
         this.description = description;
     }
 
-    public WORK_STATUS getAction() {
+    public WorkingStatus getAction() {
         return action;
     }
 
-    public void setAction(WORK_STATUS action) {
+    public void setAction(WorkingStatus action) {
         this.action = action;
     }
 

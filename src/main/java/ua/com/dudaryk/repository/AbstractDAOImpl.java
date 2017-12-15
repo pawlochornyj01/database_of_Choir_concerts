@@ -1,13 +1,13 @@
 package ua.com.dudaryk.repository;
 
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.repository.interfaces.IGenericDAO;
+import ua.com.dudaryk.repository.interfaces.AbstractDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-public abstract class AbstractGenericDAOImpl<T> implements IGenericDAO<T> {
+public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
     private Class<T> clazz;
 
     @PersistenceContext
@@ -22,23 +22,17 @@ public abstract class AbstractGenericDAOImpl<T> implements IGenericDAO<T> {
         return entityManager.find(clazz, id);
     }
 
-    @Transactional(readOnly = true)
-    public List findAll() {
-        return entityManager.createQuery("from " + clazz.getName())
-                .getResultList();
-    }
-
-
     @Override
     @Transactional()
-    public void create(T entity) {
-        entityManager.merge(entity);
+    public T save(T entity) {
+        entityManager.persist(entity);
+        return entity;
     }
 
     @Override
     @Transactional()
-    public void update(T entity) {
-        entityManager.merge(entity);
+    public T update(T entity) {
+       return entityManager.merge(entity);
     }
 
     @Override
@@ -47,11 +41,9 @@ public abstract class AbstractGenericDAOImpl<T> implements IGenericDAO<T> {
         entityManager.remove(entity);
     }
 
-    @Override
-    @Transactional()
-    public void save(T entity) {
-        entityManager.persist(entity);
+    @Transactional(readOnly = true)
+    public List findAll() {
+        return entityManager.createQuery("from " + clazz.getName())
+                .getResultList();
     }
-
-
 }

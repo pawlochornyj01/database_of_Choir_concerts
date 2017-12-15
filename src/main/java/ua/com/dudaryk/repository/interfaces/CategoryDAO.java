@@ -1,8 +1,8 @@
 package ua.com.dudaryk.repository.interfaces;
 import ua.com.dudaryk.model.Category;
 
-public interface CategoryDAO<T> {
+public interface CategoryDAO {
 
-    T findByDudarykId(Long id);
+    Category findByDudarykId(Long id);
 
 }

@@ -1,13 +1,14 @@
-package ua.com.dudaryk.repository.realizations;
+package ua.com.dudaryk.repository.implementations;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.repository.AbstractGenericDAOImpl;
+import ua.com.dudaryk.model.Category;
+import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CategoryDAO;
 
 @Repository
 @Transactional
-public class CategoryDAOImpl<Category> extends AbstractGenericDAOImpl<Category> implements CategoryDAO {
+public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements CategoryDAO {
 
     @Override
     public void setClazz(Class<Category> clazzToSet) {

@@ -1,16 +1,16 @@
-package ua.com.dudaryk.repository.realizations;
+package ua.com.dudaryk.repository.implementations;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.model.VOICE;
-import ua.com.dudaryk.repository.AbstractGenericDAOImpl;
+import ua.com.dudaryk.model.Voice;
+import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.DudarykDAO;
 
 import java.util.List;
 
 @Repository
 @Transactional
-public class DudarykDAOImpl<Dudaryk> extends AbstractGenericDAOImpl<Dudaryk> implements DudarykDAO {
+public class DudarykDAOImpl<Dudaryk> extends AbstractDAOImpl<Dudaryk> implements DudarykDAO {
 
     @Override
     public void setClazz(Class<Dudaryk> clazzToSet) {
@@ -33,8 +33,8 @@ public class DudarykDAOImpl<Dudaryk> extends AbstractGenericDAOImpl<Dudaryk> imp
 
     @Transactional(readOnly = true)
     @Override
-    public List findByVoice(String voice) {
-        String query = "select Dudaryk from dudaryk  where Dudaryk.VOICE=" + VOICE.valueOf(voice);
+    public List findByVoice(Voice voice) {
+        String query = "select Dudaryk from dudaryk  where Dudaryk.Voice =" + voice;
         return entityManager.createQuery(query).getResultList();
     }
 

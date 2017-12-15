@@ -1,15 +1,16 @@
-package ua.com.dudaryk.repository.realizations;
+package ua.com.dudaryk.repository.implementations;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.dudaryk.repository.AbstractGenericDAOImpl;
+import ua.com.dudaryk.model.Participant;
+import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.ParticipantDAO;
 
 import java.util.List;
 
 @Repository
 @Transactional
-public class ParticipantDAOImpl<Participant> extends AbstractGenericDAOImpl<Participant> implements ParticipantDAO {
+public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements ParticipantDAO {
 
     @Override
     public void setClazz(Class<Participant> clazzToSet) {
@@ -18,7 +19,7 @@ public class ParticipantDAOImpl<Participant> extends AbstractGenericDAOImpl<Part
 
     @Transactional(readOnly = true)
     @Override
-    public List findByName(String name) {
+    public List<Participant> findByName(String name) {
         String query = "select Participant from participant  where Participant.NAME=" + name;
         return entityManager.createQuery(query).getResultList();
     }

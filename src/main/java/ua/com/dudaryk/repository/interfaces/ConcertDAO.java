@@ -1,15 +1,17 @@
 package ua.com.dudaryk.repository.interfaces;
 
 
+import ua.com.dudaryk.model.Concert;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface ConcertDAO<T> {
+public interface ConcertDAO {
 
-    List<T> findByName(String name);
+    List<Concert> findByName(String name);
 
-    List<T> findByDate(LocalDateTime date);
+    List<Concert> findByDate(LocalDateTime date);
 
-    List<T> findByParticipant(Long id);
+    List<Concert> findByParticipant(Long id);
 
 }
