@@ -43,13 +43,16 @@ public class Dudaryk implements Serializable {
     private LocalDateTime dateOfBirthday;
 
     @Column(name = "VOICE")
-    private Voice voice;
+    @Enumerated(EnumType.STRING)
+    private VOICE VOICE;
 
     @Column(name = "IS_ACTION")
     private boolean isAction;
 
+
     @Column(name = "PHOTO")
     private String photo;
+
 
     public List<UserHistory> getUserHistories() {
         return userHistories;
@@ -59,8 +62,8 @@ public class Dudaryk implements Serializable {
         this.userHistories = userHistories;
     }
 
-    public void setVoice(Voice voice) {
-        this.voice = voice;
+    public void setVOICE(VOICE VOICE) {
+        this.VOICE = VOICE;
     }
 
     public List<Concert> getConcerts() {
@@ -135,12 +138,12 @@ public class Dudaryk implements Serializable {
         this.dateOfBirthday = dateOfBirthday;
     }
 
-    public Voice getVoice() {
-        return voice;
+    public VOICE getVOICE() {
+        return VOICE;
     }
 
-    public void setVoice(String voice) {
-        this.voice = Voice.valueOf(voice);
+    public void setVoice(VOICE voice) {
+        this.VOICE = VOICE;
     }
 
     public boolean isAction() {
@@ -159,6 +162,7 @@ public class Dudaryk implements Serializable {
         this.photo = photo;
     }
 
+
     @Override
     public String toString() {
         return "Dudaryk{" +
@@ -171,7 +175,7 @@ public class Dudaryk implements Serializable {
                 ", phone='" + phone + '\'' +
                 ", description='" + description + '\'' +
                 ", dateOfBirthday=" + dateOfBirthday +
-                ", voice=" + voice +
+                ", VOICE=" + VOICE +
                 ", isAction=" + isAction +
                 ", photo='" + photo + '\'' +
                 '}';

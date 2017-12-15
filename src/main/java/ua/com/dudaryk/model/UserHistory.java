@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "user_history")
-public class UserHistory implements Serializable{
+public class UserHistory implements Serializable {
 
 
     @Id
@@ -27,8 +27,9 @@ public class UserHistory implements Serializable{
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @Column(name = "ACTION")
-    private JobAction action;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "WORK_STATUS")
+    private WORK_STATUS action;
 
     public Dudaryk getDudaryk() {
         return dudaryk;
@@ -38,9 +39,6 @@ public class UserHistory implements Serializable{
         this.dudaryk = dudaryk;
     }
 
-    public void setAction(JobAction action) {
-        this.action = action;
-    }
 
     public int getUserHistoryId() {
         return userHistoryId;
@@ -75,12 +73,12 @@ public class UserHistory implements Serializable{
         this.description = description;
     }
 
-    public JobAction getAction() {
+    public WORK_STATUS getAction() {
         return action;
     }
 
-    public void setAction(String action) {
-        this.action = JobAction.valueOf(action);
+    public void setAction(WORK_STATUS action) {
+        this.action = action;
     }
 
     @Override

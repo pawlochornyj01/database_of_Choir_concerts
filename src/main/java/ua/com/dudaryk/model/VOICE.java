@@ -1,5 +1,5 @@
 package ua.com.dudaryk.model;
 
-public enum Voice {
+public enum VOICE {
     Discanto,Alto,Tenor,Bass
 }

@@ -1,5 +1,5 @@
 package ua.com.dudaryk.model;
 
-public enum JobAction {
+public enum WORK_STATUS {
     Dismissed,Working,Vacation
 }

@@ -1,9 +1,9 @@
-package ua.com.dudaryk.repository;
+package ua.com.dudaryk.repository.interfaces;
 
 import java.io.Serializable;
 import java.util.List;
 
-public interface IGenericDAO<T extends Serializable> {
+public interface IGenericDAO<T> {
 
     T findById(Long id);
 
