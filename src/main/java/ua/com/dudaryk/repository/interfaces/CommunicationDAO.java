@@ -1,13 +1,15 @@
 package ua.com.dudaryk.repository.interfaces;
 
+import ua.com.dudaryk.model.Communication;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface CommunicationDAO<T> {
+public interface CommunicationDAO {
 
-    List<T> findByConcertId(Long id);
+    List<Communication> findByConcertId(Long id);
 
-    List<T> findByMembershipDate(LocalDateTime date);
+    List<Communication> findByMembershipDate(LocalDateTime date);
 
-    List<T> findByName(String name);
+    List<Communication> findByName(String name);
 }

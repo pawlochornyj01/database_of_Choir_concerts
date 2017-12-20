@@ -1,8 +1,10 @@
 package ua.com.dudaryk.repository.interfaces;
 
+import ua.com.dudaryk.model.UserHistory;
+
 import java.util.List;
 
-public interface UserHistoryDAO<T> {
+public interface UserHistoryDAO {
 
-    List<T> findByDudarykId(Long id);
+    List<UserHistory> findByDudarykId(Long id);
 }

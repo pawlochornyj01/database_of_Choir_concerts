@@ -15,10 +15,11 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
         super.setClazz(clazzToSet);
     }
 
+    //чи не кастити а лишити шо бметод повертав просто обджект?
     @Transactional(readOnly = true)
     @Override
-    public Object findByDudarykId(Long id) {
+    public Category findByDudarykId(Long id) {
         String query = "select Category from category  where Category.DUDARYK_ID=" + id;
-        return entityManager.createQuery(query).getSingleResult();
+        return (Category) entityManager.createQuery(query).getSingleResult();
     }
 }
