@@ -11,7 +11,7 @@ public class Category implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "CATEGORY_ID")
-    private int categoryId;
+    private long categoryId;
 
     @Column(name = "NAME")
     private String name;
@@ -37,11 +37,11 @@ public class Category implements Serializable {
         this.name = name;
     }
 
-    public int getCategoryId() {
+    public long getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(long categoryId) {
         this.categoryId = categoryId;
     }
 

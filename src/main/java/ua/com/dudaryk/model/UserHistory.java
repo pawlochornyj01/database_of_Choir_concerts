@@ -12,7 +12,7 @@ public class UserHistory implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "USER_HISTORY-ID")
-    private int userHistoryId;
+    private long userHistoryId;
 
     @ManyToOne
     @JoinColumn(name = "DUDARYK_ID")
@@ -40,11 +40,11 @@ public class UserHistory implements Serializable {
     }
 
 
-    public int getUserHistoryId() {
+    public long getUserHistoryId() {
         return userHistoryId;
     }
 
-    public void setUserHistoryId(int userHistoryId) {
+    public void setUserHistoryId(long userHistoryId) {
         this.userHistoryId = userHistoryId;
     }
 

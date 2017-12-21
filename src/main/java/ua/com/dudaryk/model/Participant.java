@@ -14,7 +14,7 @@ public class Participant implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "PARTICIPANT_ID")
-    private int participantId;
+    private long participantId;
 
     @ManyToMany(mappedBy = "participants")
     private List<Concert> concerts = new ArrayList<>();
@@ -42,11 +42,11 @@ public class Participant implements Serializable {
         this.concerts = concerts;
     }
 
-    public int getParticipantId() {
+    public long getParticipantId() {
         return participantId;
     }
 
-    public void setParticipantId(int participantId) {
+    public void setParticipantId(long participantId) {
         this.participantId = participantId;
     }
 

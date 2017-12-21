@@ -11,7 +11,7 @@ public class Communication implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "COMMUNICATION_ID")
-    private int communicationId;
+    private long communicationId;
 
     @Column(name = "NAME")
     private String name;
@@ -43,11 +43,11 @@ public class Communication implements Serializable {
         this.concert = concert;
     }
 
-    public int getCommunicationId() {
+    public long getCommunicationId() {
         return communicationId;
     }
 
-    public void setCommunicationId(int communicationId) {
+    public void setCommunicationId(long communicationId) {
         this.communicationId = communicationId;
     }
 

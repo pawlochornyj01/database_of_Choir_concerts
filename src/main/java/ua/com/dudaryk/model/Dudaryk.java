@@ -13,7 +13,7 @@ public class Dudaryk implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "DUDARYK_ID")
-    private int dudarykId;
+    private long dudarykId;
 
     @ManyToMany(mappedBy = "dudaryks")
     private List<Concert> concerts;
@@ -82,11 +82,11 @@ public class Dudaryk implements Serializable {
         this.categories = categories;
     }
 
-    public int getDudarykId() {
+    public long getDudarykId() {
         return dudarykId;
     }
 
-    public void setDudarykId(int dudarykId) {
+    public void setDudarykId(long dudarykId) {
         this.dudarykId = dudarykId;
     }
 
@@ -142,9 +142,7 @@ public class Dudaryk implements Serializable {
         return Voice;
     }
 
-    public void setVoice(Voice voice) {
-        this.Voice = Voice;
-    }
+
 
     public boolean isAction() {
         return isAction;

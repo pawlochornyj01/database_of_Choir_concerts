@@ -13,7 +13,7 @@ public class Concert implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "CONCERT_ID")
-    private int concertId;
+    private long concertId;
 
     @Column(name = "DATE")
     private LocalDateTime date;
@@ -64,11 +64,11 @@ public class Concert implements Serializable {
         this.dudaryks = dudaryks;
     }
 
-    public int getConcertId() {
+    public long getConcertId() {
         return concertId;
     }
 
-    public void setConcertId(int concertId) {
+    public void setConcertId(long concertId) {
         this.concertId = concertId;
     }
 
