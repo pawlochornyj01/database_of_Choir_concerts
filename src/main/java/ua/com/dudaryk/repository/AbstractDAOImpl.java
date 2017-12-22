@@ -42,7 +42,7 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
     }
 
     @Transactional(readOnly = true)
-    public List findAll() {
+    public List<T> findAll() {
         return entityManager.createQuery("from " + clazz.getName())
                 .getResultList();
     }

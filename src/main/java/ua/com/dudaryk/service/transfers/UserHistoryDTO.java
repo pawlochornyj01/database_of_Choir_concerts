@@ -1,4 +1,4 @@
-package ua.com.dudaryk.transfers;
+package ua.com.dudaryk.service.transfers;
 
 import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.WorkingStatus;
@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 public class UserHistoryDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    private long userHistoryId;
 
     private Dudaryk dudaryk;
 
@@ -58,5 +60,13 @@ public class UserHistoryDTO implements Serializable {
 
     public void setAction(WorkingStatus action) {
         this.action = action;
+    }
+
+    public long getUserHistoryId() {
+        return userHistoryId;
+    }
+
+    public void setUserHistoryId(long userHistoryId) {
+        this.userHistoryId = userHistoryId;
     }
 }

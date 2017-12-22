@@ -1,4 +1,4 @@
-package ua.com.dudaryk.transfers;
+package ua.com.dudaryk.service.transfers;
 
 import ua.com.dudaryk.model.Communication;
 import ua.com.dudaryk.model.Dudaryk;
