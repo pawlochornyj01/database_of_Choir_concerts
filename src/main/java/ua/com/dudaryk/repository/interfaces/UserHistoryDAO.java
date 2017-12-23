@@ -4,7 +4,18 @@ import ua.com.dudaryk.model.UserHistory;
 
 import java.util.List;
 
-public interface UserHistoryDAO {
+public interface UserHistoryDAO  {
 
     List<UserHistory> findByDudarykId(Long id);
+
+    List<UserHistory> findAllUH();
+
+    UserHistory saveUH(UserHistory userHistory);
+
+    UserHistory updateUH(UserHistory userHistory);
+
+    UserHistory findByIdUH(Long id);
+
+    void deleteUH(UserHistory userHistory);
+
 }

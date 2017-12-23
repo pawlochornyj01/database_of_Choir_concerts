@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Category;
-import ua.com.dudaryk.repository.implementations.CategoryDAOImpl;
-import ua.com.dudaryk.service.AbstractServiceImpl;
-import ua.com.dudaryk.service.interfaces.AbstractService;
+import ua.com.dudaryk.repository.interfaces.CategoryDAO;
 import ua.com.dudaryk.service.interfaces.CategoryService;
 import ua.com.dudaryk.service.transfers.CategoryDTO;
 
@@ -15,21 +13,20 @@ import java.util.List;
 
 @Service
 @Transactional
-public class CategoryServiceImpl extends AbstractServiceImpl<CategoryDTO> implements CategoryService,AbstractService<CategoryDTO> {
+public class CategoryServiceImpl implements CategoryService {
+
+    private CategoryDAO categoryDAO;
 
     @Autowired
-    private CategoryDAOImpl categoryDAO;
-
-    @Override
-    public void setClazz(Class<CategoryDTO> clazzToSet) {
-        super.setClazz(clazzToSet);
+    public CategoryServiceImpl(CategoryDAO categoryDAO) {
+        this.categoryDAO = categoryDAO;
     }
 
     public CategoryDTO save(CategoryDTO categoryDTO) {
         Category category = new Category();
         category.setName(categoryDTO.getName());
         category.setDudaryk(categoryDTO.getDudaryk());
-        category = categoryDAO.save(category);
+        category = categoryDAO.saveCategory(category);
         categoryDTO.setCategoryId(category.getCategoryId());
         return categoryDTO;
     }
@@ -38,27 +35,13 @@ public class CategoryServiceImpl extends AbstractServiceImpl<CategoryDTO> implem
         Category category = new Category();
         category.setName(categoryDTO.getName());
         category.setDudaryk(categoryDTO.getDudaryk());
-        category = categoryDAO.update(category);
-        categoryDTO.setCategoryId(category.getCategoryId());
-        return categoryDTO;
-    }
-
-    public void delete(Long id) {
-        Category category = categoryDAO.findById(id);
-        categoryDAO.delete(category);
-    }
-
-    public CategoryDTO findById(Long id) {
-        Category category = categoryDAO.findById(id);
-        CategoryDTO categoryDTO = new CategoryDTO();
-        categoryDTO.setDudaryk(category.getDudaryk());
-        categoryDTO.setName(category.getName());
+        category = categoryDAO.updateCategory(category);
         categoryDTO.setCategoryId(category.getCategoryId());
         return categoryDTO;
     }
 
     public List<CategoryDTO> findAll() {
-        List<Category> categories = categoryDAO.findAll();
+        List<Category> categories = categoryDAO.findAllCategory();
         List<CategoryDTO> categoryDTOList = new ArrayList<>();
         for (Category category : categories) {
             CategoryDTO categoryDTO = new CategoryDTO();
@@ -70,7 +53,6 @@ public class CategoryServiceImpl extends AbstractServiceImpl<CategoryDTO> implem
 
         return categoryDTOList;
     }
-
 
     public CategoryDTO findByDudarykId(Long id) {
         Category category = categoryDAO.findByDudarykId(id);

@@ -1,11 +1,12 @@
 package ua.com.dudaryk.service.implementations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Communication;
-import ua.com.dudaryk.repository.implementations.CommunicationDAOImpl;
-import ua.com.dudaryk.service.AbstractServiceImpl;
-import ua.com.dudaryk.service.interfaces.AbstractService;
 
+
+import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 import ua.com.dudaryk.service.interfaces.CommunicationService;
 import ua.com.dudaryk.service.transfers.CommunicationDTO;
 
@@ -13,15 +14,16 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommunicationServiceImpl extends AbstractServiceImpl<CommunicationDTO> implements CommunicationService, AbstractService<CommunicationDTO> {
+@Service
+@Transactional
+public class CommunicationServiceImpl implements CommunicationService {
 
+    private CommunicationDAO communicationDAO;
 
     @Autowired
-    private CommunicationDAOImpl communicationDAO;
+    public CommunicationServiceImpl(CommunicationDAO communicationDAO) {
 
-    @Override
-    public void setClazz(Class<CommunicationDTO> clazzToSet) {
-        super.setClazz(clazzToSet);
+        this.communicationDAO = communicationDAO;
     }
 
     private List<CommunicationDTO> DTOListBuilder(List<Communication> communications, List<CommunicationDTO> communicationDTOList) {
@@ -40,9 +42,8 @@ public class CommunicationServiceImpl extends AbstractServiceImpl<CommunicationD
         return communicationDTOList;
     }
 
-    @Override
     public CommunicationDTO findById(Long id) {
-        Communication communication = communicationDAO.findById(id);
+        Communication communication = communicationDAO.findByCommunicationId(id);
         CommunicationDTO communicationDTO = new CommunicationDTO();
         communicationDTO.setCommunicationId(communication.getCommunicationId());
         communicationDTO.setName(communication.getName());
@@ -56,7 +57,6 @@ public class CommunicationServiceImpl extends AbstractServiceImpl<CommunicationD
 
     }
 
-    @Override
     public CommunicationDTO save(CommunicationDTO communicationDTO) {
         Communication communication = new Communication();
         communication.setName(communicationDTO.getName());
@@ -66,12 +66,11 @@ public class CommunicationServiceImpl extends AbstractServiceImpl<CommunicationD
         communication.setMembershipDate(communicationDTO.getMembershipDate());
         communication.setPhone(communicationDTO.getPhone());
         communication.setConcert(communicationDTO.getConcert());
-        communication = communicationDAO.save(communication);
+        communication = communicationDAO.saveCommunication(communication);
         communicationDTO.setCommunicationId(communication.getCommunicationId());
         return communicationDTO;
     }
 
-    @Override
     public CommunicationDTO update(CommunicationDTO communicationDTO) {
         Communication communication = new Communication();
         communication.setName(communicationDTO.getName());
@@ -81,21 +80,19 @@ public class CommunicationServiceImpl extends AbstractServiceImpl<CommunicationD
         communication.setMembershipDate(communicationDTO.getMembershipDate());
         communication.setPhone(communicationDTO.getPhone());
         communication.setConcert(communicationDTO.getConcert());
-        communication = communicationDAO.update(communication);
+        communication = communicationDAO.updateCommunication(communication);
         communicationDTO.setCommunicationId(communication.getCommunicationId());
         return communicationDTO;
     }
 
-    @Override
     public void delete(Long id) {
-        Communication communication = communicationDAO.findById(id);
-        communicationDAO.delete(communication);
+        Communication communication = communicationDAO.findByCommunicationId(id);
+        communicationDAO.deleteCommunication(communication);
 
     }
 
-    @Override
     public List<CommunicationDTO> findAll() {
-        List<Communication> communications = communicationDAO.findAll();
+        List<Communication> communications = communicationDAO.findAllCommunication();
         List<CommunicationDTO> communicationDTOList = new ArrayList<>();
         return DTOListBuilder(communications, communicationDTOList);
     }

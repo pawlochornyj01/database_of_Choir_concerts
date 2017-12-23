@@ -7,11 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6004b9-d13c-4711-9e9e-73da58c1a980" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/AbstractServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/AbstractService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,7 +47,59 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="UserHistoryServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#DTOListBuilder#0;class#UserHistoryServiceImpl#0" expanded="false" />
+                <element signature="method#save#0;class#UserHistoryServiceImpl#0" expanded="false" />
+                <element signature="method#update#0;class#UserHistoryServiceImpl#0" expanded="false" />
+                <element signature="method#delete#0;class#UserHistoryServiceImpl#0" expanded="false" />
+                <element signature="method#findById#0;class#UserHistoryServiceImpl#0" expanded="false" />
+                <element signature="method#findAll#0;class#UserHistoryServiceImpl#0" expanded="false" />
+                <element signature="method#findByDudarykId#0;class#UserHistoryServiceImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHistoryDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHistoryDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding>
+                <element signature="method#findByDudarykId#0;class#UserHistoryDAOImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHistoryService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/realizations/CommunicationDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/realizations/ConcertDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/realizations/DudarykDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/realizations/ParticipantDAOImpl.java" />
@@ -81,20 +139,13 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/IGenericDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractGenericDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Work_Status.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/WorkingStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java" />
@@ -113,14 +164,22 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ParticipantService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/transfers/UserHistoryDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/AbstractServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/AbstractService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/AbstractServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -216,10 +275,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,10 +308,91 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="transfers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -491,12 +627,13 @@
       <workItem from="1513354211435" duration="440000" />
       <workItem from="1513770118353" duration="4234000" />
       <workItem from="1513969641647" duration="7238000" />
-      <workItem from="1514014481162" duration="3135000" />
+      <workItem from="1514014481162" duration="3315000" />
+      <workItem from="1514046039173" duration="5151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119015000" />
+    <option name="totallyTimeSpent" value="124346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,6 +646,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.501634" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -530,9 +668,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6617647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -595,33 +733,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="e#1995#1996#0" expanded="true" />
-            <element signature="e#2037#2038#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2870">
@@ -674,24 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -723,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,10 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#1884#1885#0" expanded="false" />
-            <element signature="e#1926#1927#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,9 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,10 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#1995#1996#0" expanded="true" />
-            <element signature="e#2037#2038#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,10 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,9 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,9 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,14 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" column="41" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -853,14 +916,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/AbstractServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.5.RELEASE/spring-beans-4.3.5.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -876,21 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/transfers/UserHistoryDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,52 +949,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -971,21 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="83" column="3" lean-forward="false" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
-          <folding>
-            <element signature="method#save#0;class#CategoryServiceImpl#0" expanded="false" />
-            <element signature="method#update#0;class#CategoryServiceImpl#0" expanded="false" />
-            <element signature="method#delete#0;class#CategoryServiceImpl#0" expanded="false" />
-            <element signature="method#findById#0;class#CategoryServiceImpl#0" expanded="false" />
-            <element signature="method#findAll#0;class#CategoryServiceImpl#0" expanded="false" />
-            <element signature="method#findByDudarykId#0;class#CategoryServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -994,30 +981,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CommunicationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/transfers/CommunicationDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+          <folding>
+            <element signature="method#save#0;class#CategoryServiceImpl#0" expanded="false" />
+            <element signature="method#update#0;class#CategoryServiceImpl#0" expanded="false" />
+            <element signature="method#findAll#0;class#CategoryServiceImpl#0" expanded="false" />
+            <element signature="method#findByDudarykId#0;class#CategoryServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#CommunicationServiceImpl#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#DTOListBuilder#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#findById#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#save#0;class#CommunicationServiceImpl#0" expanded="false" />
@@ -1031,21 +1104,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CommunicationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="97" column="57" lean-forward="true" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+        <state relative-caret-position="204">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
-            <element signature="method#DTOListBuilder#0;class#UserHistoryServiceImpl#0" expanded="false" />
-            <element signature="method#findById#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#findByConcertId#0;class#CommunicationDAOImpl#0" expanded="false" />
+            <element signature="method#findByMembershipDate#0;class#CommunicationDAOImpl#0" expanded="false" />
+            <element signature="method#findByName#0;class#CommunicationDAOImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="259">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="method#findByDudarykId#0;class#UserHistoryDAOImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#DTOListBuilder#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#save#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#update#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#findById#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#findAll#0;class#UserHistoryServiceImpl#0" expanded="false" />
+            <element signature="method#findByDudarykId#0;class#UserHistoryServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding />
         </state>
       </provider>

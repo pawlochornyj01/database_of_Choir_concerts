@@ -18,6 +18,31 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
         super.setClazz(clazzToSet);
     }
 
+    @Override
+    public Communication findByCommunicationId(Long id) {
+        return findById(id);
+    }
+
+    @Override
+    public Communication saveCommunication(Communication communication) {
+        return save(communication);
+    }
+
+    @Override
+    public Communication updateCommunication(Communication communication) {
+        return update(communication);
+    }
+
+    @Override
+    public void deleteCommunication(Communication communication) {
+         super.delete(communication);
+    }
+
+    @Override
+    public List<Communication> findAllCommunication() {
+        return findAll();
+    }
+
     @Transactional(readOnly = true)
     @Override
     public List<Communication> findByConcertId(Long id) {

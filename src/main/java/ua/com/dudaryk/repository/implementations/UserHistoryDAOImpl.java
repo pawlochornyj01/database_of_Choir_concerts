@@ -24,5 +24,30 @@ public class UserHistoryDAOImpl extends AbstractDAOImpl<UserHistory> implements 
         return entityManager.createQuery(query).getResultList();
     }
 
+    @Override
+    public List<UserHistory> findAllUH() {
+        return findAll();
+    }
+
+    @Override
+    public UserHistory saveUH(UserHistory userHistory) {
+        return save(userHistory);
+    }
+
+    @Override
+    public UserHistory updateUH(UserHistory userHistory) {
+        return update(userHistory);
+    }
+
+    @Override
+    public UserHistory findByIdUH(Long id) {
+        return findById(id);
+    }
+
+    @Override
+    public void deleteUH(UserHistory userHistory) {
+        super.delete(userHistory);
+    }
+
 
 }

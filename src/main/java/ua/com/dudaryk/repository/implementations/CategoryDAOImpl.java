@@ -6,6 +6,8 @@ import ua.com.dudaryk.model.Category;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CategoryDAO;
 
+import java.util.List;
+
 @Repository
 @Transactional
 public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements CategoryDAO {
@@ -15,6 +17,21 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
         super.setClazz(clazzToSet);
     }
 
+    @Override
+    public Category saveCategory(Category category) {
+        return save(category);
+    }
+
+    @Override
+    public Category updateCategory(Category category) {
+        return update(category);
+    }
+
+    @Override
+    public List<Category> findAllCategory() {
+        return findAll();
+    }
+
     //чи не кастити а лишити шо бметод повертав просто обджект?
     @Transactional(readOnly = true)
     @Override
@@ -22,4 +39,6 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
         String query = "select Category from category  where Category.DUDARYK_ID=" + id;
         return (Category) entityManager.createQuery(query).getSingleResult();
     }
+
+
 }

@@ -11,7 +11,7 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
     private Class<T> clazz;
 
     @PersistenceContext
-    public EntityManager entityManager;
+    protected EntityManager entityManager;
 
     public void setClazz(Class<T> clazzToSet) {
         this.clazz = clazzToSet;

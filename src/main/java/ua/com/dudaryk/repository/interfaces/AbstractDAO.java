@@ -13,7 +13,7 @@ public interface AbstractDAO<T> {
 
     void delete(T entity);
 
-    List findAll();
+    List<T> findAll();
 
 
 }

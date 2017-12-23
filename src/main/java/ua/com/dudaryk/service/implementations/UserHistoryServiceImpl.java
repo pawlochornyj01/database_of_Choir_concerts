@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.UserHistory;
-import ua.com.dudaryk.repository.implementations.UserHistoryDAOImpl;
-import ua.com.dudaryk.service.AbstractServiceImpl;
-import ua.com.dudaryk.service.interfaces.AbstractService;
+import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 import ua.com.dudaryk.service.interfaces.UserHistoryService;
 import ua.com.dudaryk.service.transfers.UserHistoryDTO;
 
@@ -15,17 +13,17 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UserHistoryServiceImpl extends AbstractServiceImpl<UserHistoryDTO> implements UserHistoryService, AbstractService<UserHistoryDTO> {
+public class UserHistoryServiceImpl implements UserHistoryService {
+
+
+    private UserHistoryDAO userHistoryDAO;
 
     @Autowired
-    private UserHistoryDAOImpl userHistoryDAO;
-
-    @Override
-    public void setClazz(Class<UserHistoryDTO> clazzToSet) {
-        super.setClazz(clazzToSet);
+    public UserHistoryServiceImpl(UserHistoryDAO userHistoryDAO) {
+        this.userHistoryDAO = userHistoryDAO;
     }
 
-    private List<UserHistoryDTO> DTOListBuilder(List<UserHistory> userHistories,List<UserHistoryDTO> userHistoryDTOList ){
+    private List<UserHistoryDTO> DTOListBuilder(List<UserHistory> userHistories, List<UserHistoryDTO> userHistoryDTOList) {
         for (UserHistory userHistory : userHistories) {
             UserHistoryDTO userHistoryDTO = new UserHistoryDTO();
             userHistoryDTO.setUserHistoryId(userHistory.getUserHistoryId());
@@ -39,8 +37,6 @@ public class UserHistoryServiceImpl extends AbstractServiceImpl<UserHistoryDTO> 
         return userHistoryDTOList;
     }
 
-
-    @Override
     public UserHistoryDTO save(UserHistoryDTO userHistoryDTO) {
         UserHistory userHistory = new UserHistory();
         userHistory.setDudaryk(userHistoryDTO.getDudaryk());
@@ -48,12 +44,11 @@ public class UserHistoryServiceImpl extends AbstractServiceImpl<UserHistoryDTO> 
         userHistory.setComment(userHistoryDTO.getComment());
         userHistory.setDescription(userHistoryDTO.getDescription());
         userHistory.setAction(userHistoryDTO.getAction());
-        userHistory = userHistoryDAO.save(userHistory);
+        userHistory = userHistoryDAO.saveUH(userHistory);
         userHistoryDTO.setUserHistoryId(userHistory.getUserHistoryId());
         return userHistoryDTO;
     }
 
-    @Override
     public UserHistoryDTO update(UserHistoryDTO userHistoryDTO) {
         UserHistory userHistory = new UserHistory();
         userHistory.setDudaryk(userHistoryDTO.getDudaryk());
@@ -61,20 +56,18 @@ public class UserHistoryServiceImpl extends AbstractServiceImpl<UserHistoryDTO> 
         userHistory.setComment(userHistoryDTO.getComment());
         userHistory.setDescription(userHistoryDTO.getDescription());
         userHistory.setAction(userHistoryDTO.getAction());
-        userHistory = userHistoryDAO.update(userHistory);
+        userHistory = userHistoryDAO.updateUH(userHistory);
         userHistoryDTO.setUserHistoryId(userHistory.getUserHistoryId());
         return userHistoryDTO;
     }
 
-    @Override
     public void delete(Long id) {
-        UserHistory userHistory = userHistoryDAO.findById(id);
-        userHistoryDAO.delete(userHistory);
+        UserHistory userHistory = userHistoryDAO.findByIdUH(id);
+        userHistoryDAO.deleteUH(userHistory);
     }
 
-    @Override
     public UserHistoryDTO findById(Long id) {
-        UserHistory userHistory = userHistoryDAO.findById(id);
+        UserHistory userHistory = userHistoryDAO.findByIdUH(id);
         UserHistoryDTO userHistoryDTO = new UserHistoryDTO();
         userHistoryDTO.setUserHistoryId(userHistory.getUserHistoryId());
         userHistoryDTO.setAction(userHistory.getAction());
@@ -85,13 +78,12 @@ public class UserHistoryServiceImpl extends AbstractServiceImpl<UserHistoryDTO> 
         return userHistoryDTO;
     }
 
-    @Override
     public List<UserHistoryDTO> findAll() {
 
-        List<UserHistory> userHistories = userHistoryDAO.findAll();
+        List<UserHistory> userHistories = userHistoryDAO.findAllUH();
         List<UserHistoryDTO> userHistoryDTOList = new ArrayList<>();
 
-        return DTOListBuilder(userHistories,userHistoryDTOList);
+        return DTOListBuilder(userHistories, userHistoryDTOList);
 
     }
 
@@ -99,7 +91,7 @@ public class UserHistoryServiceImpl extends AbstractServiceImpl<UserHistoryDTO> 
         List<UserHistory> userHistories = userHistoryDAO.findByDudarykId(id);
         List<UserHistoryDTO> userHistoryDTOList = new ArrayList<>();
 
-        return DTOListBuilder(userHistories,userHistoryDTOList);
+        return DTOListBuilder(userHistories, userHistoryDTOList);
     }
 
 
