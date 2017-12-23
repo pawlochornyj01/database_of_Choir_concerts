@@ -5,7 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Category;
 import ua.com.dudaryk.repository.implementations.CategoryDAOImpl;
-import ua.com.dudaryk.repository.interfaces.CategoryDAO;
+import ua.com.dudaryk.service.AbstractServiceImpl;
+import ua.com.dudaryk.service.interfaces.AbstractService;
 import ua.com.dudaryk.service.interfaces.CategoryService;
 import ua.com.dudaryk.service.transfers.CategoryDTO;
 
@@ -14,11 +15,15 @@ import java.util.List;
 
 @Service
 @Transactional
-public class CategoryServiceImpl implements CategoryService {
+public class CategoryServiceImpl extends AbstractServiceImpl<CategoryDTO> implements CategoryService,AbstractService<CategoryDTO> {
 
     @Autowired
     private CategoryDAOImpl categoryDAO;
 
+    @Override
+    public void setClazz(Class<CategoryDTO> clazzToSet) {
+        super.setClazz(clazzToSet);
+    }
 
     public CategoryDTO save(CategoryDTO categoryDTO) {
         Category category = new Category();
@@ -75,4 +80,6 @@ public class CategoryServiceImpl implements CategoryService {
         categoryDTO.setCategoryId(category.getCategoryId());
         return categoryDTO;
     }
+
+
 }
