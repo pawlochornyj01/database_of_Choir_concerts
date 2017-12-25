@@ -58,84 +58,95 @@ public class Dudaryk implements Serializable {
         return userHistories;
     }
 
-    public void setUserHistories(List<UserHistory> userHistories) {
+    public Dudaryk setUserHistories(List<UserHistory> userHistories) {
         this.userHistories = userHistories;
+        return this;
     }
 
-    public void setVoice(Voice voice) {
+    public Dudaryk setVoice(Voice voice) {
         this.Voice = voice;
+        return this;
     }
 
     public List<Concert> getConcerts() {
         return concerts;
     }
 
-    public void setConcerts(List<Concert> concerts) {
+    public Dudaryk setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
+        return this;
     }
 
     public List<Category> getCategories() {
         return categories;
     }
 
-    public void setCategories(List<Category> categories) {
+    public Dudaryk setCategories(List<Category> categories) {
         this.categories = categories;
+        return this;
     }
 
     public long getDudarykId() {
         return dudarykId;
     }
 
-    public void setDudarykId(long dudarykId) {
+    public Dudaryk setDudarykId(long dudarykId) {
         this.dudarykId = dudarykId;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Dudaryk setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public Dudaryk setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public Dudaryk setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public Dudaryk setPhone(String phone) {
         this.phone = phone;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public Dudaryk setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public LocalDateTime getDateOfBirthday() {
         return dateOfBirthday;
     }
 
-    public void setDateOfBirthday(LocalDateTime dateOfBirthday) {
+    public Dudaryk setDateOfBirthday(LocalDateTime dateOfBirthday) {
         this.dateOfBirthday = dateOfBirthday;
+        return this;
     }
 
     public Voice getVoice() {
@@ -143,21 +154,22 @@ public class Dudaryk implements Serializable {
     }
 
 
-
     public boolean isAction() {
         return isAction;
     }
 
-    public void setAction(boolean action) {
+    public Dudaryk setAction(boolean action) {
         isAction = action;
+        return this;
     }
 
     public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public Dudaryk setPhoto(String photo) {
         this.photo = photo;
+        return this;
     }
 
 

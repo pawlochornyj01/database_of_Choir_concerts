@@ -26,55 +26,62 @@ public class ParticipantDTO implements Serializable {
         return participantId;
     }
 
-    public void setParticipantId(long participantId) {
+    public ParticipantDTO setParticipantId(long participantId) {
         this.participantId = participantId;
+        return this;
     }
 
     public List<Concert> getConcerts() {
         return concerts;
     }
 
-    public void setConcerts(List<Concert> concerts) {
+    public ParticipantDTO setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public ParticipantDTO setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public ParticipantDTO setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public ParticipantDTO setPhone(String phone) {
         this.phone = phone;
+        return this;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public ParticipantDTO setComment(String comment) {
         this.comment = comment;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public ParticipantDTO setDescription(String description) {
         this.description = description;
+        return this;
     }
 }

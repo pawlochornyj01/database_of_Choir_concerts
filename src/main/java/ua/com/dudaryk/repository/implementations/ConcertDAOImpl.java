@@ -19,6 +19,26 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
         super.setClazz(clazzToSet);
     }
 
+    @Override
+    public Concert saveConcert(Concert concert) {
+        return save(concert);
+    }
+
+    @Override
+    public Concert updateConcert(Concert concert) {
+        return update(concert);
+    }
+
+    @Override
+    public Concert findConcertById(Long id) {
+        return findById(id);
+    }
+
+    @Override
+    public List<Concert> findAllConcerts() {
+        return findAll();
+    }
+
     @Transactional(readOnly = true)
     @Override
     public List<Concert> findByName(String name) {

@@ -8,6 +8,16 @@ import java.util.List;
 
 public interface ConcertDAO {
 
+    Concert saveConcert(Concert concert);
+
+    Concert updateConcert(Concert concert);
+
+    void delete(Concert concert);
+
+    Concert findConcertById(Long id);
+
+    List<Concert> findAllConcerts();
+
     List<Concert> findByName(String name);
 
     List<Concert> findByDate(LocalDateTime date);

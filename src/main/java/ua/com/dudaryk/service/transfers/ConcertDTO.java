@@ -32,63 +32,71 @@ public class ConcertDTO implements Serializable {
         return concertId;
     }
 
-    public void setConcertId(long concertId) {
+    public ConcertDTO setConcertId(long concertId) {
         this.concertId = concertId;
+        return this;
     }
 
     public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public ConcertDTO setDate(LocalDateTime date) {
         this.date = date;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public ConcertDTO setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public ConcertDTO setGenre(String genre) {
         this.genre = genre;
+        return this;
     }
 
     public String getPoster() {
         return poster;
     }
 
-    public void setPoster(String poster) {
+    public ConcertDTO setPoster(String poster) {
         this.poster = poster;
+        return this;
     }
 
     public List<Participant> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(List<Participant> participants) {
+    public ConcertDTO setParticipants(List<Participant> participants) {
         this.participants = participants;
+        return this;
     }
 
     public List<Communication> getCommunications() {
         return communications;
     }
 
-    public void setCommunications(List<Communication> communications) {
+    public ConcertDTO setCommunications(List<Communication> communications) {
         this.communications = communications;
+        return this;
     }
 
     public List<Dudaryk> getDudaryks() {
         return dudaryks;
     }
 
-    public void setDudaryks(List<Dudaryk> dudaryks) {
+    public ConcertDTO setDudaryks(List<Dudaryk> dudaryks) {
         this.dudaryks = dudaryks;
+        return this;
     }
 }
