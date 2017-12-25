@@ -8,8 +8,6 @@ import java.util.List;
 
 public class ParticipantDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
     private long participantId;
 
     private List<Concert> concerts = new ArrayList<>();

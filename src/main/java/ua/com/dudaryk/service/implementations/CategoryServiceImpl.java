@@ -23,18 +23,18 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     public CategoryDTO save(CategoryDTO categoryDTO) {
-        Category category = new Category();
-        category.setName(categoryDTO.getName());
-        category.setDudaryk(categoryDTO.getDudaryk());
+        Category category = new Category()
+                .setName(categoryDTO.getName())
+                .setDudaryk(categoryDTO.getDudaryk());
         category = categoryDAO.saveCategory(category);
-        categoryDTO.setCategoryId(category.getCategoryId());
+//        categoryDTO.setCategoryId(category.getCategoryId());
         return categoryDTO;
     }
 
     public CategoryDTO update(CategoryDTO categoryDTO) {
-        Category category = new Category();
-        category.setName(categoryDTO.getName());
-        category.setDudaryk(categoryDTO.getDudaryk());
+        Category category = new Category()
+                .setName(categoryDTO.getName())
+                .setDudaryk(categoryDTO.getDudaryk());
         category = categoryDAO.updateCategory(category);
         categoryDTO.setCategoryId(category.getCategoryId());
         return categoryDTO;
@@ -44,10 +44,10 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> categories = categoryDAO.findAllCategory();
         List<CategoryDTO> categoryDTOList = new ArrayList<>();
         for (Category category : categories) {
-            CategoryDTO categoryDTO = new CategoryDTO();
-            categoryDTO.setCategoryId(category.getCategoryId());
-            categoryDTO.setName(category.getName());
-            categoryDTO.setDudaryk(category.getDudaryk());
+            CategoryDTO categoryDTO = new CategoryDTO()
+                    .setCategoryId(category.getCategoryId())
+                    .setName(category.getName())
+                    .setDudaryk(category.getDudaryk());
             categoryDTOList.add(categoryDTO);
         }
 
@@ -56,11 +56,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     public CategoryDTO findByDudarykId(Long id) {
         Category category = categoryDAO.findByDudarykId(id);
-        CategoryDTO categoryDTO = new CategoryDTO();
-        categoryDTO.setDudaryk(category.getDudaryk());
-        categoryDTO.setName(category.getName());
-        categoryDTO.setCategoryId(category.getCategoryId());
-        return categoryDTO;
+        return new CategoryDTO()
+                .setDudaryk(category.getDudaryk())
+                .setName(category.getName())
+                .setCategoryId(category.getCategoryId());
+
     }
 
 

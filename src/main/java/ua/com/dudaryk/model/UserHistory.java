@@ -35,8 +35,9 @@ public class UserHistory implements Serializable {
         return dudaryk;
     }
 
-    public void setDudaryk(Dudaryk dudaryk) {
+    public UserHistory setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
+        return this;
     }
 
 
@@ -44,40 +45,45 @@ public class UserHistory implements Serializable {
         return userHistoryId;
     }
 
-    public void setUserHistoryId(long userHistoryId) {
+    public UserHistory setUserHistoryId(long userHistoryId) {
         this.userHistoryId = userHistoryId;
+        return this;
     }
 
     public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public UserHistory setDate(LocalDateTime date) {
         this.date = date;
+        return this;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public UserHistory setComment(String comment) {
         this.comment = comment;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public UserHistory setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public WorkingStatus getAction() {
         return action;
     }
 
-    public void setAction(WorkingStatus action) {
+    public UserHistory setAction(WorkingStatus action) {
         this.action = action;
+        return this;
     }
 
     @Override

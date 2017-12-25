@@ -25,24 +25,27 @@ public class Category implements Serializable {
         return dudaryk;
     }
 
-    public void setDudaryk(Dudaryk dudaryk) {
+    public Category setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Category setName(String name) {
         this.name = name;
+        return this;
     }
 
     public long getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public Category setCategoryId(long categoryId) {
         this.categoryId = categoryId;
+        return this;
     }
 
     @Override

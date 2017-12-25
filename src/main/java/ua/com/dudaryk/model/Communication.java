@@ -39,64 +39,72 @@ public class Communication implements Serializable {
         return concert;
     }
 
-    public void setConcert(Concert concert) {
+    public Communication setConcert(Concert concert) {
         this.concert = concert;
+        return this;
     }
 
     public long getCommunicationId() {
         return communicationId;
     }
 
-    public void setCommunicationId(long communicationId) {
+    public Communication setCommunicationId(long communicationId) {
         this.communicationId = communicationId;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Communication setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public Communication setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public Communication setPhone(String phone) {
         this.phone = phone;
+        return this;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public Communication setComment(String comment) {
         this.comment = comment;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public Communication setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public LocalDateTime getMembershipDate() {
         return membershipDate;
     }
 
-    public void setMembershipDate(LocalDateTime membershipDate) {
+    public Communication setMembershipDate(LocalDateTime membershipDate) {
         this.membershipDate = membershipDate;
+        return this;
     }
 
     @Override

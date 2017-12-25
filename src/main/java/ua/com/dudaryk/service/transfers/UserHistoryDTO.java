@@ -8,8 +8,6 @@ import java.time.LocalDateTime;
 
 public class UserHistoryDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
     private long userHistoryId;
 
     private Dudaryk dudaryk;
@@ -26,47 +24,53 @@ public class UserHistoryDTO implements Serializable {
         return dudaryk;
     }
 
-    public void setDudaryk(Dudaryk dudaryk) {
+    public UserHistoryDTO setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
+        return this;
     }
 
     public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public UserHistoryDTO setDate(LocalDateTime date) {
         this.date = date;
+        return this;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public UserHistoryDTO setComment(String comment) {
         this.comment = comment;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public UserHistoryDTO setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public WorkingStatus getAction() {
         return action;
     }
 
-    public void setAction(WorkingStatus action) {
+    public UserHistoryDTO setAction(WorkingStatus action) {
         this.action = action;
+        return this;
     }
 
     public long getUserHistoryId() {
         return userHistoryId;
     }
 
-    public void setUserHistoryId(long userHistoryId) {
+    public UserHistoryDTO setUserHistoryId(long userHistoryId) {
         this.userHistoryId = userHistoryId;
+        return this;
     }
 }

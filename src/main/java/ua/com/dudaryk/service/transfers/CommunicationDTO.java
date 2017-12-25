@@ -7,8 +7,6 @@ import java.time.LocalDateTime;
 
 public class CommunicationDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
     private long communicationId;
 
     private String name;
@@ -29,63 +27,71 @@ public class CommunicationDTO implements Serializable {
         return communicationId;
     }
 
-    public void setCommunicationId(long communicationId) {
+    public CommunicationDTO setCommunicationId(long communicationId) {
         this.communicationId = communicationId;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public CommunicationDTO setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public CommunicationDTO setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public CommunicationDTO setPhone(String phone) {
         this.phone = phone;
+        return this;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public CommunicationDTO setComment(String comment) {
         this.comment = comment;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public CommunicationDTO setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public LocalDateTime getMembershipDate() {
         return membershipDate;
     }
 
-    public void setMembershipDate(LocalDateTime membershipDate) {
+    public CommunicationDTO setMembershipDate(LocalDateTime membershipDate) {
         this.membershipDate = membershipDate;
+        return this;
     }
 
     public Concert getConcert() {
         return concert;
     }
 
-    public void setConcert(Concert concert) {
+    public CommunicationDTO setConcert(Concert concert) {
         this.concert = concert;
+        return this;
     }
 }

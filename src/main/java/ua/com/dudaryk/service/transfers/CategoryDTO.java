@@ -6,8 +6,6 @@ import java.io.Serializable;
 
 public class CategoryDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
     private long categoryId;
 
     private String name;
@@ -18,23 +16,26 @@ public class CategoryDTO implements Serializable {
         return categoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public CategoryDTO setCategoryId(long categoryId) {
         this.categoryId = categoryId;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public CategoryDTO setName(String name) {
         this.name = name;
+        return this;
     }
 
     public Dudaryk getDudaryk() {
         return dudaryk;
     }
 
-    public void setDudaryk(Dudaryk dudaryk) {
+    public CategoryDTO setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
+        return this;
     }
 }

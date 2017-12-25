@@ -28,15 +28,15 @@ public class CommunicationServiceImpl implements CommunicationService {
 
     private List<CommunicationDTO> DTOListBuilder(List<Communication> communications, List<CommunicationDTO> communicationDTOList) {
         for (Communication communication : communications) {
-            CommunicationDTO communicationDTO = new CommunicationDTO();
-            communicationDTO.setCommunicationId(communication.getCommunicationId());
-            communicationDTO.setName(communication.getName());
-            communicationDTO.setEmail(communication.getEmail());
-            communicationDTO.setDescription(communication.getDescription());
-            communicationDTO.setComment(communication.getComment());
-            communicationDTO.setMembershipDate(communication.getMembershipDate());
-            communicationDTO.setPhone(communication.getPhone());
-            communicationDTO.setConcert(communication.getConcert());
+            CommunicationDTO communicationDTO = new CommunicationDTO()
+                    .setCommunicationId(communication.getCommunicationId())
+                    .setName(communication.getName())
+                    .setEmail(communication.getEmail())
+                    .setDescription(communication.getDescription())
+                    .setComment(communication.getComment())
+                    .setMembershipDate(communication.getMembershipDate())
+                    .setPhone(communication.getPhone())
+                    .setConcert(communication.getConcert());
             communicationDTOList.add(communicationDTO);
         }
         return communicationDTOList;
@@ -44,42 +44,41 @@ public class CommunicationServiceImpl implements CommunicationService {
 
     public CommunicationDTO findById(Long id) {
         Communication communication = communicationDAO.findByCommunicationId(id);
-        CommunicationDTO communicationDTO = new CommunicationDTO();
-        communicationDTO.setCommunicationId(communication.getCommunicationId());
-        communicationDTO.setName(communication.getName());
-        communicationDTO.setEmail(communication.getEmail());
-        communicationDTO.setDescription(communication.getDescription());
-        communicationDTO.setComment(communication.getComment());
-        communicationDTO.setMembershipDate(communication.getMembershipDate());
-        communicationDTO.setPhone(communication.getPhone());
-        communicationDTO.setConcert(communication.getConcert());
-        return communicationDTO;
+        return new CommunicationDTO()
+                .setCommunicationId(communication.getCommunicationId())
+                .setName(communication.getName())
+                .setEmail(communication.getEmail())
+                .setDescription(communication.getDescription())
+                .setComment(communication.getComment())
+                .setMembershipDate(communication.getMembershipDate())
+                .setPhone(communication.getPhone())
+                .setConcert(communication.getConcert());
 
     }
 
     public CommunicationDTO save(CommunicationDTO communicationDTO) {
-        Communication communication = new Communication();
-        communication.setName(communicationDTO.getName());
-        communication.setEmail(communicationDTO.getEmail());
-        communication.setDescription(communicationDTO.getDescription());
-        communication.setComment(communicationDTO.getComment());
-        communication.setMembershipDate(communicationDTO.getMembershipDate());
-        communication.setPhone(communicationDTO.getPhone());
-        communication.setConcert(communicationDTO.getConcert());
+        Communication communication = new Communication()
+                .setName(communicationDTO.getName())
+                .setEmail(communicationDTO.getEmail())
+                .setDescription(communicationDTO.getDescription())
+                .setComment(communicationDTO.getComment())
+                .setMembershipDate(communicationDTO.getMembershipDate())
+                .setPhone(communicationDTO.getPhone())
+                .setConcert(communicationDTO.getConcert());
         communication = communicationDAO.saveCommunication(communication);
-        communicationDTO.setCommunicationId(communication.getCommunicationId());
+//        communicationDTO.setCommunicationId(communication.getCommunicationId());
         return communicationDTO;
     }
 
     public CommunicationDTO update(CommunicationDTO communicationDTO) {
-        Communication communication = new Communication();
-        communication.setName(communicationDTO.getName());
-        communication.setEmail(communicationDTO.getEmail());
-        communication.setDescription(communicationDTO.getDescription());
-        communication.setComment(communicationDTO.getComment());
-        communication.setMembershipDate(communicationDTO.getMembershipDate());
-        communication.setPhone(communicationDTO.getPhone());
-        communication.setConcert(communicationDTO.getConcert());
+        Communication communication = new Communication()
+                .setName(communicationDTO.getName())
+                .setEmail(communicationDTO.getEmail())
+                .setDescription(communicationDTO.getDescription())
+                .setComment(communicationDTO.getComment())
+                .setMembershipDate(communicationDTO.getMembershipDate())
+                .setPhone(communicationDTO.getPhone())
+                .setConcert(communicationDTO.getConcert());
         communication = communicationDAO.updateCommunication(communication);
         communicationDTO.setCommunicationId(communication.getCommunicationId());
         return communicationDTO;
