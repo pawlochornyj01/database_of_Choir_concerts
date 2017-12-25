@@ -7,6 +7,17 @@ import java.util.List;
 
 public interface DudarykDAO {
 
+
+    Dudaryk saveDudaryk(Dudaryk dudaryk);
+
+    Dudaryk updateDudaryk(Dudaryk dudaryk);
+
+    void deleteDudaryk(Dudaryk dudaryk);
+
+    Dudaryk findDudarykById(Long id);
+
+    List<Dudaryk> findAllDudaryks();
+
     List<Dudaryk> findByName(String name);
 
     List<Dudaryk> findByLastName(String lastName);

@@ -17,6 +17,21 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
         super.setClazz(clazzToSet);
     }
 
+    @Override
+    public Participant saveParticipant(Participant participant) {
+        return save(participant);
+    }
+
+    @Override
+    public void deleteParticipant(Participant participant) {
+        super.delete(participant);
+    }
+
+    @Override
+    public Participant findParticipantById(Long id) {
+        return findById(id);
+    }
+
     @Transactional(readOnly = true)
     @Override
     public List<Participant> findByName(String name) {

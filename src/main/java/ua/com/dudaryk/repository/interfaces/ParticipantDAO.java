@@ -6,6 +6,12 @@ import java.util.List;
 
 public interface ParticipantDAO {
 
+    Participant saveParticipant(Participant participant);
+
+    void deleteParticipant(Participant participant);
+
+    Participant findParticipantById(Long id);
+
     List<Participant> findByName(String name);
 
 //    List<T> findByConcert(Long id);

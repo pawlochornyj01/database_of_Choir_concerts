@@ -70,7 +70,7 @@ public class ConcertServiceImpl implements ConcertService {
 
     public void delete(Long id) {
         Concert concert = concertDAO.findConcertById(id);
-        concertDAO.delete(concert);
+        concertDAO.deleteConcert(concert);
     }
 
     public ConcertDTO findById(Long id) {

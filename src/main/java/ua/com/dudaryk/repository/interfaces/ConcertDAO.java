@@ -12,7 +12,7 @@ public interface ConcertDAO {
 
     Concert updateConcert(Concert concert);
 
-    void delete(Concert concert);
+    void deleteConcert(Concert concert);
 
     Concert findConcertById(Long id);
 

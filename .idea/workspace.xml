@@ -7,7 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6004b9-d13c-4711-9e9e-73da58c1a980" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,12 +45,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="DudarykService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            <state relative-caret-position="272">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticipantServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#2881#2882#0" expanded="true" />
+                <element signature="e#2908#2909#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Participant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+              <folding>
+                <element signature="method#setConcerts#0;class#Participant#0" expanded="false" />
+                <element signature="method#setParticipantId#0;class#Participant#0" expanded="false" />
+                <element signature="method#setName#0;class#Participant#0" expanded="false" />
+                <element signature="method#setEmail#0;class#Participant#0" expanded="false" />
+                <element signature="method#setPhone#0;class#Participant#0" expanded="false" />
+                <element signature="method#setComment#0;class#Participant#0" expanded="false" />
+                <element signature="method#setDescription#0;class#Participant#0" expanded="false" />
+                <element signature="method#toString#0;class#Participant#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,15 +120,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/WORK_STATUS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/IGenericDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractGenericDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Work_Status.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/WorkingStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/transfers/CategoryDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/transfers/CommunicationDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/transfers/ConcertDTO.java" />
@@ -123,10 +161,16 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -222,7 +266,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,6 +381,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
@@ -577,12 +621,13 @@
       <workItem from="1514014481162" duration="3315000" />
       <workItem from="1514046039173" duration="5301000" />
       <workItem from="1514067262784" duration="1126000" />
-      <workItem from="1514187453746" duration="5457000" />
+      <workItem from="1514187453746" duration="5590000" />
+      <workItem from="1514231360792" duration="3637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131079000" />
+    <option name="totallyTimeSpent" value="134849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -617,9 +662,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6617647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27987897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28441754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -682,20 +727,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebAppInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-510">
@@ -724,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Voice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -745,34 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ParticipantService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -784,13 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -894,8 +887,8 @@
         <state relative-caret-position="272">
           <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
           <folding>
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="false" />
+            <element signature="e#463#464#0" expanded="false" />
             <element signature="method#setDudaryk#0;class#Category#0" expanded="false" />
             <element signature="method#setName#0;class#Category#0" expanded="false" />
             <element signature="method#setCategoryId#0;class#Category#0" expanded="false" />
@@ -908,7 +901,7 @@
         <state relative-caret-position="305">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#setName#0;class#CategoryDTO#0" expanded="false" />
             <element signature="method#setDudaryk#0;class#CategoryDTO#0" expanded="false" />
           </folding>
@@ -920,7 +913,7 @@
         <state relative-caret-position="368">
           <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#DTOListBuilder#0;class#UserHistoryServiceImpl#0" expanded="false" />
             <element signature="method#save#0;class#UserHistoryServiceImpl#0" expanded="false" />
             <element signature="method#update#0;class#UserHistoryServiceImpl#0" expanded="false" />
@@ -980,28 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/transfers/DudarykDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding>
-            <element signature="method#setDudarykId#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setConcerts#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setUserHistories#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setCategories#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setName#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setLastName#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setEmail#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setPhone#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setDescription#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setDateOfBirthday#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setVoice#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setAction#0;class#DudarykDTO#0" expanded="false" />
-            <element signature="method#setPhoto#0;class#DudarykDTO#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/transfers/ParticipantDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1014,29 +985,6 @@
             <element signature="method#setPhone#0;class#ParticipantDTO#0" expanded="false" />
             <element signature="method#setComment#0;class#ParticipantDTO#0" expanded="false" />
             <element signature="method#setDescription#0;class#ParticipantDTO#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="method#setUserHistories#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setVoice#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setConcerts#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setCategories#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setDudarykId#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setName#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setLastName#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setEmail#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setPhone#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setDescription#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setDateOfBirthday#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setAction#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#setPhoto#0;class#Dudaryk#0" expanded="false" />
-            <element signature="method#toString#0;class#Dudaryk#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1058,35 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="method#setConcerts#0;class#Participant#0" expanded="false" />
-            <element signature="method#setParticipantId#0;class#Participant#0" expanded="false" />
-            <element signature="method#setName#0;class#Participant#0" expanded="false" />
-            <element signature="method#setEmail#0;class#Participant#0" expanded="false" />
-            <element signature="method#setPhone#0;class#Participant#0" expanded="false" />
-            <element signature="method#setComment#0;class#Participant#0" expanded="false" />
-            <element signature="method#setDescription#0;class#Participant#0" expanded="false" />
-            <element signature="method#toString#0;class#Participant#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1096,34 +1019,6 @@
         <state relative-caret-position="68">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="method#findByConcertId#0;class#CommunicationDAOImpl#0" expanded="false" />
-            <element signature="method#findByMembershipDate#0;class#CommunicationDAOImpl#0" expanded="false" />
-            <element signature="method#findByName#0;class#CommunicationDAOImpl#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,7 +1064,7 @@
         <state relative-caret-position="428">
           <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#CommunicationServiceImpl#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#DTOListBuilder#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#findById#0;class#CommunicationServiceImpl#0" expanded="false" />
@@ -1178,25 +1073,6 @@
             <element signature="method#findByConcertId#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#findByMembershipDate#0;class#CommunicationServiceImpl#0" expanded="false" />
             <element signature="method#findByName#0;class#CommunicationServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DTOListBuilder#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#save#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#update#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#delete#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#findById#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#findAll#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#findByName#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#findByDate#0;class#ConcertServiceImpl#0" expanded="false" />
-            <element signature="method#findByParticipant#0;class#ConcertServiceImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1213,7 +1089,198 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="method#findByConcertId#0;class#CommunicationDAOImpl#0" expanded="false" />
+            <element signature="method#findByMembershipDate#0;class#CommunicationDAOImpl#0" expanded="false" />
+            <element signature="method#findByName#0;class#CommunicationDAOImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="method#setUserHistories#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setVoice#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setConcerts#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setCategories#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setDudarykId#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setName#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setLastName#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setEmail#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setPhone#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setDescription#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setDateOfBirthday#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setAction#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#setPhoto#0;class#Dudaryk#0" expanded="false" />
+            <element signature="method#toString#0;class#Dudaryk#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/transfers/DudarykDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="46" column="14" lean-forward="true" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+          <folding>
+            <element signature="method#setDudarykId#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setConcerts#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setUserHistories#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setCategories#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setName#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setLastName#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setEmail#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setPhone#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setDescription#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setDateOfBirthday#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setVoice#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setAction#0;class#DudarykDTO#0" expanded="false" />
+            <element signature="method#setPhoto#0;class#DudarykDTO#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#DTOListBuilder#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#save#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#update#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#findById#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#findAll#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#findByName#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#findByDate#0;class#ConcertServiceImpl#0" expanded="false" />
+            <element signature="method#findByParticipant#0;class#ConcertServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="114" column="13" lean-forward="true" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#DTOListBuilder#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#save#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#update#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findById#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findAll#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findByName#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findByLastName#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findByVoice#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findAction#0;class#DudarykServiceImpl#0" expanded="false" />
+            <element signature="method#findByConcert#0;class#DudarykServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="method#setConcerts#0;class#Participant#0" expanded="false" />
+            <element signature="method#setParticipantId#0;class#Participant#0" expanded="false" />
+            <element signature="method#setName#0;class#Participant#0" expanded="false" />
+            <element signature="method#setEmail#0;class#Participant#0" expanded="false" />
+            <element signature="method#setPhone#0;class#Participant#0" expanded="false" />
+            <element signature="method#setComment#0;class#Participant#0" expanded="false" />
+            <element signature="method#setDescription#0;class#Participant#0" expanded="false" />
+            <element signature="method#toString#0;class#Participant#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#2881#2882#0" expanded="true" />
+            <element signature="e#2908#2909#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

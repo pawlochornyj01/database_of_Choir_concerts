@@ -30,6 +30,11 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
     }
 
     @Override
+    public void deleteConcert(Concert concert) {
+        super.delete(concert);
+    }
+
+    @Override
     public Concert findConcertById(Long id) {
         return findById(id);
     }

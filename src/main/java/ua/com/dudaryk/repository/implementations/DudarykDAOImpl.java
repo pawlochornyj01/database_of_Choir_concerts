@@ -18,6 +18,31 @@ public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykD
         super.setClazz(clazzToSet);
     }
 
+    @Override
+    public Dudaryk saveDudaryk(Dudaryk dudaryk) {
+        return save(dudaryk);
+    }
+
+    @Override
+    public Dudaryk updateDudaryk(Dudaryk dudaryk) {
+        return update(dudaryk);
+    }
+
+    @Override
+    public void deleteDudaryk(Dudaryk dudaryk) {
+        super.delete(dudaryk);
+    }
+
+    @Override
+    public Dudaryk findDudarykById(Long id) {
+        return findById(id);
+    }
+
+    @Override
+    public List<Dudaryk> findAllDudaryks() {
+        return findAll();
+    }
+
     @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByName(String name) {
