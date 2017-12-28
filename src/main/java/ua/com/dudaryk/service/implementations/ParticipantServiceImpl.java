@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.repository.interfaces.ParticipantDAO;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
-import ua.com.dudaryk.service.transfers.ParticipantDTO;
+import ua.com.dudaryk.service.dto.ParticipantDTO;
 
 
 import java.util.ArrayList;

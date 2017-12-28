@@ -1,7 +1,10 @@
 package ua.com.dudaryk.model;
 
+import ua.com.dudaryk.service.dto.CommunicationDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -29,17 +32,33 @@ public class Communication implements Serializable {
     private String description;
 
     @Column(name = "DATE_OF_MEMBERSHIP")
-    private LocalDateTime membershipDate;
+    private LocalDate membershipDate;
 
     @ManyToOne
     @JoinColumn(name = "CONCERT_ID")
     private Concert concert;
 
+
+    public static Communication toEntity(CommunicationDTO communicationDTO) {
+        Communication communication = new Communication()
+                .setName(communicationDTO.getName())
+                .setEmail(communicationDTO.getEmail())
+                .setDescription(communicationDTO.getDescription())
+                .setComment(communicationDTO.getComment())
+                .setMembershipDate(communicationDTO.getMembershipDate())
+                .setPhone(communicationDTO.getPhone())
+                .setConcert(communicationDTO.getConcert());
+        if (communicationDTO.getCommunicationId() != 0) {
+            communication.setCommunicationId(communicationDTO.getCommunicationId());
+        }
+        return communication;
+    }
+
     public Concert getConcert() {
         return concert;
     }
 
-    public Communication setConcert(Concert concert) {
+    private Communication setConcert(Concert concert) {
         this.concert = concert;
         return this;
     }
@@ -48,7 +67,7 @@ public class Communication implements Serializable {
         return communicationId;
     }
 
-    public Communication setCommunicationId(long communicationId) {
+    private Communication setCommunicationId(long communicationId) {
         this.communicationId = communicationId;
         return this;
     }
@@ -66,7 +85,7 @@ public class Communication implements Serializable {
         return email;
     }
 
-    public Communication setEmail(String email) {
+    private Communication setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -75,7 +94,7 @@ public class Communication implements Serializable {
         return phone;
     }
 
-    public Communication setPhone(String phone) {
+    private Communication setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -84,7 +103,7 @@ public class Communication implements Serializable {
         return comment;
     }
 
-    public Communication setComment(String comment) {
+    private Communication setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -93,16 +112,16 @@ public class Communication implements Serializable {
         return description;
     }
 
-    public Communication setDescription(String description) {
+    private Communication setDescription(String description) {
         this.description = description;
         return this;
     }
 
-    public LocalDateTime getMembershipDate() {
+    public LocalDate getMembershipDate() {
         return membershipDate;
     }
 
-    public Communication setMembershipDate(LocalDateTime membershipDate) {
+    private Communication setMembershipDate(LocalDate membershipDate) {
         this.membershipDate = membershipDate;
         return this;
     }

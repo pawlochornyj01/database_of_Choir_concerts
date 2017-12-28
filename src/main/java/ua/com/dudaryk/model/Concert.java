@@ -1,5 +1,7 @@
 package ua.com.dudaryk.model;
 
+import ua.com.dudaryk.service.dto.ConcertDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -40,11 +42,27 @@ public class Concert implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "DUDARYK_ID"))
     private List<Dudaryk> dudaryks;
 
+
+    public static Concert toEntity(ConcertDTO concertDTO) {
+        Concert concert = new Concert()
+                .setCommunications(concertDTO.getCommunications())
+                .setDate(concertDTO.getDate())
+                .setDudaryks(concertDTO.getDudaryks())
+                .setGenre(concertDTO.getGenre())
+                .setName(concertDTO.getName())
+                .setParticipants(concertDTO.getParticipants())
+                .setPoster(concertDTO.getPoster());
+        if (concertDTO.getConcertId() != 0) {
+            concert.setConcertId(concertDTO.getConcertId());
+        }
+        return concert;
+    }
+
     public List<Participant> getParticipants() {
         return participants;
     }
 
-    public Concert setParticipants(List<Participant> participants) {
+    private Concert setParticipants(List<Participant> participants) {
         this.participants = participants;
         return this;
     }
@@ -53,7 +71,7 @@ public class Concert implements Serializable {
         return communications;
     }
 
-    public Concert setCommunications(List<Communication> communications) {
+    private Concert setCommunications(List<Communication> communications) {
         this.communications = communications;
         return this;
     }
@@ -62,7 +80,7 @@ public class Concert implements Serializable {
         return dudaryks;
     }
 
-    public Concert setDudaryks(List<Dudaryk> dudaryks) {
+    private Concert setDudaryks(List<Dudaryk> dudaryks) {
         this.dudaryks = dudaryks;
         return this;
     }
@@ -71,7 +89,7 @@ public class Concert implements Serializable {
         return concertId;
     }
 
-    public Concert setConcertId(long concertId) {
+    private Concert setConcertId(long concertId) {
         this.concertId = concertId;
         return this;
     }
@@ -80,7 +98,7 @@ public class Concert implements Serializable {
         return date;
     }
 
-    public Concert setDate(LocalDateTime date) {
+    private Concert setDate(LocalDateTime date) {
         this.date = date;
         return this;
     }
@@ -89,7 +107,7 @@ public class Concert implements Serializable {
         return name;
     }
 
-    public Concert setName(String name) {
+    private Concert setName(String name) {
         this.name = name;
         return this;
     }
@@ -98,7 +116,7 @@ public class Concert implements Serializable {
         return genre;
     }
 
-    public Concert setGenre(String genre) {
+    private Concert setGenre(String genre) {
         this.genre = genre;
         return this;
     }
@@ -107,7 +125,7 @@ public class Concert implements Serializable {
         return poster;
     }
 
-    public Concert setPoster(String poster) {
+    private Concert setPoster(String poster) {
         this.poster = poster;
         return this;
     }

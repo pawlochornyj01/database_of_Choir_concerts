@@ -6,10 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.repository.interfaces.ConcertDAO;
 import ua.com.dudaryk.service.interfaces.ConcertService;
-import ua.com.dudaryk.service.transfers.ConcertDTO;
+
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,94 +23,39 @@ public class ConcertServiceImpl implements ConcertService {
         this.concertDAO = concertDAO;
     }
 
-    private List<ConcertDTO> DTOListBuilder(List<Concert> concerts, List<ConcertDTO> concertDTOList) {
-        for (Concert concert : concerts) {
-            ConcertDTO concertDTO = new ConcertDTO()
-                    .setConcertId(concert.getConcertId())
-                    .setCommunications(concert.getCommunications())
-                    .setDate(concert.getDate())
-                    .setDudaryks(concert.getDudaryks())
-                    .setGenre(concert.getGenre())
-                    .setName(concert.getName())
-                    .setParticipants(concert.getParticipants())
-                    .setPoster(concert.getPoster());
-            concertDTOList.add(concertDTO);
-        }
 
-        return concertDTOList;
+    public Concert save(Concert concert) {
+        return concertDAO.saveConcert(concert);
     }
 
-    public ConcertDTO save(ConcertDTO concertDTO) {
-        Concert concert = new Concert()
-                .setCommunications(concertDTO.getCommunications())
-                .setDate(concertDTO.getDate())
-                .setDudaryks(concertDTO.getDudaryks())
-                .setGenre(concertDTO.getGenre())
-                .setName(concertDTO.getName())
-                .setParticipants(concertDTO.getParticipants())
-                .setPoster(concertDTO.getPoster());
-        concert = concertDAO.saveConcert(concert);
-        return concertDTO;
-    }
-
-    public ConcertDTO update(ConcertDTO concertDTO) {
-        Concert concert = new Concert()
-                .setCommunications(concertDTO.getCommunications())
-                .setDate(concertDTO.getDate())
-                .setDudaryks(concertDTO.getDudaryks())
-                .setGenre(concertDTO.getGenre())
-                .setName(concertDTO.getName())
-                .setParticipants(concertDTO.getParticipants())
-                .setPoster(concertDTO.getPoster());
-        concert = concertDAO.updateConcert(concert);
-        concertDTO.setConcertId(concert.getConcertId());
-        return concertDTO;
+    public Concert update(Concert concert) {
+        return concertDAO.updateConcert(concert);
     }
 
     public void delete(Long id) {
-        Concert concert = concertDAO.findConcertById(id);
-        concertDAO.deleteConcert(concert);
+        concertDAO.deleteConcert(concertDAO.findConcertById(id));
     }
 
-    public ConcertDTO findById(Long id) {
-        Concert concert = concertDAO.findConcertById(id);
-        return new ConcertDTO()
-                .setConcertId(concert.getConcertId())
-                .setCommunications(concert.getCommunications())
-                .setDate(concert.getDate())
-                .setDudaryks(concert.getDudaryks())
-                .setGenre(concert.getGenre())
-                .setName(concert.getName())
-                .setParticipants(concert.getParticipants())
-                .setPoster(concert.getPoster());
-
+    public Concert findById(Long id) {
+        return concertDAO.findConcertById(id);
     }
 
-    public List<ConcertDTO> findAll() {
-        List<Concert> concerts = concertDAO.findAllConcerts();
-        List<ConcertDTO> concertDTOList = new ArrayList<>();
-        return DTOListBuilder(concerts, concertDTOList);
+    public List<Concert> findAll() {
+        return concertDAO.findAllConcerts();
     }
 
     @Override
-    public List<ConcertDTO> findByName(String name) {
-        List<Concert> concerts = concertDAO.findByName(name);
-        List<ConcertDTO> concertDTOList = new ArrayList<>();
-        return DTOListBuilder(concerts, concertDTOList);
+    public List<Concert> findByName(String name) {
+        return concertDAO.findByName(name);
     }
 
     @Override
-    public List<ConcertDTO> findByDate(LocalDateTime date) {
-        List<Concert> concerts = concertDAO.findByDate(date);
-        List<ConcertDTO> concertDTOList = new ArrayList<>();
-        return DTOListBuilder(concerts, concertDTOList);
-
+    public List<Concert> findByDate(LocalDateTime date) {
+        return concertDAO.findByDate(date);
     }
 
     @Override
-    public List<ConcertDTO> findByParticipant(Long id) {
-        List<Concert> concerts = concertDAO.findByParticipant(id);
-        List<ConcertDTO> concertDTOList = new ArrayList<>();
-        return DTOListBuilder(concerts, concertDTOList);
+    public List<Concert> findByParticipant(Long id) {
+        return concertDAO.findByParticipant(id);
     }
 }

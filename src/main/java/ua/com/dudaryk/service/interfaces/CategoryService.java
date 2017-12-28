@@ -1,8 +1,9 @@
 package ua.com.dudaryk.service.interfaces;
 
-import ua.com.dudaryk.service.transfers.CategoryDTO;
+import ua.com.dudaryk.model.Category;
+import ua.com.dudaryk.service.dto.CategoryDTO;
 
 public interface CategoryService {
 
-    CategoryDTO findByDudarykId(Long id);
+    Category findByDudarykId(Long id);
 }

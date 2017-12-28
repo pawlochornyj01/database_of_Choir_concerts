@@ -1,4 +1,4 @@
-package ua.com.dudaryk.service.transfers;
+package ua.com.dudaryk.service.dto;
 
 import ua.com.dudaryk.model.Concert;
 

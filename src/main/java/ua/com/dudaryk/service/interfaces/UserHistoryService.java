@@ -1,6 +1,6 @@
 package ua.com.dudaryk.service.interfaces;
 
-import ua.com.dudaryk.service.transfers.UserHistoryDTO;
+import ua.com.dudaryk.service.dto.UserHistoryDTO;
 
 import java.util.List;
 

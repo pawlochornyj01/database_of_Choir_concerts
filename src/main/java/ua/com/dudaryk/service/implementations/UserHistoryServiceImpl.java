@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.UserHistory;
 import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 import ua.com.dudaryk.service.interfaces.UserHistoryService;
-import ua.com.dudaryk.service.transfers.UserHistoryDTO;
+import ua.com.dudaryk.service.dto.UserHistoryDTO;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,15 +1,16 @@
 package ua.com.dudaryk.service.interfaces;
 
-import ua.com.dudaryk.service.transfers.ConcertDTO;
+import ua.com.dudaryk.model.Concert;
+import ua.com.dudaryk.service.dto.ConcertDTO;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ConcertService {
 
-    List<ConcertDTO> findByName(String name);
+    List<Concert> findByName(String name);
 
-    List<ConcertDTO> findByDate(LocalDateTime date);
+    List<Concert> findByDate(LocalDateTime date);
 
-    List<ConcertDTO> findByParticipant(Long id);
+    List<Concert> findByParticipant(Long id);
 }

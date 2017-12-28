@@ -8,7 +8,7 @@ import ua.com.dudaryk.model.Communication;
 
 import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 import ua.com.dudaryk.service.interfaces.CommunicationService;
-import ua.com.dudaryk.service.transfers.CommunicationDTO;
+import ua.com.dudaryk.service.dto.CommunicationDTO;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -26,94 +26,38 @@ public class CommunicationServiceImpl implements CommunicationService {
         this.communicationDAO = communicationDAO;
     }
 
-    private List<CommunicationDTO> DTOListBuilder(List<Communication> communications, List<CommunicationDTO> communicationDTOList) {
-        for (Communication communication : communications) {
-            CommunicationDTO communicationDTO = new CommunicationDTO()
-                    .setCommunicationId(communication.getCommunicationId())
-                    .setName(communication.getName())
-                    .setEmail(communication.getEmail())
-                    .setDescription(communication.getDescription())
-                    .setComment(communication.getComment())
-                    .setMembershipDate(communication.getMembershipDate())
-                    .setPhone(communication.getPhone())
-                    .setConcert(communication.getConcert());
-            communicationDTOList.add(communicationDTO);
-        }
-        return communicationDTOList;
+    public Communication findById(Long id) {
+        return communicationDAO.findByCommunicationId(id);
     }
 
-    public CommunicationDTO findById(Long id) {
-        Communication communication = communicationDAO.findByCommunicationId(id);
-        return new CommunicationDTO()
-                .setCommunicationId(communication.getCommunicationId())
-                .setName(communication.getName())
-                .setEmail(communication.getEmail())
-                .setDescription(communication.getDescription())
-                .setComment(communication.getComment())
-                .setMembershipDate(communication.getMembershipDate())
-                .setPhone(communication.getPhone())
-                .setConcert(communication.getConcert());
-
+    public Communication save(Communication communication) {
+        return communicationDAO.saveCommunication(communication);
     }
 
-    public CommunicationDTO save(CommunicationDTO communicationDTO) {
-        Communication communication = new Communication()
-                .setName(communicationDTO.getName())
-                .setEmail(communicationDTO.getEmail())
-                .setDescription(communicationDTO.getDescription())
-                .setComment(communicationDTO.getComment())
-                .setMembershipDate(communicationDTO.getMembershipDate())
-                .setPhone(communicationDTO.getPhone())
-                .setConcert(communicationDTO.getConcert());
-        communication = communicationDAO.saveCommunication(communication);
-//        communicationDTO.setCommunicationId(communication.getCommunicationId());
-        return communicationDTO;
-    }
-
-    public CommunicationDTO update(CommunicationDTO communicationDTO) {
-        Communication communication = new Communication()
-                .setName(communicationDTO.getName())
-                .setEmail(communicationDTO.getEmail())
-                .setDescription(communicationDTO.getDescription())
-                .setComment(communicationDTO.getComment())
-                .setMembershipDate(communicationDTO.getMembershipDate())
-                .setPhone(communicationDTO.getPhone())
-                .setConcert(communicationDTO.getConcert());
-        communication = communicationDAO.updateCommunication(communication);
-        communicationDTO.setCommunicationId(communication.getCommunicationId());
-        return communicationDTO;
+    public Communication update(Communication communication) {
+        return communicationDAO.updateCommunication(communication);
     }
 
     public void delete(Long id) {
-        Communication communication = communicationDAO.findByCommunicationId(id);
-        communicationDAO.deleteCommunication(communication);
-
+        communicationDAO.deleteCommunication(communicationDAO.findByCommunicationId(id));
     }
 
-    public List<CommunicationDTO> findAll() {
-        List<Communication> communications = communicationDAO.findAllCommunication();
-        List<CommunicationDTO> communicationDTOList = new ArrayList<>();
-        return DTOListBuilder(communications, communicationDTOList);
+    public List<Communication> findAll() {
+        return communicationDAO.findAllCommunication();
     }
 
     @Override
-    public List<CommunicationDTO> findByConcertId(Long id) {
-        List<Communication> communications = communicationDAO.findByConcertId(id);
-        List<CommunicationDTO> communicationDTOList = new ArrayList<>();
-        return DTOListBuilder(communications, communicationDTOList);
+    public List<Communication> findByConcertId(Long id) {
+        return communicationDAO.findByConcertId(id);
     }
 
     @Override
-    public List<CommunicationDTO> findByMembershipDate(LocalDateTime date) {
-        List<Communication> communications = communicationDAO.findByMembershipDate(date);
-        List<CommunicationDTO> communicationDTOList = new ArrayList<>();
-        return DTOListBuilder(communications, communicationDTOList);
+    public List<Communication> findByMembershipDate(LocalDateTime date) {
+        return communicationDAO.findByMembershipDate(date);
     }
 
     @Override
-    public List<CommunicationDTO> findByName(String name) {
-        List<Communication> communications = communicationDAO.findByName(name);
-        List<CommunicationDTO> communicationDTOList = new ArrayList<>();
-        return DTOListBuilder(communications, communicationDTOList);
+    public List<Communication> findByName(String name) {
+        return communicationDAO.findByName(name);
     }
 }

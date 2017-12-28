@@ -1,7 +1,10 @@
 package ua.com.dudaryk.model;
 
+import ua.com.dudaryk.service.dto.DudarykDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,11 +43,11 @@ public class Dudaryk implements Serializable {
     private String description;
 
     @Column(name = "DATE_OF_BIRTHDAY")
-    private LocalDateTime dateOfBirthday;
+    private LocalDate birthday;
 
-    @Column(name = "Voice")
+    @Column(name = "voice")
     @Enumerated(EnumType.STRING)
-    private Voice Voice;
+    private Voice voice;
 
     @Column(name = "IS_ACTION")
     private boolean isAction;
@@ -53,18 +56,38 @@ public class Dudaryk implements Serializable {
     @Column(name = "PHOTO")
     private String photo;
 
+    public static Dudaryk toEntity(DudarykDTO dudarykDTO) {
+        Dudaryk dudaryk = new Dudaryk()
+                .setAction(dudarykDTO.isAction())
+                .setCategories(dudarykDTO.getCategories())
+                .setConcerts(dudarykDTO.getConcerts())
+                .setBirthday(dudarykDTO.getBirthday())
+                .setDescription(dudarykDTO.getDescription())
+                .setEmail(dudarykDTO.getEmail())
+                .setLastName(dudarykDTO.getLastName())
+                .setName(dudarykDTO.getName())
+                .setPhone(dudarykDTO.getPhone())
+                .setPhoto(dudarykDTO.getPhoto())
+                .setUserHistories(dudarykDTO.getUserHistories())
+                .setVoice(dudarykDTO.getVoice());
+        if (dudarykDTO.getDudarykId() != 0) {
+            dudaryk.setDudarykId(dudarykDTO.getDudarykId());
+        }
+        return dudaryk;
+    }
+
 
     public List<UserHistory> getUserHistories() {
         return userHistories;
     }
 
-    public Dudaryk setUserHistories(List<UserHistory> userHistories) {
+    private Dudaryk setUserHistories(List<UserHistory> userHistories) {
         this.userHistories = userHistories;
         return this;
     }
 
-    public Dudaryk setVoice(Voice voice) {
-        this.Voice = voice;
+    private Dudaryk setVoice(Voice voice) {
+        this.voice = voice;
         return this;
     }
 
@@ -72,7 +95,7 @@ public class Dudaryk implements Serializable {
         return concerts;
     }
 
-    public Dudaryk setConcerts(List<Concert> concerts) {
+    private Dudaryk setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
         return this;
     }
@@ -81,7 +104,7 @@ public class Dudaryk implements Serializable {
         return categories;
     }
 
-    public Dudaryk setCategories(List<Category> categories) {
+    private Dudaryk setCategories(List<Category> categories) {
         this.categories = categories;
         return this;
     }
@@ -90,7 +113,7 @@ public class Dudaryk implements Serializable {
         return dudarykId;
     }
 
-    public Dudaryk setDudarykId(long dudarykId) {
+    private Dudaryk setDudarykId(long dudarykId) {
         this.dudarykId = dudarykId;
         return this;
     }
@@ -99,7 +122,7 @@ public class Dudaryk implements Serializable {
         return name;
     }
 
-    public Dudaryk setName(String name) {
+    private Dudaryk setName(String name) {
         this.name = name;
         return this;
     }
@@ -108,7 +131,7 @@ public class Dudaryk implements Serializable {
         return lastName;
     }
 
-    public Dudaryk setLastName(String lastName) {
+    private Dudaryk setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -117,7 +140,7 @@ public class Dudaryk implements Serializable {
         return email;
     }
 
-    public Dudaryk setEmail(String email) {
+    private Dudaryk setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -126,7 +149,7 @@ public class Dudaryk implements Serializable {
         return phone;
     }
 
-    public Dudaryk setPhone(String phone) {
+    private Dudaryk setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -135,30 +158,29 @@ public class Dudaryk implements Serializable {
         return description;
     }
 
-    public Dudaryk setDescription(String description) {
+    private Dudaryk setDescription(String description) {
         this.description = description;
         return this;
     }
 
-    public LocalDateTime getDateOfBirthday() {
-        return dateOfBirthday;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public Dudaryk setDateOfBirthday(LocalDateTime dateOfBirthday) {
-        this.dateOfBirthday = dateOfBirthday;
+    private Dudaryk setBirthday(LocalDate dateOfBirthday) {
+        this.birthday = dateOfBirthday;
         return this;
     }
 
     public Voice getVoice() {
-        return Voice;
+        return voice;
     }
-
 
     public boolean isAction() {
         return isAction;
     }
 
-    public Dudaryk setAction(boolean action) {
+    private Dudaryk setAction(boolean action) {
         isAction = action;
         return this;
     }
@@ -167,7 +189,7 @@ public class Dudaryk implements Serializable {
         return photo;
     }
 
-    public Dudaryk setPhoto(String photo) {
+    private Dudaryk setPhoto(String photo) {
         this.photo = photo;
         return this;
     }
@@ -184,8 +206,8 @@ public class Dudaryk implements Serializable {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", description='" + description + '\'' +
-                ", dateOfBirthday=" + dateOfBirthday +
-                ", Voice=" + Voice +
+                ", dateOfBirthday=" + birthday +
+                ", voice=" + voice +
                 ", isAction=" + isAction +
                 ", photo='" + photo + '\'' +
                 '}';

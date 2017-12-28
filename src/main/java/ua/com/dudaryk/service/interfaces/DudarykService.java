@@ -1,19 +1,20 @@
 package ua.com.dudaryk.service.interfaces;
 
+import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.Voice;
-import ua.com.dudaryk.service.transfers.DudarykDTO;
+import ua.com.dudaryk.service.dto.DudarykDTO;
 
 import java.util.List;
 
 public interface DudarykService {
 
-    List<DudarykDTO> findByName(String name);
+    List<Dudaryk> findByName(String name);
 
-    List<DudarykDTO> findByLastName(String lastName);
+    List<Dudaryk> findByLastName(String lastName);
 
-    List<DudarykDTO> findByVoice(Voice voice);
+    List<Dudaryk> findByVoice(Voice voice);
 
-    List<DudarykDTO> findAction();
+    List<Dudaryk> findAction();
 
-    List<DudarykDTO> findByConcert(Long id);
+    List<Dudaryk> findByConcert(Long id);
 }

@@ -1,6 +1,8 @@
 package ua.com.dudaryk.model;
 
 
+import ua.com.dudaryk.service.dto.CategoryDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -20,12 +22,21 @@ public class Category implements Serializable {
     @JoinColumn(name = "DUDARYK_ID")
     private Dudaryk dudaryk;
 
+    public static Category toEntity(CategoryDTO categoryDTO) {
+        Category category = new Category()
+                .setName(categoryDTO.getName())
+                .setDudaryk(categoryDTO.getDudaryk());
+        if (categoryDTO.getCategoryId() != 0) {
+            category.setCategoryId(categoryDTO.getCategoryId());
+        }
+        return category;
+    }
 
     public Dudaryk getDudaryk() {
         return dudaryk;
     }
 
-    public Category setDudaryk(Dudaryk dudaryk) {
+    private Category setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
         return this;
     }
@@ -34,7 +45,7 @@ public class Category implements Serializable {
         return name;
     }
 
-    public Category setName(String name) {
+    private Category setName(String name) {
         this.name = name;
         return this;
     }
@@ -43,7 +54,7 @@ public class Category implements Serializable {
         return categoryId;
     }
 
-    public Category setCategoryId(long categoryId) {
+    private Category setCategoryId(long categoryId) {
         this.categoryId = categoryId;
         return this;
     }

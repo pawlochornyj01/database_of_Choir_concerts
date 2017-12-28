@@ -1,6 +1,7 @@
-package ua.com.dudaryk.service.transfers;
+package ua.com.dudaryk.service.dto;
 
 import ua.com.dudaryk.model.Communication;
+import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.Participant;
 
@@ -22,6 +23,26 @@ public class ConcertDTO implements Serializable {
 
     private String poster;
 
+    private static ConcertDTO toDto(Concert concert) {
+        return new ConcertDTO()
+                .setConcertId(concert.getConcertId())
+                .setCommunications(concert.getCommunications())
+                .setDate(concert.getDate())
+                .setDudaryks(concert.getDudaryks())
+                .setGenre(concert.getGenre())
+                .setName(concert.getName())
+                .setParticipants(concert.getParticipants())
+                .setPoster(concert.getPoster());
+    }
+
+    public static List<ConcertDTO> toDto(List<Concert> concerts) {
+        List<ConcertDTO> concertDTOList = new ArrayList<>();
+        for (Concert concert : concerts) {
+            concertDTOList.add(toDto(concert));
+        }
+        return concertDTOList;
+    }
+
     private List<Participant> participants;
 
     private List<Communication> communications = new ArrayList<>();
@@ -32,7 +53,7 @@ public class ConcertDTO implements Serializable {
         return concertId;
     }
 
-    public ConcertDTO setConcertId(long concertId) {
+    private ConcertDTO setConcertId(long concertId) {
         this.concertId = concertId;
         return this;
     }
@@ -41,7 +62,7 @@ public class ConcertDTO implements Serializable {
         return date;
     }
 
-    public ConcertDTO setDate(LocalDateTime date) {
+    private ConcertDTO setDate(LocalDateTime date) {
         this.date = date;
         return this;
     }
@@ -50,7 +71,7 @@ public class ConcertDTO implements Serializable {
         return name;
     }
 
-    public ConcertDTO setName(String name) {
+    private ConcertDTO setName(String name) {
         this.name = name;
         return this;
     }
@@ -59,7 +80,7 @@ public class ConcertDTO implements Serializable {
         return genre;
     }
 
-    public ConcertDTO setGenre(String genre) {
+    private ConcertDTO setGenre(String genre) {
         this.genre = genre;
         return this;
     }
@@ -68,7 +89,7 @@ public class ConcertDTO implements Serializable {
         return poster;
     }
 
-    public ConcertDTO setPoster(String poster) {
+    private ConcertDTO setPoster(String poster) {
         this.poster = poster;
         return this;
     }
@@ -77,7 +98,7 @@ public class ConcertDTO implements Serializable {
         return participants;
     }
 
-    public ConcertDTO setParticipants(List<Participant> participants) {
+    private ConcertDTO setParticipants(List<Participant> participants) {
         this.participants = participants;
         return this;
     }
@@ -86,7 +107,7 @@ public class ConcertDTO implements Serializable {
         return communications;
     }
 
-    public ConcertDTO setCommunications(List<Communication> communications) {
+    private ConcertDTO setCommunications(List<Communication> communications) {
         this.communications = communications;
         return this;
     }
@@ -95,7 +116,7 @@ public class ConcertDTO implements Serializable {
         return dudaryks;
     }
 
-    public ConcertDTO setDudaryks(List<Dudaryk> dudaryks) {
+    private ConcertDTO setDudaryks(List<Dudaryk> dudaryks) {
         this.dudaryks = dudaryks;
         return this;
     }

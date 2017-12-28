@@ -1,12 +1,9 @@
-package ua.com.dudaryk.service.transfers;
+package ua.com.dudaryk.service.dto;
 
-import ua.com.dudaryk.model.Category;
-import ua.com.dudaryk.model.Concert;
-import ua.com.dudaryk.model.UserHistory;
-import ua.com.dudaryk.model.Voice;
+import ua.com.dudaryk.model.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,20 +28,44 @@ public class DudarykDTO implements Serializable {
 
     private String description;
 
-    private LocalDateTime dateOfBirthday;
+    private LocalDate birthday;
 
-    private Voice Voice;
+    private Voice voice;
 
     private boolean isAction;
 
     private String photo;
 
+    private static DudarykDTO toDto(Dudaryk dudaryk) {
+        return new DudarykDTO()
+                .setDudarykId(dudaryk.getDudarykId())
+                .setAction(dudaryk.isAction())
+                .setCategories(dudaryk.getCategories())
+                .setConcerts(dudaryk.getConcerts())
+                .setBirthday(dudaryk.getBirthday())
+                .setDescription(dudaryk.getDescription())
+                .setEmail(dudaryk.getEmail())
+                .setLastName(dudaryk.getLastName())
+                .setName(dudaryk.getName())
+                .setPhone(dudaryk.getPhone())
+                .setPhoto(dudaryk.getPhoto())
+                .setUserHistories(dudaryk.getUserHistories())
+                .setVoice(dudaryk.getVoice());
+    }
+
+    public static List<DudarykDTO> toDto(List<Dudaryk> dudaryks) {
+        List<DudarykDTO> dudarykDTOList = new ArrayList<>();
+        for (Dudaryk dudaryk : dudaryks) {
+            dudarykDTOList.add(toDto(dudaryk));
+        }
+        return dudarykDTOList;
+    }
 
     public long getDudarykId() {
         return dudarykId;
     }
 
-    public DudarykDTO setDudarykId(long dudarykId) {
+    private DudarykDTO setDudarykId(long dudarykId) {
         this.dudarykId = dudarykId;
         return this;
     }
@@ -53,7 +74,7 @@ public class DudarykDTO implements Serializable {
         return concerts;
     }
 
-    public DudarykDTO setConcerts(List<Concert> concerts) {
+    private DudarykDTO setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
         return this;
     }
@@ -62,7 +83,7 @@ public class DudarykDTO implements Serializable {
         return userHistories;
     }
 
-    public DudarykDTO setUserHistories(List<UserHistory> userHistories) {
+    private DudarykDTO setUserHistories(List<UserHistory> userHistories) {
         this.userHistories = userHistories;
         return this;
     }
@@ -71,7 +92,7 @@ public class DudarykDTO implements Serializable {
         return categories;
     }
 
-    public DudarykDTO setCategories(List<Category> categories) {
+    private DudarykDTO setCategories(List<Category> categories) {
         this.categories = categories;
         return this;
     }
@@ -80,7 +101,7 @@ public class DudarykDTO implements Serializable {
         return name;
     }
 
-    public DudarykDTO setName(String name) {
+    private DudarykDTO setName(String name) {
         this.name = name;
         return this;
     }
@@ -89,7 +110,7 @@ public class DudarykDTO implements Serializable {
         return lastName;
     }
 
-    public DudarykDTO setLastName(String lastName) {
+    private DudarykDTO setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -98,7 +119,7 @@ public class DudarykDTO implements Serializable {
         return email;
     }
 
-    public DudarykDTO setEmail(String email) {
+    private DudarykDTO setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -107,7 +128,7 @@ public class DudarykDTO implements Serializable {
         return phone;
     }
 
-    public DudarykDTO setPhone(String phone) {
+    private DudarykDTO setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -116,26 +137,26 @@ public class DudarykDTO implements Serializable {
         return description;
     }
 
-    public DudarykDTO setDescription(String description) {
+    private DudarykDTO setDescription(String description) {
         this.description = description;
         return this;
     }
 
-    public LocalDateTime getDateOfBirthday() {
-        return dateOfBirthday;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public DudarykDTO setDateOfBirthday(LocalDateTime dateOfBirthday) {
-        this.dateOfBirthday = dateOfBirthday;
+    private DudarykDTO setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
         return this;
     }
 
     public Voice getVoice() {
-        return Voice;
+        return voice;
     }
 
-    public DudarykDTO setVoice(Voice voice) {
-        this.Voice = voice;
+    private DudarykDTO setVoice(Voice voice) {
+        this.voice = voice;
         return this;
     }
 
@@ -143,7 +164,7 @@ public class DudarykDTO implements Serializable {
         return isAction;
     }
 
-    public DudarykDTO setAction(boolean action) {
+    private DudarykDTO setAction(boolean action) {
         isAction = action;
         return this;
     }
@@ -152,7 +173,7 @@ public class DudarykDTO implements Serializable {
         return photo;
     }
 
-    public DudarykDTO setPhoto(String photo) {
+    private DudarykDTO setPhoto(String photo) {
         this.photo = photo;
         return this;
     }
