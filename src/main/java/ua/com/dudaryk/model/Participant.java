@@ -1,6 +1,8 @@
 package ua.com.dudaryk.model;
 
 
+import ua.com.dudaryk.service.dto.ParticipantDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -34,11 +36,25 @@ public class Participant implements Serializable {
     @Column(name = "DESCRIPTION")
     private String description;
 
+    public Participant toEntity(ParticipantDTO participantDTO) {
+        Participant participant = new Participant()
+                .setComment(participantDTO.getComment())
+                .setConcerts(participantDTO.getConcerts())
+                .setDescription(participantDTO.getDescription())
+                .setEmail(participantDTO.getEmail())
+                .setName(participantDTO.getName())
+                .setPhone(participantDTO.getPhone());
+        if (participantDTO.getParticipantId() != 0) {
+            participant.setParticipantId(participantDTO.getParticipantId());
+        }
+        return participant;
+    }
+
     public List<Concert> getConcerts() {
         return concerts;
     }
 
-    public Participant setConcerts(List<Concert> concerts) {
+    private Participant setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
         return this;
     }
@@ -47,7 +63,7 @@ public class Participant implements Serializable {
         return participantId;
     }
 
-    public Participant setParticipantId(long participantId) {
+    private Participant setParticipantId(long participantId) {
         this.participantId = participantId;
         return this;
     }
@@ -56,7 +72,7 @@ public class Participant implements Serializable {
         return name;
     }
 
-    public Participant setName(String name) {
+    private Participant setName(String name) {
         this.name = name;
         return this;
     }
@@ -65,7 +81,7 @@ public class Participant implements Serializable {
         return email;
     }
 
-    public Participant setEmail(String email) {
+    private Participant setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -74,7 +90,7 @@ public class Participant implements Serializable {
         return phone;
     }
 
-    public Participant setPhone(String phone) {
+    private Participant setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -83,7 +99,7 @@ public class Participant implements Serializable {
         return comment;
     }
 
-    public Participant setComment(String comment) {
+    private Participant setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -92,7 +108,7 @@ public class Participant implements Serializable {
         return description;
     }
 
-    public Participant setDescription(String description) {
+    private Participant setDescription(String description) {
         this.description = description;
         return this;
     }

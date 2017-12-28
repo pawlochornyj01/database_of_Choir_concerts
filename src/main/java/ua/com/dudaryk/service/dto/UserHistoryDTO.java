@@ -1,10 +1,13 @@
 package ua.com.dudaryk.service.dto;
 
 import ua.com.dudaryk.model.Dudaryk;
+import ua.com.dudaryk.model.UserHistory;
 import ua.com.dudaryk.model.WorkingStatus;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserHistoryDTO implements Serializable {
 
@@ -20,11 +23,29 @@ public class UserHistoryDTO implements Serializable {
 
     private WorkingStatus action;
 
+    private static UserHistoryDTO toDto(UserHistory userHistory) {
+        return new UserHistoryDTO()
+                .setUserHistoryId(userHistory.getUserHistoryId())
+                .setAction(userHistory.getAction())
+                .setComment(userHistory.getComment())
+                .setDate(userHistory.getDate())
+                .setDescription(userHistory.getDescription())
+                .setDudaryk(userHistory.getDudaryk());
+    }
+
+    public static List<UserHistoryDTO> toDto(List<UserHistory> userHistories) {
+        List<UserHistoryDTO> userHistoryDTOList = new ArrayList<>();
+        for (UserHistory userHistory : userHistories) {
+            userHistoryDTOList.add(toDto(userHistory));
+        }
+        return userHistoryDTOList;
+    }
+
     public Dudaryk getDudaryk() {
         return dudaryk;
     }
 
-    public UserHistoryDTO setDudaryk(Dudaryk dudaryk) {
+    private UserHistoryDTO setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
         return this;
     }
@@ -33,7 +54,7 @@ public class UserHistoryDTO implements Serializable {
         return date;
     }
 
-    public UserHistoryDTO setDate(LocalDateTime date) {
+    private UserHistoryDTO setDate(LocalDateTime date) {
         this.date = date;
         return this;
     }
@@ -42,7 +63,7 @@ public class UserHistoryDTO implements Serializable {
         return comment;
     }
 
-    public UserHistoryDTO setComment(String comment) {
+    private UserHistoryDTO setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -51,7 +72,7 @@ public class UserHistoryDTO implements Serializable {
         return description;
     }
 
-    public UserHistoryDTO setDescription(String description) {
+    private UserHistoryDTO setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -60,7 +81,7 @@ public class UserHistoryDTO implements Serializable {
         return action;
     }
 
-    public UserHistoryDTO setAction(WorkingStatus action) {
+    private UserHistoryDTO setAction(WorkingStatus action) {
         this.action = action;
         return this;
     }
@@ -69,7 +90,7 @@ public class UserHistoryDTO implements Serializable {
         return userHistoryId;
     }
 
-    public UserHistoryDTO setUserHistoryId(long userHistoryId) {
+    private UserHistoryDTO setUserHistoryId(long userHistoryId) {
         this.userHistoryId = userHistoryId;
         return this;
     }

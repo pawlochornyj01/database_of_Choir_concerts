@@ -23,75 +23,28 @@ public class UserHistoryServiceImpl implements UserHistoryService {
         this.userHistoryDAO = userHistoryDAO;
     }
 
-    private List<UserHistoryDTO> DTOListBuilder(List<UserHistory> userHistories, List<UserHistoryDTO> userHistoryDTOList) {
-        for (UserHistory userHistory : userHistories) {
-            UserHistoryDTO userHistoryDTO = new UserHistoryDTO()
-                    .setUserHistoryId(userHistory.getUserHistoryId())
-                    .setAction(userHistory.getAction())
-                    .setComment(userHistory.getComment())
-                    .setDate(userHistory.getDate())
-                    .setDescription(userHistory.getDescription())
-                    .setDudaryk(userHistory.getDudaryk());
-            userHistoryDTOList.add(userHistoryDTO);
-        }
-        return userHistoryDTOList;
+    public UserHistory save(UserHistory userHistory) {
+        return userHistoryDAO.saveUH(userHistory);
     }
 
-    public UserHistoryDTO save(UserHistoryDTO userHistoryDTO) {
-        UserHistory userHistory = new UserHistory()
-                .setDudaryk(userHistoryDTO.getDudaryk())
-                .setDate(userHistoryDTO.getDate())
-                .setComment(userHistoryDTO.getComment())
-                .setDescription(userHistoryDTO.getDescription())
-                .setAction(userHistoryDTO.getAction());
-        userHistory = userHistoryDAO.saveUH(userHistory);
-//        userHistoryDTO.setUserHistoryId(userHistory.getUserHistoryId());
-        return userHistoryDTO;
-    }
-
-    public UserHistoryDTO update(UserHistoryDTO userHistoryDTO) {
-        UserHistory userHistory = new UserHistory()
-                .setDudaryk(userHistoryDTO.getDudaryk())
-                .setDate(userHistoryDTO.getDate())
-                .setComment(userHistoryDTO.getComment())
-                .setDescription(userHistoryDTO.getDescription())
-                .setAction(userHistoryDTO.getAction());
-        userHistory = userHistoryDAO.updateUH(userHistory);
-        userHistoryDTO.setUserHistoryId(userHistory.getUserHistoryId());
-        return userHistoryDTO;
+    public UserHistory update(UserHistory userHistory) {
+        return userHistoryDAO.updateUH(userHistory);
     }
 
     public void delete(Long id) {
-        UserHistory userHistory = userHistoryDAO.findByIdUH(id);
-        userHistoryDAO.deleteUH(userHistory);
+        userHistoryDAO.deleteUH(userHistoryDAO.findByIdUH(id));
     }
 
-    public UserHistoryDTO findById(Long id) {
-        UserHistory userHistory = userHistoryDAO.findByIdUH(id);
-        return new UserHistoryDTO()
-                .setUserHistoryId(userHistory.getUserHistoryId())
-                .setAction(userHistory.getAction())
-                .setComment(userHistory.getComment())
-                .setDate(userHistory.getDate())
-                .setDescription(userHistory.getDescription())
-                .setDudaryk(userHistory.getDudaryk());
-
+    public UserHistory findById(Long id) {
+        return userHistoryDAO.findByIdUH(id);
     }
 
-    public List<UserHistoryDTO> findAll() {
-
-        List<UserHistory> userHistories = userHistoryDAO.findAllUH();
-        List<UserHistoryDTO> userHistoryDTOList = new ArrayList<>();
-
-        return DTOListBuilder(userHistories, userHistoryDTOList);
-
+    public List<UserHistory> findAll() {
+        return userHistoryDAO.findAllUH();
     }
 
-    public List<UserHistoryDTO> findByDudarykId(Long id) {
-        List<UserHistory> userHistories = userHistoryDAO.findByDudarykId(id);
-        List<UserHistoryDTO> userHistoryDTOList = new ArrayList<>();
-
-        return DTOListBuilder(userHistories, userHistoryDTOList);
+    public List<UserHistory> findByDudarykId(Long id) {
+        return userHistoryDAO.findByDudarykId(id);
     }
 
 

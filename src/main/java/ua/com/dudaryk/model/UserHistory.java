@@ -1,5 +1,7 @@
 package ua.com.dudaryk.model;
 
+import ua.com.dudaryk.service.dto.UserHistoryDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -31,21 +33,33 @@ public class UserHistory implements Serializable {
     @Column(name = "WorkingStatus")
     private WorkingStatus action;
 
+    public static UserHistory toEntity(UserHistoryDTO userHistoryDTO) {
+        UserHistory userHistory = new UserHistory()
+                .setDudaryk(userHistoryDTO.getDudaryk())
+                .setDate(userHistoryDTO.getDate())
+                .setComment(userHistoryDTO.getComment())
+                .setDescription(userHistoryDTO.getDescription())
+                .setAction(userHistoryDTO.getAction());
+        if (userHistoryDTO.getUserHistoryId() != 0) {
+            userHistory.setUserHistoryId(userHistoryDTO.getUserHistoryId());
+        }
+        return userHistory;
+    }
+
     public Dudaryk getDudaryk() {
         return dudaryk;
     }
 
-    public UserHistory setDudaryk(Dudaryk dudaryk) {
+    private UserHistory setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
         return this;
     }
-
 
     public long getUserHistoryId() {
         return userHistoryId;
     }
 
-    public UserHistory setUserHistoryId(long userHistoryId) {
+    private UserHistory setUserHistoryId(long userHistoryId) {
         this.userHistoryId = userHistoryId;
         return this;
     }
@@ -54,7 +68,7 @@ public class UserHistory implements Serializable {
         return date;
     }
 
-    public UserHistory setDate(LocalDateTime date) {
+    private UserHistory setDate(LocalDateTime date) {
         this.date = date;
         return this;
     }
@@ -63,7 +77,7 @@ public class UserHistory implements Serializable {
         return comment;
     }
 
-    public UserHistory setComment(String comment) {
+    private UserHistory setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -72,7 +86,7 @@ public class UserHistory implements Serializable {
         return description;
     }
 
-    public UserHistory setDescription(String description) {
+    private UserHistory setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -81,7 +95,7 @@ public class UserHistory implements Serializable {
         return action;
     }
 
-    public UserHistory setAction(WorkingStatus action) {
+    private UserHistory setAction(WorkingStatus action) {
         this.action = action;
         return this;
     }
@@ -96,4 +110,5 @@ public class UserHistory implements Serializable {
                 ", action=" + action +
                 '}';
     }
+
 }

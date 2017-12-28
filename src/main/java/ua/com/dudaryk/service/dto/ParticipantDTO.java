@@ -1,6 +1,7 @@
 package ua.com.dudaryk.service.dto;
 
 import ua.com.dudaryk.model.Concert;
+import ua.com.dudaryk.model.Participant;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,11 +23,30 @@ public class ParticipantDTO implements Serializable {
 
     private String description;
 
+    private static ParticipantDTO toDto(Participant participant) {
+        return new ParticipantDTO()
+                .setParticipantId(participant.getParticipantId())
+                .setComment(participant.getComment())
+                .setConcerts(participant.getConcerts())
+                .setDescription(participant.getDescription())
+                .setEmail(participant.getEmail())
+                .setName(participant.getName())
+                .setPhone(participant.getPhone());
+    }
+
+    public static List<ParticipantDTO> toDto(List<Participant> participants) {
+        List<ParticipantDTO> participantDTOList = new ArrayList<>();
+        for (Participant participant : participants) {
+            participantDTOList.add(toDto(participant));
+        }
+        return participantDTOList;
+    }
+
     public long getParticipantId() {
         return participantId;
     }
 
-    public ParticipantDTO setParticipantId(long participantId) {
+    private ParticipantDTO setParticipantId(long participantId) {
         this.participantId = participantId;
         return this;
     }
@@ -35,7 +55,7 @@ public class ParticipantDTO implements Serializable {
         return concerts;
     }
 
-    public ParticipantDTO setConcerts(List<Concert> concerts) {
+    private ParticipantDTO setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
         return this;
     }
@@ -44,7 +64,7 @@ public class ParticipantDTO implements Serializable {
         return name;
     }
 
-    public ParticipantDTO setName(String name) {
+    private ParticipantDTO setName(String name) {
         this.name = name;
         return this;
     }
@@ -53,7 +73,7 @@ public class ParticipantDTO implements Serializable {
         return email;
     }
 
-    public ParticipantDTO setEmail(String email) {
+    private ParticipantDTO setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -62,7 +82,7 @@ public class ParticipantDTO implements Serializable {
         return phone;
     }
 
-    public ParticipantDTO setPhone(String phone) {
+    private ParticipantDTO setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -71,7 +91,7 @@ public class ParticipantDTO implements Serializable {
         return comment;
     }
 
-    public ParticipantDTO setComment(String comment) {
+    private ParticipantDTO setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -80,7 +100,7 @@ public class ParticipantDTO implements Serializable {
         return description;
     }
 
-    public ParticipantDTO setDescription(String description) {
+    private ParticipantDTO setDescription(String description) {
         this.description = description;
         return this;
     }
