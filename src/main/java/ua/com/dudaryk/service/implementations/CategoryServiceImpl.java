@@ -31,7 +31,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     public List<Category> findAll() {
-        return  categoryDAO.findAllCategory();
+        return categoryDAO.findAllCategory();
 
     }
 

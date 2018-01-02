@@ -23,7 +23,6 @@ public class ConcertServiceImpl implements ConcertService {
         this.concertDAO = concertDAO;
     }
 
-
     public Concert save(Concert concert) {
         return concertDAO.saveConcert(concert);
     }

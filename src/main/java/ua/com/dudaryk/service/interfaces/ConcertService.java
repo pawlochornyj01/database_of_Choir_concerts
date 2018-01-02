@@ -13,4 +13,14 @@ public interface ConcertService {
     List<Concert> findByDate(LocalDateTime date);
 
     List<Concert> findByParticipant(Long id);
+
+    Concert save(Concert concert);
+
+    Concert update(Concert concert);
+
+    void delete(Long id);
+
+    Concert findById(Long id);
+
+    List<Concert> findAll();
 }

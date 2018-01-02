@@ -13,4 +13,14 @@ public interface CommunicationService {
     List<Communication> findByMembershipDate(LocalDateTime date);
 
     List<Communication> findByName(String name);
+
+    Communication findById(Long id);
+
+    Communication save(Communication communication);
+
+    Communication update(Communication communication);
+
+    void delete(Long id);
+
+    List<Communication> findAll();
 }

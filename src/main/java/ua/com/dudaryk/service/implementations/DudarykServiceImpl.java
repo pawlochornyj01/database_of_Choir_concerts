@@ -17,7 +17,6 @@ public class DudarykServiceImpl implements DudarykService {
 
     private DudarykDAO dudarykDAO;
 
-    @Autowired
     public DudarykServiceImpl(DudarykDAO dudarykDAO) {
         this.dudarykDAO = dudarykDAO;
     }

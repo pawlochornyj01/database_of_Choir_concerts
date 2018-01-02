@@ -9,4 +9,9 @@ public interface ParticipantService {
 
     List<Participant> findByName(String name);
 
+    Participant save(Participant participant);
+
+    void delete(Long id);
+
+    Participant findById(Long id);
 }

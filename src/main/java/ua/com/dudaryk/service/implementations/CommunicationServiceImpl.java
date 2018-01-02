@@ -30,6 +30,7 @@ public class CommunicationServiceImpl implements CommunicationService {
         return communicationDAO.findByCommunicationId(id);
     }
 
+
     public Communication save(Communication communication) {
         return communicationDAO.saveCommunication(communication);
     }
@@ -41,6 +42,7 @@ public class CommunicationServiceImpl implements CommunicationService {
     public void delete(Long id) {
         communicationDAO.deleteCommunication(communicationDAO.findByCommunicationId(id));
     }
+
 
     public List<Communication> findAll() {
         return communicationDAO.findAllCommunication();
