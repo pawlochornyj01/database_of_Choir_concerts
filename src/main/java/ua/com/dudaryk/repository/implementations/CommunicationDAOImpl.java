@@ -6,6 +6,7 @@ import ua.com.dudaryk.model.Communication;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,9 +14,9 @@ import java.util.List;
 @Transactional
 public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> implements CommunicationDAO {
 
-    @Override
-    public void setClazz(Class<Communication> clazzToSet) {
-        super.setClazz(clazzToSet);
+    @PostConstruct
+    private void init() {
+        setClazz(Communication.class);
     }
 
     @Override
@@ -35,7 +36,7 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
 
     @Override
     public void deleteCommunication(Communication communication) {
-         super.delete(communication);
+        super.delete(communication);
     }
 
     @Override

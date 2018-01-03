@@ -6,6 +6,7 @@ import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.ConcertDAO;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,10 +14,9 @@ import java.util.List;
 @Transactional
 public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertDAO {
 
-
-    @Override
-    public void setClazz(Class<Concert> clazzToSet) {
-        super.setClazz(clazzToSet);
+    @PostConstruct
+    private void init() {
+        setClazz(Concert.class);
     }
 
     @Override

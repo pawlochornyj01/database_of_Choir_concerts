@@ -6,11 +6,17 @@ import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.ParticipantDAO;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Repository
 @Transactional
 public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements ParticipantDAO {
+
+    @PostConstruct
+    private void init() {
+        setClazz(Participant.class);
+    }
 
     @Override
     public void setClazz(Class<Participant> clazzToSet) {

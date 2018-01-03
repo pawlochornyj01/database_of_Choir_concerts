@@ -6,16 +6,16 @@ import ua.com.dudaryk.model.UserHistory;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Repository
 @Transactional
 public class UserHistoryDAOImpl extends AbstractDAOImpl<UserHistory> implements UserHistoryDAO {
 
-
-    @Override
-    public void setClazz(Class<UserHistory> clazzToSet) {
-        super.setClazz(clazzToSet);
+    @PostConstruct
+    private void init() {
+        setClazz(UserHistory.class);
     }
 
     @Override

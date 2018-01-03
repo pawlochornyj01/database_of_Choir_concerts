@@ -7,11 +7,17 @@ import ua.com.dudaryk.model.Voice;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.DudarykDAO;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Repository
 @Transactional
 public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykDAO {
+
+    @PostConstruct
+    private void init() {
+        setClazz(Dudaryk.class);
+    }
 
     @Override
     public void setClazz(Class<Dudaryk> clazzToSet) {
