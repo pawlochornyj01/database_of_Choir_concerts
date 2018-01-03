@@ -8,7 +8,7 @@ import ua.com.dudaryk.service.interfaces.ParticipantService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/participant")
+@RequestMapping("participant/")
 public class ParticipantController {
 
     private ParticipantService participantService;

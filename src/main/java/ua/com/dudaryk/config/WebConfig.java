@@ -16,16 +16,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import java.util.Locale;
 
 @Configuration
-@EnableWebMvc//сєку
+@EnableWebMvc
 @ComponentScan("ua.com.dudaryk")  //TODO: розберешся з отим всім, не пиши від фанаря методом тику
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/jsp/");
+        resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
-
         return resolver;
     }
 

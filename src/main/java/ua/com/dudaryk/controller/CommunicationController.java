@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/communication")
+@RequestMapping("communication/")
 public class CommunicationController {
 
     private CommunicationService communicationService;

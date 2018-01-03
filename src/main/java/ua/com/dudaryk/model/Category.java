@@ -36,7 +36,7 @@ public class Category implements Serializable {
         return dudaryk;
     }
 
-    private Category setDudaryk(Dudaryk dudaryk) {
+    public Category setDudaryk(Dudaryk dudaryk) {
         this.dudaryk = dudaryk;
         return this;
     }
@@ -45,7 +45,7 @@ public class Category implements Serializable {
         return name;
     }
 
-    private Category setName(String name) {
+    public Category setName(String name) {
         this.name = name;
         return this;
     }
@@ -54,7 +54,7 @@ public class Category implements Serializable {
         return categoryId;
     }
 
-    private Category setCategoryId(long categoryId) {
+    public Category setCategoryId(long categoryId) {
         this.categoryId = categoryId;
         return this;
     }

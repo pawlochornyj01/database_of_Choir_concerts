@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/concert")
+@RequestMapping("concert/")
 public class ConcertController {
 
     private ConcertService concertService;

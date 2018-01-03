@@ -11,8 +11,9 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer implements WebApplicationInitializer{
-
+public class WebAppInitializer
+        extends AbstractAnnotationConfigDispatcherServletInitializer
+        implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
@@ -20,7 +21,8 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         servletContext.addListener(new ContextLoaderListener(context));
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("DispatcherServlet", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
-        dispatcher.addMapping("*.html");
+        dispatcher.setInitParameter("throwExceptionIfNoHandlerFound", "true");
+        dispatcher.addMapping("/");
 //        dispatcher.addMapping("*.pdf");
 //        dispatcher.addMapping("*.json");
     }
@@ -28,7 +30,6 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
     private AnnotationConfigWebApplicationContext getContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext(); //TODO: почитати за app context
         context.register(AppConfig.class);
-//        context.setConfigLocation("ua.com.dudaryk.config.WebConfig");
         return context;
     }
 

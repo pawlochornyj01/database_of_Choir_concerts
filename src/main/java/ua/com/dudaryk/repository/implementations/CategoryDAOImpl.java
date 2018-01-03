@@ -6,15 +6,16 @@ import ua.com.dudaryk.model.Category;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CategoryDAO;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Repository
 @Transactional
 public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements CategoryDAO {
-
-    @Override
-    public void setClazz(Class<Category> clazzToSet) {
-        super.setClazz(clazzToSet);
+    
+    @PostConstruct
+    private void init() {
+        setClazz(Category.class);
     }
 
     @Override

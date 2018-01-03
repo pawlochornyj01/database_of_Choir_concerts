@@ -13,7 +13,7 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
     @PersistenceContext
     protected EntityManager entityManager;
 
-    public void setClazz(Class<T> clazzToSet) {
+    protected void setClazz(Class<T> clazzToSet) {
         this.clazz = clazzToSet;
     }
 
@@ -43,7 +43,6 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
 
     @Transactional(readOnly = true)
     public List<T> findAll() {
-        return entityManager.createQuery("from " + clazz.getName())
-                .getResultList();
+        return entityManager.createQuery("from " + clazz.getName()).getResultList();
     }
 }

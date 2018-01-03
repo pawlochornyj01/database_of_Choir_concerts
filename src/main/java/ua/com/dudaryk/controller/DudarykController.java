@@ -9,7 +9,7 @@ import ua.com.dudaryk.service.interfaces.DudarykService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/dudaryk")
+@RequestMapping("singer/")
 public class DudarykController {
 
     private DudarykService dudarykService;

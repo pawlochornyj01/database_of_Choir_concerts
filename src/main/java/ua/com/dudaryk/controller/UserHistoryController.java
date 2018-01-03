@@ -8,7 +8,7 @@ import ua.com.dudaryk.service.interfaces.UserHistoryService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/userHistory")
+@RequestMapping("userHistory/")
 public class UserHistoryController {
 
     private UserHistoryService userHistoryService;
