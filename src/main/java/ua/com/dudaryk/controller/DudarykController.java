@@ -19,12 +19,12 @@ public class DudarykController {
         this.dudarykService = dudarykService;
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "all/")
     public List<Dudaryk> findAll() {
         return dudarykService.findAll();
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @RequestMapping(value = "update/", method = RequestMethod.POST)
     public Dudaryk update(@RequestBody Dudaryk dudaryk) {
 
         if (dudaryk.getDudarykId() > 0)
@@ -32,43 +32,43 @@ public class DudarykController {
         return dudaryk;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "save/", method = RequestMethod.POST)
     public Dudaryk save(@RequestBody Dudaryk dudaryk) {
 
         return dudarykService.save(dudaryk);
     }
 
-    @GetMapping(value = "/delete")
+    @GetMapping(value = "delete/")
     public void delete(@PathVariable("id") Long id) {
         dudarykService.delete(id);
     }
 
-    @GetMapping(value = "/byId")
+    @GetMapping(value = "byId/")
     public Dudaryk findById(@PathVariable("id") Long id) {
         return dudarykService.findById(id);
     }
 
-    @GetMapping(value = "/byName")
+    @GetMapping(value = "byName/")
     public List<Dudaryk> findByName(@PathVariable("name") String name) {
         return dudarykService.findByName(name);
     }
 
-    @GetMapping(value = "/byLastName")
+    @GetMapping(value = "byLastName/")
     public List<Dudaryk> findByLastName(@PathVariable("lastName") String lastName) {
         return dudarykService.findByLastName(lastName);
     }
 
-    @GetMapping(value = "/byVoice")
+    @GetMapping(value = "byVoice/")
     public List<Dudaryk> findByVoice(@PathVariable("voice") Voice voice) {
         return dudarykService.findByVoice(voice);
     }
 
-    @GetMapping(value = "/action")
+    @GetMapping(value = "action/")
     public List<Dudaryk> findAction() {
         return dudarykService.findAction();
     }
 
-    @GetMapping(value = "/byConcert")
+    @GetMapping(value = "byConcert/")
     public List<Dudaryk> findByConcert(@PathVariable("id") Long id) {
         return dudarykService.findByConcert(id);
     }

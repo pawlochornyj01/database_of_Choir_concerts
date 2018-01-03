@@ -18,12 +18,12 @@ public class UserHistoryController {
         this.userHistoryService = userHistoryService;
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "all/")
     public List<UserHistory> findAll() {
         return userHistoryService.findAll();
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @RequestMapping(value = "update/", method = RequestMethod.POST)
     public UserHistory update(@RequestBody UserHistory userHistory) {
 
         if (userHistory.getUserHistoryId() > 0)
@@ -31,23 +31,23 @@ public class UserHistoryController {
         return userHistory;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "save/", method = RequestMethod.POST)
     public UserHistory save(@RequestBody UserHistory userHistory) {
 
         return userHistoryService.save(userHistory);
     }
 
-    @GetMapping(value = "/delete")
+    @GetMapping(value = "delete/")
     public void delete(@PathVariable("id") Long id) {
         userHistoryService.delete(id);
     }
 
-    @GetMapping(value = "/byId")
+    @GetMapping(value = "byId/")
     public UserHistory findById(@PathVariable("id") Long id) {
         return userHistoryService.findById(id);
     }
 
-    @GetMapping(value = "/byDudaryk")
+    @GetMapping(value = "byDudaryk/")
     public List<UserHistory> findByDudarykId(@PathVariable("id") Long id) {
         return userHistoryService.findByDudarykId(id);
     }

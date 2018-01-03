@@ -27,7 +27,7 @@ public class CategoryController {
         return modelAndView;
     }
 //
-//    @RequestMapping(value = "/update", method = RequestMethod.POST)
+//    @RequestMapping(value = "update/", method = RequestMethod.POST)
 //    public Category update(@RequestBody Category category) {
 //
 //        if (category.getCategoryId() > 0)
@@ -35,13 +35,13 @@ public class CategoryController {
 //        return category;
 //    }
 //
-//    @RequestMapping(value = "/save", method = RequestMethod.POST)
+//    @RequestMapping(value = "save/", method = RequestMethod.POST)
 //    public Category save(@RequestBody Category category) {
 //
 //        return categoryService.save(category);
 //    }
 //
-//    @GetMapping(value = "/byDudarykId")
+//    @GetMapping(value = "byDudarykId/")
 //    public Category findByDudarykId(Long id) {
 //        return categoryService.findByDudarykId(id);
 //    }

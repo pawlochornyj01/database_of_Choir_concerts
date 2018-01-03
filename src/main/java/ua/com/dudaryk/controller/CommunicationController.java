@@ -20,12 +20,12 @@ public class CommunicationController {
         this.communicationService = communicationService;
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "all/")
     public List<Communication> findAll() {
         return communicationService.findAll();
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @RequestMapping(value = "update/", method = RequestMethod.POST)
     public Communication update(@RequestBody Communication communication) {
 
         if (communication.getCommunicationId() > 0)
@@ -33,33 +33,33 @@ public class CommunicationController {
         return communication;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "save/", method = RequestMethod.POST)
     public Communication save(@RequestBody Communication communication) {
 
         return communicationService.save(communication);
     }
 
-    @GetMapping(value = "/delete")
+    @GetMapping(value = "delete/")
     public void delete(@PathVariable("id") Long id) {
         communicationService.delete(id);
     }
 
-    @GetMapping(value = "/byId")
+    @GetMapping(value = "byId/")
     public Communication findById(@PathVariable("id") Long id) {
         return communicationService.findById(id);
     }
 
-    @GetMapping(value = "/byConcertId")
+    @GetMapping(value = "byConcertId/")
     public List<Communication> findByConcertId(@PathVariable("id") Long id) {
         return communicationService.findByConcertId(id);
     }
 
-    @GetMapping(value = "/byMembership")
+    @GetMapping(value = "byMembership/")
     public List<Communication> findByMembershipDate(@PathVariable("date") LocalDateTime date) {
         return communicationService.findByMembershipDate(date);
     }
 
-    @GetMapping(value = "/byName")
+    @GetMapping(value = "byName/")
     public List<Communication> findByName(String name) {
         return communicationService.findByName(name);
     }
