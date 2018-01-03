@@ -17,6 +17,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     private CategoryDAO categoryDAO;
 
+
     @Autowired
     public CategoryServiceImpl(CategoryDAO categoryDAO) {
         this.categoryDAO = categoryDAO;
@@ -32,7 +33,6 @@ public class CategoryServiceImpl implements CategoryService {
 
     public List<Category> findAll() {
         return categoryDAO.findAllCategory();
-
     }
 
     public Category findByDudarykId(Long id) {
