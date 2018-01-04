@@ -3,9 +3,13 @@ package ua.com.dudaryk.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import ua.com.dudaryk.model.Category;
 import ua.com.dudaryk.service.interfaces.CategoryService;
+
+import javax.validation.Valid;
 
 //@RestController
 @Controller
@@ -26,7 +30,21 @@ public class CategoryController {
         modelAndView.addObject("categoryList", categoryService.findAll());
         return modelAndView;
     }
-//
+
+    @RequestMapping("save/")
+    public void add() {
+
+    }
+
+    @RequestMapping(value = "save/", method = RequestMethod.POST)
+    public String categoryAddSubmit(@ModelAttribute("category") @Valid Category category, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/category/save/";
+        }
+        categoryService.save(category);
+        return "redirect:/category/all/";
+    }
+
 //    @RequestMapping(value = "update/", method = RequestMethod.POST)
 //    public Category update(@RequestBody Category category) {
 //

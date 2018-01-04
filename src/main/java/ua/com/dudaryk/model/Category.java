@@ -1,6 +1,7 @@
 package ua.com.dudaryk.model;
 
 
+import org.hibernate.validator.constraints.NotEmpty;
 import ua.com.dudaryk.service.dto.CategoryDTO;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ public class Category implements Serializable {
     private long categoryId;
 
     @Column(name = "NAME")
+    @NotEmpty
     private String name;
 
     @ManyToOne
