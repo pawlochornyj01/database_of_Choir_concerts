@@ -4,19 +4,20 @@
 <html>
 <head>
     <style type="text/css">
-        h1{
+        h1 {
             color: firebrick;
             font-family: Arial;
-            font-size: 70px;
+            font-size: 50px;
             text-align: center;
         }
 
-    .class1{
-    border: 4px outset firebrick;
-        padding: 10px;
+        .class1 {
+            border: 4px outset firebrick;
+            padding: 10px;
 
-    }
-        th.class1{
+        }
+
+        th.class1 {
             color: antiquewhite;
         }
     </style>
@@ -27,8 +28,6 @@
     <tr>
         <th>Id</th>
         <th>Name</th>
-        <th>Dudaryk Name</th>
-        <th>Dudaryk LastName</th>
     </tr>
 
     <c:forEach items="${categoryList}" var="category">
@@ -36,12 +35,22 @@
 
             <td>${category.categoryId}</td>
             <td>${category.name}</td>
-            <td>${category.dudaryk.name}</td>
-            <td>${category.dudaryk.lastname}</td>
-
         </tr>
         <br/>
     </c:forEach>
 </table>
+
+<h2>Add a new Category</h2>
+
+<form:form method="post" modelAttribute="category">
+    <p>
+        Name:
+        <input type="text" name="name"/>
+        <form:errors path="name" cssclass="error"><span id="name.errors"
+                                                        cssclass="error">may not be empty</span></form:errors>
+    </p>
+
+    <input type="submit"/>
+</form:form>
 </body>
 </html>

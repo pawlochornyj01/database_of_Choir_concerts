@@ -31,12 +31,12 @@ public class CategoryController {
         return modelAndView;
     }
 
-    @RequestMapping("save/")
+    @RequestMapping("all/")
     public void add() {
 
     }
 
-    @RequestMapping(value = "save/", method = RequestMethod.POST)
+    @RequestMapping(value = "all/", method = RequestMethod.POST)
     public String categoryAddSubmit(@ModelAttribute("category") @Valid Category category, BindingResult result) {
         if (result.hasErrors()) {
             return "/category/save/";
