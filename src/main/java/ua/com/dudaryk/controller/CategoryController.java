@@ -31,10 +31,10 @@ public class CategoryController {
         return modelAndView;
     }
 
-    @RequestMapping("all/")
-    public void add() {
-
-    }
+//    @RequestMapping("all/")
+//    public void add() {
+//
+//    }
 
     @RequestMapping(value = "all/", method = RequestMethod.POST)
     public String categoryAddSubmit(@ModelAttribute("category") @Valid Category category, BindingResult result) {
@@ -42,7 +42,7 @@ public class CategoryController {
             return "category_list";
         }
         categoryService.save(category);
-        return "redirect:category_list";
+        return "redirect:/category/all/";
     }
 
     @RequestMapping("byDudarykId/")
@@ -64,13 +64,13 @@ public class CategoryController {
 //        modelAndView.addObject("categoryList", categoryService.findByDudarykId(id));
 //        return modelAndView;
 //    }
-//    @RequestMapping(value = "update/", method = RequestMethod.POST)
-//    public Category update(@RequestBody Category category) {
-//
-//        if (category.getCategoryId() > 0)
-//            category = categoryService.update(category);
-//        return category;
-//    }
+    @RequestMapping(value = "update/", method = RequestMethod.PUT)
+    public Category update(@RequestBody Category category) {
+
+        if (category.getCategoryId() > 0)
+            category = categoryService.update(category);
+        return category;
+    }
 //
 //    @RequestMapping(value = "save/", method = RequestMethod.POST)
 //    public Category save(@RequestBody Category category) {

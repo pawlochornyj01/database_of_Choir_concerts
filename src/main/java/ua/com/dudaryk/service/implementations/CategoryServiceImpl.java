@@ -16,7 +16,6 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService {
 
     private CategoryDAO categoryDAO;
-    static List<Category> categoryList = new ArrayList<>();
 
     @Autowired
     public CategoryServiceImpl(CategoryDAO categoryDAO) {
@@ -32,8 +31,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     public List<Category> findAll() {
-        categoryList.addAll(categoryDAO.findAllCategory());
-        return categoryList;
+        return categoryDAO.findAllCategory();
     }
 
     public Category findByDudarykId(Long id) {
@@ -41,13 +39,5 @@ public class CategoryServiceImpl implements CategoryService {
 
 
     }
-
-    static {
-        Category category = new Category();
-        category.setCategoryId(1000);
-        category.setName("artist");
-        categoryList.add(category);
-    }
-
 
 }
