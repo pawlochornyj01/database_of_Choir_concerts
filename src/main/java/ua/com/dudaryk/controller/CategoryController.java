@@ -44,6 +44,14 @@ public class CategoryController {
         categoryService.save(category);
         return "redirect:/category/all/";
     }
+    @RequestMapping(value = "all/", method = RequestMethod.DELETE)
+    public String categoryDelete(@ModelAttribute("category") @Valid Category category, BindingResult result) {
+        if (result.hasErrors()) {
+            return "category_list";
+        }
+        categoryService.save(category);
+        return "redirect:/category/all/";
+    }
 
     @RequestMapping("byDudarykId/")
     public void findByDudarykId() {

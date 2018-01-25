@@ -36,6 +36,9 @@
 
             <td>${category.categoryId}</td>
             <td>${category.name}</td>
+            <td><form action="/category/all/"method="post">
+                <input type="submit" name="category" value="Delete" var="category" />
+            </form></td>
         </tr>
         <br/>
     </c:forEach>
