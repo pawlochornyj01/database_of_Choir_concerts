@@ -41,5 +41,10 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
         return (Category) entityManager.createQuery(query).getSingleResult();
     }
 
+    @Override
+    public void deleteCategory(Category category) {
+        super.delete(category);
+    }
+
 
 }
