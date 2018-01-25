@@ -31,13 +31,9 @@ public class CategoryController {
         return modelAndView;
     }
 
-//    @RequestMapping("all/")
-//    public void add() {
-//
-//    }
 
     @RequestMapping(value = "all/", method = RequestMethod.POST)
-    public String categoryAddSubmit(@ModelAttribute("category") @Valid Category category, BindingResult result) {
+    public String addCategory(@ModelAttribute("category") @Valid Category category, BindingResult result) {
         if (result.hasErrors()) {
             return "category_list";
         }
@@ -50,43 +46,14 @@ public class CategoryController {
         categoryService.delete(new Category().setCategoryId(id));
         return "redirect:/category/all/";
     }
-//    @RequestMapping(value = "all/", method = RequestMethod.DELETE)
-//    public ModelAndView delete(@ModelAttribute("category") @Valid Category category) {
-//        categoryService.delete(category);
-//        return new ModelAndView("category_list");
-//    }
 
-    @RequestMapping("byDudarykId/")
-    public void findByDudarykId() {
-
-    }
-
-    @RequestMapping(value = "byDudarykId/", method = RequestMethod.POST)
-    public String categoryFind(@ModelAttribute("category") @Valid Category category, BindingResult result, long id) {
-        if (result.hasErrors()) {
-            return "category/byDudarykId/";
-        }
-        categoryService.findByDudarykId(id);
-        return "redirect:category/byDudarykId/";
-    }
-
-    //    @GetMapping(value = "byDudarykId/")
-//    public ModelAndView findByDudarykId(long id) {
-//        ModelAndView modelAndView = new ModelAndView("category_list");
-//        modelAndView.addObject("categoryList", categoryService.findByDudarykId(id));
-//        return modelAndView;
-//    }
     @RequestMapping(value = "update/", method = RequestMethod.PUT)
-    public Category update(@RequestBody Category category) {
+    public Category updateCategory(@RequestBody Category category) {
 
         if (category.getCategoryId() > 0)
             category = categoryService.update(category);
         return category;
     }
 
-//
-//    @GetMapping(value = "byDudarykId/")
-//    public Category findByDudarykId(Long id) {
-//        return categoryService.findByDudarykId(id);
-//    }
+
 }

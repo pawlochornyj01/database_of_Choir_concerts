@@ -50,11 +50,11 @@ public class CommunicationController {
 //        return communicationService.findAll();
 //    }
 //
-//    @RequestMapping(value = "update/", method = RequestMethod.POST)
-//    public Communication update(@RequestBody Communication communication) {
+//    @RequestMapping(value = "updateCategory/", method = RequestMethod.POST)
+//    public Communication updateCategory(@RequestBody Communication communication) {
 //
 //        if (communication.getCommunicationId() > 0)
-//            communication = communicationService.update(communication);
+//            communication = communicationService.updateCategory(communication);
 //        return communication;
 //    }
 //
