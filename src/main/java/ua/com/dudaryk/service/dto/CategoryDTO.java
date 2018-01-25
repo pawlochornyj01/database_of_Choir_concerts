@@ -13,13 +13,13 @@ public class CategoryDTO implements Serializable {
 
     private String name;
 
-    private Dudaryk dudaryk;
+    private List<Dudaryk> dudaryks;
 
     private static CategoryDTO toDto(Category category) {
         return new CategoryDTO()
                 .setCategoryId(category.getCategoryId())
                 .setName(category.getName())
-                .setDudaryk(category.getDudaryk());
+                .setDudaryks(category.getDudaryks());
     }
 
     public static List<CategoryDTO> toDto(List<Category> categories) {
@@ -49,14 +49,12 @@ public class CategoryDTO implements Serializable {
         return this;
     }
 
-    public Dudaryk getDudaryk() {
-        return dudaryk;
+    public List<Dudaryk> getDudaryks() {
+        return dudaryks;
     }
 
-    private CategoryDTO setDudaryk(Dudaryk dudaryk) {
-        this.dudaryk = dudaryk;
+    public CategoryDTO setDudaryks(List<Dudaryk> dudaryks) {
+        this.dudaryks = dudaryks;
         return this;
     }
-
-
 }

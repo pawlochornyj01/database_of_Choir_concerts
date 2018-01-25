@@ -24,8 +24,10 @@ public class Dudaryk implements Serializable {
     @OneToMany(mappedBy = "dudaryk", cascade = CascadeType.ALL)
     private List<UserHistory> userHistories = new ArrayList<>();
 
-    @OneToMany(mappedBy = "dudaryk", cascade = CascadeType.ALL)
-    private List<Category> categories = new ArrayList<>();
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "dudaryk_category", joinColumns = @JoinColumn(name = "DUDARYK_ID"),
+            inverseJoinColumns = @JoinColumn(name = "CATEGORY_ID"))
+    private List<Category> categories;
 
     @Column(name = "NAME")
     private String name;

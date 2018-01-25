@@ -6,6 +6,8 @@ import ua.com.dudaryk.service.dto.CategoryDTO;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "category")
@@ -20,26 +22,25 @@ public class Category implements Serializable {
     @NotEmpty
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "DUDARYK_ID")
-    private Dudaryk dudaryk;
+    @ManyToMany(mappedBy = "categories")
+    private List<Dudaryk> dudaryks = new ArrayList<>();
 
     public static Category toEntity(CategoryDTO categoryDTO) {
         Category category = new Category()
                 .setName(categoryDTO.getName())
-                .setDudaryk(categoryDTO.getDudaryk());
+                .setDudaryks(categoryDTO.getDudaryks());
         if (categoryDTO.getCategoryId() != 0) {
             category.setCategoryId(categoryDTO.getCategoryId());
         }
         return category;
     }
 
-    public Dudaryk getDudaryk() {
-        return dudaryk;
+    public List<Dudaryk> getDudaryks() {
+        return dudaryks;
     }
 
-    public Category setDudaryk(Dudaryk dudaryk) {
-        this.dudaryk = dudaryk;
+    public Category setDudaryks(List<Dudaryk> dudaryks) {
+        this.dudaryks = dudaryks;
         return this;
     }
 

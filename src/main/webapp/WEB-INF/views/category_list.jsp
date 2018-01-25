@@ -39,14 +39,9 @@
             <td>${category.name}</td>
             <td>
                 <form action="/category/delete/${category.categoryId}/" method="get">
-                    <%--<input type="hidden" name="categoryId" value="${category.categoryId}" />--%>
                     <input type="submit" value="Delete" name="remove">
                 </form>
-                <%--<button type="submit" class="btn" data-toggle="confirmation" name="delete"--%>
-                        <%--data-placement="left" data-singleton="true"--%>
-                        <%--data-href='<c:url value="/category/delete/${category.categoryId}/"/>'>--%>
-                    <%--Delete--%>
-                <%--</button>--%>
+
             </td>
         </tr>
         <br/>
@@ -65,21 +60,6 @@
     <input type="submit"/>
 </form:form>
 
-<%--<h3>find category by dudaruk</h3>--%>
-
-<%--<form:form method="post" modelAttribute="category">--%>
-<%--<p>--%>
-<%--dudaryk id:--%>
-<%--<input type="number" name="id"/>--%>
-
-<%--</p>--%>
-
-<%--<input type="submit"/>--%>
-<%--</form:form>--%>
-
-<%--<h4>This is the category you were looking for</h4>--%>
-<%--<h5>${category.categoryId}--%>
-<%--${category.name}</h5>--%>
 
 </body>
 </html>

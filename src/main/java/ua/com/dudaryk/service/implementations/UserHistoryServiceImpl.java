@@ -26,19 +26,19 @@ public class UserHistoryServiceImpl implements UserHistoryService {
     }
 
     public UserHistory update(UserHistory userHistory) {
-        return userHistoryDAO.updateUH(userHistory);
+        return userHistoryDAO.updateUserHistory(userHistory);
     }
 
     public void delete(Long id) {
-        userHistoryDAO.deleteUH(userHistoryDAO.findByIdUH(id));
+        userHistoryDAO.deleteUserHistory(userHistoryDAO.findByIdUserHistory(id));
     }
 
     public UserHistory findById(Long id) {
-        return userHistoryDAO.findByIdUH(id);
+        return userHistoryDAO.findByIdUserHistory(id);
     }
 
     public List<UserHistory> findAll() {
-        return userHistoryDAO.findAllUH();
+        return userHistoryDAO.findAllUserHistory();
     }
 
     @Transactional(readOnly = true)
