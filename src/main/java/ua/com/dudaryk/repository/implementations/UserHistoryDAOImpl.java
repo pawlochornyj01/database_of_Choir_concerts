@@ -25,27 +25,27 @@ public class UserHistoryDAOImpl extends AbstractDAOImpl<UserHistory> implements 
     }
 
     @Override
-    public List<UserHistory> findAllUH() {
+    public List<UserHistory> findAllUserHistory() {
         return findAll();
     }
 
     @Override
-    public UserHistory saveUH(UserHistory userHistory) {
+    public UserHistory saveUserHistory(UserHistory userHistory) {
         return save(userHistory);
     }
 
     @Override
-    public UserHistory updateUH(UserHistory userHistory) {
+    public UserHistory updateUserHistory(UserHistory userHistory) {
         return update(userHistory);
     }
 
     @Override
-    public UserHistory findByIdUH(Long id) {
+    public UserHistory findByIdUserHistory(Long id) {
         return findById(id);
     }
 
     @Override
-    public void deleteUH(UserHistory userHistory) {
+    public void deleteUserHistory(UserHistory userHistory) {
         super.delete(userHistory);
     }
 

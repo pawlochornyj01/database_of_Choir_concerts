@@ -8,14 +8,14 @@ public interface UserHistoryDAO  {
 
     List<UserHistory> findByDudarykId(Long id);
 
-    List<UserHistory> findAllUH();
+    List<UserHistory> findAllUserHistory();
 
-    UserHistory saveUH(UserHistory userHistory);
+    UserHistory saveUserHistory(UserHistory userHistory);
 
-    UserHistory updateUH(UserHistory userHistory);
+    UserHistory updateUserHistory(UserHistory userHistory);
 
-    UserHistory findByIdUH(Long id);
+    UserHistory findByIdUserHistory(Long id);
 
-    void deleteUH(UserHistory userHistory);
+    void deleteUserHistory(UserHistory userHistory);
 
 }

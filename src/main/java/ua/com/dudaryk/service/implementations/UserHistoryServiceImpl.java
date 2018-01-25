@@ -6,9 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.UserHistory;
 import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 import ua.com.dudaryk.service.interfaces.UserHistoryService;
-import ua.com.dudaryk.service.dto.UserHistoryDTO;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,7 +22,7 @@ public class UserHistoryServiceImpl implements UserHistoryService {
     }
 
     public UserHistory save(UserHistory userHistory) {
-        return userHistoryDAO.saveUH(userHistory);
+        return userHistoryDAO.saveUserHistory(userHistory);
     }
 
     public UserHistory update(UserHistory userHistory) {
