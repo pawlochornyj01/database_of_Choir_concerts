@@ -41,26 +41,31 @@ public class DudarykServiceImpl implements DudarykService {
         return dudarykDAO.findAllDudaryks();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByName(String name) {
         return dudarykDAO.findByName(name);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByLastName(String lastName) {
         return dudarykDAO.findByLastName(lastName);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByVoice(Voice voice) {
         return dudarykDAO.findByVoice(voice);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findAction() {
         return dudarykDAO.findAction();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByConcert(Long id) {
         return dudarykDAO.findByConcert(id);

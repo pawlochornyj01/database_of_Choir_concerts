@@ -34,7 +34,7 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
     }
 
     //чи не кастити а лишити шо бметод повертав просто обджект?
-    @Transactional(readOnly = true)
+
     @Override
     public Category findByDudarykId(Long id) {
         String query = "select Category from category  where Category.DUDARYK_ID=" + id;

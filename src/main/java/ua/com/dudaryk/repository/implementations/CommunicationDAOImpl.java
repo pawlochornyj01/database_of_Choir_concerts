@@ -44,21 +44,20 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
         return findAll();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Communication> findByConcertId(Long id) {
         String query = "select Communication from communication  where Communication.CONCERT_ID=" + id;
         return entityManager.createQuery(query).getResultList();
     }
 
-    @Transactional(readOnly = true)
     @Override
     public List<Communication> findByMembershipDate(LocalDateTime date) {
         String query = "select Communication from communication  where Communication.DATE_OF_MEMBERSHIP=" + date;
         return entityManager.createQuery(query).getResultList();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Communication> findByName(String name) {
         String query = "select Communication from communication  where Communication.NAME=" + name;

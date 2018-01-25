@@ -43,6 +43,7 @@ public class UserHistoryServiceImpl implements UserHistoryService {
         return userHistoryDAO.findAllUH();
     }
 
+    @Transactional(readOnly = true)
     public List<UserHistory> findByDudarykId(Long id) {
         return userHistoryDAO.findByDudarykId(id);
     }

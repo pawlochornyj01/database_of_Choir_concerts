@@ -36,6 +36,7 @@ public class ParticipantServiceImpl implements ParticipantService {
         return participantDAO.findParticipantById(id);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Participant> findByName(String name) {
         return participantDAO.findByName(name);

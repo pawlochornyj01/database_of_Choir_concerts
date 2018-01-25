@@ -49,35 +49,35 @@ public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykD
         return findAll();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Dudaryk> findByName(String name) {
         String query = "select Dudaryk from dudaryk  where Dudaryk.NAME=" + name;
         return entityManager.createQuery(query).getResultList();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Dudaryk> findByLastName(String lastName) {
         String query = "select Dudaryk from dudaryk  where Dudaryk.LASTNAME=" + lastName;
         return entityManager.createQuery(query).getResultList();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Dudaryk> findByVoice(Voice voice) {
         String query = "select Dudaryk from dudaryk  where Dudaryk.Voice =" + voice;
         return entityManager.createQuery(query).getResultList();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Dudaryk> findAction() {
         String query = "select Dudaryk from dudaryk  where Dudaryk.IS_ACTION=" + true;
         return entityManager.createQuery(query).getResultList();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Dudaryk> findByConcert(Long id) {
         String query = "select Dudaryk from dudaryk  where Dudaryk.CONCERT_ID=" + id;

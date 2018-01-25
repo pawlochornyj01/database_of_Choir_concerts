@@ -38,7 +38,7 @@ public class CategoryServiceImpl implements CategoryService {
     public void delete(Category category) {
          categoryDAO.deleteCategory(category);
     }
-
+    @Transactional(readOnly = true)
     public Category findByDudarykId(Long id) {
         return categoryDAO.findByDudarykId(id);
 

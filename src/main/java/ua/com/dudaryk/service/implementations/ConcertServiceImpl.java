@@ -43,16 +43,19 @@ public class ConcertServiceImpl implements ConcertService {
         return concertDAO.findAllConcerts();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Concert> findByName(String name) {
         return concertDAO.findByName(name);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Concert> findByDate(LocalDateTime date) {
         return concertDAO.findByDate(date);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Concert> findByParticipant(Long id) {
         return concertDAO.findByParticipant(id);

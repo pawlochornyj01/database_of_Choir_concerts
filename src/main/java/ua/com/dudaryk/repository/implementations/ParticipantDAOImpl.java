@@ -38,17 +38,11 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
         return findById(id);
     }
 
-    @Transactional(readOnly = true)
     @Override
     public List<Participant> findByName(String name) {
         String query = "select Participant from participant  where Participant.NAME=" + name;
         return entityManager.createQuery(query).getResultList();
     }
 
-//    @Transactional(readOnly = true)
-//    @Override
-//    public List findByConcert(Long id) {
-//        String query = "select Participant from participant  where Participant.CONCERT_ID=" + id;
-//        return entityManager.createQuery(query).getResultList();
-//    }
+
 }

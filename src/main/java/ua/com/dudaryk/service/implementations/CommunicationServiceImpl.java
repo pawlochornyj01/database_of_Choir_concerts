@@ -48,16 +48,19 @@ public class CommunicationServiceImpl implements CommunicationService {
         return communicationDAO.findAllCommunication();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Communication> findByConcertId(Long id) {
         return communicationDAO.findByConcertId(id);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Communication> findByMembershipDate(LocalDateTime date) {
         return communicationDAO.findByMembershipDate(date);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<Communication> findByName(String name) {
         return communicationDAO.findByName(name);

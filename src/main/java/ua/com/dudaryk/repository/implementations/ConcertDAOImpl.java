@@ -44,7 +44,7 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
         return findAll();
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Concert> findByName(String name) {
         String query = "select Concert from concert  where Concert.NAME=" + name;
@@ -52,7 +52,7 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
     }
 
-    @Transactional(readOnly = true)
+
     @Override
     public List<Concert> findByDate(LocalDateTime date) {
         String query = "select Concert from concert  where Concert.DATE=" + date;
@@ -60,8 +60,7 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
     }
 
-    //???
-    @Transactional(readOnly = true)
+
     @Override
     public List<Concert> findByParticipant(Long id) {
         String query = "select Concert from concert  where Concert.PARTICIPANT_ID=" + id;
