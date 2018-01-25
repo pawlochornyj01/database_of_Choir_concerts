@@ -16,7 +16,7 @@ public class Category implements Serializable {
     @Column(name = "CATEGORY_ID")
     private long categoryId;
 
-    @Column(name = "NAME",unique = true)
+    @Column(name = "NAME", unique = true)
     @NotEmpty
     private String name;
 

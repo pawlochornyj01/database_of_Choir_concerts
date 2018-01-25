@@ -2,6 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
 <html>
 <head>
     <style type="text/css">
@@ -36,43 +37,49 @@
 
             <td>${category.categoryId}</td>
             <td>${category.name}</td>
-            <td><form action="/category/all/"method="post">
-                <input type="submit" name="category" value="Delete" var="category" />
-            </form></td>
+            <td>
+                <form action="/category/delete/${category.categoryId}/" method="get">
+                    <%--<input type="hidden" name="categoryId" value="${category.categoryId}" />--%>
+                    <input type="submit" value="Delete" name="remove">
+                </form>
+                <%--<button type="submit" class="btn" data-toggle="confirmation" name="delete"--%>
+                        <%--data-placement="left" data-singleton="true"--%>
+                        <%--data-href='<c:url value="/category/delete/${category.categoryId}/"/>'>--%>
+                    <%--Delete--%>
+                <%--</button>--%>
+            </td>
         </tr>
         <br/>
     </c:forEach>
 </table>
 
 <h2>Add a new Category</h2>
-
 <form:form method="post" modelAttribute="category">
     <p>
         Name:
         <input type="text" name="name"/>
         <form:errors path="name" cssclass="error"><span id="name.errors"
-                                                        cssclass="error">may not be empty</span></form:errors>
+                                                        cssclass="error">may not be empty</span>
+        </form:errors>
     </p>
-
     <input type="submit"/>
-
 </form:form>
 
 <%--<h3>find category by dudaruk</h3>--%>
 
 <%--<form:form method="post" modelAttribute="category">--%>
-    <%--<p>--%>
-    <%--dudaryk id:--%>
-    <%--<input type="number" name="id"/>--%>
+<%--<p>--%>
+<%--dudaryk id:--%>
+<%--<input type="number" name="id"/>--%>
 
-    <%--</p>--%>
+<%--</p>--%>
 
-    <%--<input type="submit"/>--%>
+<%--<input type="submit"/>--%>
 <%--</form:form>--%>
 
 <%--<h4>This is the category you were looking for</h4>--%>
 <%--<h5>${category.categoryId}--%>
-    <%--${category.name}</h5>--%>
+<%--${category.name}</h5>--%>
 
-    </body>
-    </html>
+</body>
+</html>

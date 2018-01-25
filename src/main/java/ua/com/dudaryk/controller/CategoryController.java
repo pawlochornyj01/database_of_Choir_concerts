@@ -44,21 +44,25 @@ public class CategoryController {
         categoryService.save(category);
         return "redirect:/category/all/";
     }
-    @RequestMapping(value = "all/", method = RequestMethod.DELETE)
-    public String categoryDelete(@ModelAttribute("category") @Valid Category category, BindingResult result) {
-        if (result.hasErrors()) {
-            return "category_list";
-        }
-        categoryService.save(category);
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public String deleteCategory(@PathVariable long id) {
+        categoryService.delete(new Category().setCategoryId(id));
         return "redirect:/category/all/";
     }
+//    @RequestMapping(value = "all/", method = RequestMethod.DELETE)
+//    public ModelAndView delete(@ModelAttribute("category") @Valid Category category) {
+//        categoryService.delete(category);
+//        return new ModelAndView("category_list");
+//    }
 
     @RequestMapping("byDudarykId/")
     public void findByDudarykId() {
 
     }
+
     @RequestMapping(value = "byDudarykId/", method = RequestMethod.POST)
-    public String categoryFind(@ModelAttribute("category") @Valid Category category, BindingResult result,long id) {
+    public String categoryFind(@ModelAttribute("category") @Valid Category category, BindingResult result, long id) {
         if (result.hasErrors()) {
             return "category/byDudarykId/";
         }
@@ -66,7 +70,7 @@ public class CategoryController {
         return "redirect:category/byDudarykId/";
     }
 
-//    @GetMapping(value = "byDudarykId/")
+    //    @GetMapping(value = "byDudarykId/")
 //    public ModelAndView findByDudarykId(long id) {
 //        ModelAndView modelAndView = new ModelAndView("category_list");
 //        modelAndView.addObject("categoryList", categoryService.findByDudarykId(id));
@@ -79,12 +83,7 @@ public class CategoryController {
             category = categoryService.update(category);
         return category;
     }
-//
-//    @RequestMapping(value = "save/", method = RequestMethod.POST)
-//    public Category save(@RequestBody Category category) {
-//
-//        return categoryService.save(category);
-//    }
+
 //
 //    @GetMapping(value = "byDudarykId/")
 //    public Category findByDudarykId(Long id) {

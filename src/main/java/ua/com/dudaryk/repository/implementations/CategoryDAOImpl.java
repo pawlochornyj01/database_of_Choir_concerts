@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 @Transactional
 public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements CategoryDAO {
-    
+
     @PostConstruct
     private void init() {
         setClazz(Category.class);
@@ -43,6 +43,7 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
 
     @Override
     public void deleteCategory(Category category) {
+        category = entityManager.contains(category) ? category : findById(category.getCategoryId());
         super.delete(category);
     }
 
