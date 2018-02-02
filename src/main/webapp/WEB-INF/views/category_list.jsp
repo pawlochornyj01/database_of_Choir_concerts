@@ -5,6 +5,8 @@
 
 <html>
 <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
     <style type="text/css">
         h1 {
             color: firebrick;
@@ -43,6 +45,42 @@
                 </form>
 
             </td>
+            <td>
+                <form:form action="/category/update/${category.categoryId}/" method="put" modelAttribute="category">
+                    <%--<input type="button" value="Update" name="update" onclick="">--%>
+                    <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal">
+                        Update
+                    </button>
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" type="button" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">Please update category</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table border="1" class="class1">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                        </tr>
+                                        <tr>
+
+                                            <td>${category.categoryId}</td>
+                                            <input type="text" name="name"/>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form:form>
+            </td>
         </tr>
         <br/>
     </c:forEach>
@@ -61,5 +99,7 @@
 </form:form>
 
 
+<script type="text/javascript" src="webjars/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>
