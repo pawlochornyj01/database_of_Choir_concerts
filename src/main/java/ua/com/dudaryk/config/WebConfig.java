@@ -17,9 +17,11 @@ import java.util.Locale;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("ua.com.dudaryk")  //TODO: розберешся з отим всім, не пиши від фанаря методом тику
+@ComponentScan("ua.com.dudaryk.controller")  //TODO: розберешся з отим всім, не пиши від фанаря методом тику
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+//    private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
+//            "classpath:/static/", "classpath:/static/css/", "classpath:/static/js/" };
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -30,10 +32,16 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        if (!registry.hasMappingForPattern("/static/**")) {
+//            registry.addResourceHandler("/static/**").addResourceLocations(
+//                    CLASSPATH_RESOURCE_LOCATIONS);
+//        }
         registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdf/");
         registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("/META-INF/webjars/");
+        if (!registry.hasMappingForPattern("/webjars/**")) {
+            registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        }
     }
 
 
