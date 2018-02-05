@@ -2,24 +2,26 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" media="screen">
 
-    <script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script type="text/javascript" src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
     <title>Index</title>
 
 </head>
 <body>
 <h1>Category list</h1>
-<table border="1" class="class1">
+<table class="table table-striped">
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th></th>
     </tr>
 
     <c:forEach items="${categoryList}" var="category">
@@ -35,38 +37,38 @@
             </td>
             <td>
                 <form:form action="/category/update/${category.categoryId}/" method="get" modelAttribute="category">
-                    <%--<input type="button" value="Update" name="update" onclick="">--%>
-                    <%--<button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#Update">--%>
-                    <%--Update--%>
-                    <%--</button>--%>
+                    <input type="button" value="Update" name="update" onclick="">
+                    <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#Update">
+                        Update
+                    </button>
 
-                    <%--<div id="Update" class="modal fade"  >--%>
-                    <%--<div class="modal-dialog">--%>
-                    <%--<div class="modal-content">--%>
-                    <%--<div class="modal-header">--%>
-                    <%--<button class="close" type="button" data-dismiss="modal">×</button>--%>
-                    <%--<h4 class="modal-title">Please update category</h4>--%>
-                    <%--</div>--%>
-                    <%--<div class="modal-body">--%>
-                    <%--<table border="1" class="class1">--%>
-                    <%--<tr>--%>
-                    <%--<th>Id</th>--%>
-                    <%--<th>Name</th>--%>
-                    <%--</tr>--%>
-                    <%--<tr>--%>
+                    <div id="Update" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" type="button" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title">Please update category</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table border="1" class="class1">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                        </tr>
+                                        <tr>
 
-                    <%--<td>${category.categoryId}</td>--%>
-                    <%--<td><input type="text" name="name"/></td>--%>
-                    <%--</tr>--%>
-                    <%--</table>--%>
-                    <%--</div>--%>
-                    <%--<div class="modal-footer">--%>
-                    <%--<button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>--%>
-                    <%--</div>--%>
-                    <%--<button type="submit" class="btn btn-primary">Save</button>--%>
-                    <%--</div>--%>
-                    <%--</div>--%>
-                    <%--</div>--%>
+                                            <td>${category.categoryId}</td>
+                                            <td><input type="text" name="name"/></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </form:form>
@@ -88,9 +90,9 @@
     </p>
     <input type="submit"/>
 </form:form>
-<button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#Update">Показать всплывающее окно
+<button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#modal">Показать всплывающее окно
 </button>
-<div id="Update" class="modal fade">
+<div id="modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
