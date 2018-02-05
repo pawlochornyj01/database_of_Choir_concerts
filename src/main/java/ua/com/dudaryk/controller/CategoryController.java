@@ -47,15 +47,15 @@ public class CategoryController {
         return "redirect:/category/all/";
     }
 
-    @RequestMapping(value = "update/{id}", method = RequestMethod.PUT)
-    public String updateCategory(@PathVariable long id, @ModelAttribute("category") @Valid Category category,
-                                 BindingResult result) {
+    @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
+    public String updateCategory(@PathVariable long id, @RequestParam(value = "name") String name,
+                                 @ModelAttribute("category") @Valid Category category, BindingResult result) {
         if (result.hasErrors()) {
             return "category_list";
         }
-        categoryService.update(category);
-//        if (category.getCategoryId() > 0)
-//            categoryService.update(new Category().setCategoryId(id).setName(name));
+//        categoryService.update(category);
+        if (category.getCategoryId() > 0)
+            categoryService.update(new Category().setCategoryId(id).setName(name));
         return "redirect:/category/all/";
     }
 

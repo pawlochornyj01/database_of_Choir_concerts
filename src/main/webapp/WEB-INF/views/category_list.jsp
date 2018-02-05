@@ -16,11 +16,13 @@
 
 </head>
 <body>
+<div class="container">
 <h1>Category list</h1>
 <table class="table table-striped">
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th></th>
         <th></th>
     </tr>
 
@@ -29,15 +31,9 @@
 
             <td>${category.categoryId}</td>
             <td>${category.name}</td>
-            <td>
-                <form action="/category/delete/${category.categoryId}/" method="get">
-                    <input type="submit" value="Delete" name="remove">
-                </form>
 
-            </td>
             <td>
-                <form:form action="/category/update/${category.categoryId}/" method="get" modelAttribute="category">
-                    <input type="button" value="Update" name="update" onclick="">
+                <form:form action="/category/update/${category.categoryId}/" method="post" modelAttribute="category">
                     <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#Update">
                         Update
                     </button>
@@ -50,7 +46,7 @@
                                     <h4 class="modal-title">Please update category</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <table border="1" class="class1">
+                                    <table class="table table-striped">
                                         <tr>
                                             <th>Id</th>
                                             <th>Name</th>
@@ -64,14 +60,23 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Save</button>
+
                             </div>
                         </div>
                     </div>
 
 
                 </form:form>
+            </td>
+
+            <td>
+                <form action="/category/delete/${category.categoryId}/" method="get">
+                        <%--<input type="submit" value="Delete" name="remove">--%>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+
             </td>
         </tr>
         <br/>
@@ -88,23 +93,9 @@
                                                         cssclass="error">may not be empty</span>
         </form:errors>
     </p>
-    <input type="submit"/>
+    <button type="submit" class="btn btn-success">Add</button>
+
 </form:form>
-<button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#modal">Показать всплывающее окно
-</button>
-<div id="modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close" type="button" data-dismiss="modal">×</button>
-                <h4 class="modal-title">Заголовок окна</h4>
-            </div>
-            <div class="modal-body">Текст уведомления</div>
-            <div class="modal-footer">
-                <button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
-            </div>
-        </div>
-    </div>
 </div>
 
 </body>
