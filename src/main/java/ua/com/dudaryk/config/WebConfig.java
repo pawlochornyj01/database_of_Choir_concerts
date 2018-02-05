@@ -21,8 +21,6 @@ import java.util.Locale;
 @ComponentScan("ua.com.dudaryk.controller")  //TODO: розберешся з отим всім, не пиши від фанаря методом тику
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-//    private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
-//            "classpath:/META-INF/resources/webjars/", "classpath:/META-INF/resources/webjars/css/", "classpath:/META-INF/resources/webjars/js/" };
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -37,19 +35,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdf/");
         registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-//        if (!registry.hasMappingForPattern("/webjars/**")) {
-//            registry.addResourceHandler("/webjars/**").addResourceLocations(
-//                    CLASSPATH_RESOURCE_LOCATIONS);
-//        }
+
         if (!registry.hasMappingForPattern("/webjars/**")) {
             registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         }
     }
-
-//    @Override
-//    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-//        configurer.enable();
-//    }
 
 
 }
