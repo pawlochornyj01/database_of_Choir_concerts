@@ -73,7 +73,7 @@
 
             <td>
                 <form action="/category/delete/${category.categoryId}/" method="get">
-                        <%--<input type="submit" value="Delete" name="remove">--%>
+
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
 

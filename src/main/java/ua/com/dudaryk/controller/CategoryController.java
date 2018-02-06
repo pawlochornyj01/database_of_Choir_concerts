@@ -53,11 +53,26 @@ public class CategoryController {
         if (result.hasErrors()) {
             return "category_list";
         }
-//        categoryService.update(category);
-        if (category.getCategoryId() > 0)
-            categoryService.update(new Category().setCategoryId(id).setName(name));
+
+        categoryService.update(new Category().setCategoryId(id).setName(name));
         return "redirect:/category/all/";
     }
+
+
+//    @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
+//
+//    public ModelAndView update(@PathVariable long id, @RequestParam(value = "name") String name,
+//                               @ModelAttribute(value = "category") Category category, BindingResult result) {
+//        ModelAndView modelAndView = new ModelAndView("category_list");
+//        if (result.hasErrors()) {
+//            return modelAndView;
+//        }
+//
+//        categoryService.update(new Category().setCategoryId(id).setName(name));
+//        modelAndView.addObject("category", category);
+//        modelAndView.addObject("categoryList", categoryService.findAll());
+//        return modelAndView;
+//    }
 
 
 }
