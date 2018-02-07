@@ -7,6 +7,7 @@ import ua.com.dudaryk.model.UserHistory;
 import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 import ua.com.dudaryk.service.interfaces.UserHistoryService;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -43,7 +44,9 @@ public class UserHistoryServiceImpl implements UserHistoryService {
 
     @Transactional(readOnly = true)
     public List<UserHistory> findByDudarykId(int id) {
-        return userHistoryDAO.findByDudarykId(id);
+        List<UserHistory> list = userHistoryDAO.findByDudarykId(id);
+        list.sort(Comparator.comparing(UserHistory::getUserHistoryId));
+        return list;
     }
 
 

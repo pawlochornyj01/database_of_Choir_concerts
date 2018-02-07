@@ -12,6 +12,7 @@ import ua.com.dudaryk.service.dto.CommunicationDTO;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -45,7 +46,10 @@ public class CommunicationServiceImpl implements CommunicationService {
 
 
     public List<Communication> findAll() {
-        return communicationDAO.findAllCommunication();
+        List<Communication> list = communicationDAO.findAllCommunication();
+        list.sort(Comparator.comparing(Communication::getCommunicationId));
+        return list;
+
     }
 
     @Transactional(readOnly = true)
@@ -57,12 +61,16 @@ public class CommunicationServiceImpl implements CommunicationService {
     @Transactional(readOnly = true)
     @Override
     public List<Communication> findByMembershipDate(LocalDateTime date) {
-        return communicationDAO.findByMembershipDate(date);
+        List<Communication> list = communicationDAO.findByMembershipDate(date);
+        list.sort(Comparator.comparing(Communication::getCommunicationId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Communication> findByName(String name) {
-        return communicationDAO.findByName(name);
+        List<Communication> list = communicationDAO.findByName(name);
+        list.sort(Comparator.comparing(Communication::getCommunicationId));
+        return list;
     }
 }

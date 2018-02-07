@@ -9,6 +9,7 @@ import ua.com.dudaryk.service.interfaces.ConcertService;
 
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -40,24 +41,34 @@ public class ConcertServiceImpl implements ConcertService {
     }
 
     public List<Concert> findAll() {
-        return concertDAO.findAllConcerts();
+        List<Concert> list = concertDAO.findAllConcerts();
+        list.sort(Comparator.comparing(Concert::getConcertId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Concert> findByName(String name) {
-        return concertDAO.findByName(name);
+        List<Concert> list = concertDAO.findByName(name);
+        list.sort(Comparator.comparing(Concert::getConcertId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Concert> findByDate(LocalDateTime date) {
-        return concertDAO.findByDate(date);
+
+        List<Concert> list = concertDAO.findByDate(date);
+        list.sort(Comparator.comparing(Concert::getConcertId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Concert> findByParticipant(int id) {
-        return concertDAO.findByParticipant(id);
+
+        List<Concert> list = concertDAO.findByParticipant(id);
+        list.sort(Comparator.comparing(Concert::getConcertId));
+        return list;
     }
 }

@@ -9,6 +9,7 @@ import ua.com.dudaryk.repository.interfaces.DudarykDAO;
 import ua.com.dudaryk.service.interfaces.DudarykService;
 
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -38,37 +39,52 @@ public class DudarykServiceImpl implements DudarykService {
     }
 
     public List<Dudaryk> findAll() {
-        return dudarykDAO.findAllDudaryks();
+
+        List<Dudaryk> list = dudarykDAO.findAllDudaryks();
+        list.sort(Comparator.comparing(Dudaryk::getDudarykId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByName(String name) {
-        return dudarykDAO.findByName(name);
+
+        List<Dudaryk> list = dudarykDAO.findByName(name);
+        list.sort(Comparator.comparing(Dudaryk::getDudarykId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByLastName(String lastName) {
-        return dudarykDAO.findByLastName(lastName);
+
+        List<Dudaryk> list = dudarykDAO.findByLastName(lastName);
+        list.sort(Comparator.comparing(Dudaryk::getDudarykId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByVoice(Voice voice) {
-        return dudarykDAO.findByVoice(voice);
+        List<Dudaryk> list = dudarykDAO.findByVoice(voice);
+        list.sort(Comparator.comparing(Dudaryk::getDudarykId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findAction() {
-        return dudarykDAO.findAction();
+        List<Dudaryk> list = dudarykDAO.findAction();
+        list.sort(Comparator.comparing(Dudaryk::getDudarykId));
+        return list;
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Dudaryk> findByConcert(int id) {
-        return dudarykDAO.findByConcert(id);
+        List<Dudaryk> list = dudarykDAO.findByConcert(id);
+        list.sort(Comparator.comparing(Dudaryk::getDudarykId));
+        return list;
 
     }
 }

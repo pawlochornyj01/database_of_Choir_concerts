@@ -10,6 +10,7 @@ import ua.com.dudaryk.service.dto.ParticipantDTO;
 
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -39,7 +40,10 @@ public class ParticipantServiceImpl implements ParticipantService {
     @Transactional(readOnly = true)
     @Override
     public List<Participant> findByName(String name) {
-        return participantDAO.findByName(name);
+
+        List<Participant> list = participantDAO.findByName(name);
+        list.sort(Comparator.comparing(Participant::getParticipantId));
+        return list;
 
     }
 }
