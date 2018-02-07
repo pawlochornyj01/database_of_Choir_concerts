@@ -19,7 +19,7 @@ public class UserHistoryDAOImpl extends AbstractDAOImpl<UserHistory> implements 
     }
 
     @Override
-    public List<UserHistory> findByDudarykId(Long id) {
+    public List<UserHistory> findByDudarykId(int id) {
         String query = "select UserHistory from user_history  where UserHistory.DUDARYK_ID=" + id;
         return entityManager.createQuery(query).getResultList();
     }
@@ -40,7 +40,7 @@ public class UserHistoryDAOImpl extends AbstractDAOImpl<UserHistory> implements 
     }
 
     @Override
-    public UserHistory findByIdUserHistory(Long id) {
+    public UserHistory findByIdUserHistory(int id) {
         return findById(id);
     }
 

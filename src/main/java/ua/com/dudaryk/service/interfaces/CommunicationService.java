@@ -8,19 +8,19 @@ import java.util.List;
 
 public interface CommunicationService {
 
-    List<Communication> findByConcertId(Long id);
+    List<Communication> findByConcertId(int id);
 
     List<Communication> findByMembershipDate(LocalDateTime date);
 
     List<Communication> findByName(String name);
 
-    Communication findById(Long id);
+    Communication findById(int id);
 
     Communication save(Communication communication);
 
     Communication update(Communication communication);
 
-    void delete(Long id);
+    void delete(int id);
 
     List<Communication> findAll();
 }

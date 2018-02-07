@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CategoryService {
 
-    Category findByDudarykId(Long id);
+    Category findByDudarykId(int id);
 
     Category save(Category category);
 

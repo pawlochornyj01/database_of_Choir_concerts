@@ -16,15 +16,15 @@ public interface DudarykService {
 
     List<Dudaryk> findAction();
 
-    List<Dudaryk> findByConcert(Long id);
+    List<Dudaryk> findByConcert(int id);
 
     Dudaryk save(Dudaryk dudaryk);
 
     Dudaryk update(Dudaryk dudaryk);
 
-    void delete(Long id);
+    void delete(int id);
 
-    Dudaryk findById(Long id);
+    Dudaryk findById(int id);
 
     List<Dudaryk> findAll();
 }

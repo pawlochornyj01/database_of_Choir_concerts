@@ -40,7 +40,7 @@ public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykD
     }
 
     @Override
-    public Dudaryk findDudarykById(Long id) {
+    public Dudaryk findDudarykById(int id) {
         return findById(id);
     }
 
@@ -79,7 +79,7 @@ public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykD
 
 
     @Override
-    public List<Dudaryk> findByConcert(Long id) {
+    public List<Dudaryk> findByConcert(int id) {
         String query = "select Dudaryk from dudaryk  where Dudaryk.CONCERT_ID=" + id;
         return entityManager.createQuery(query).getResultList();
     }

@@ -28,11 +28,11 @@ public class ParticipantServiceImpl implements ParticipantService {
         return participantDAO.saveParticipant(participant);
     }
 
-    public void delete(Long id) {
+    public void delete(int id) {
         participantDAO.deleteParticipant(participantDAO.findParticipantById(id));
     }
 
-    public Participant findById(Long id) {
+    public Participant findById(int id) {
         return participantDAO.findParticipantById(id);
     }
 

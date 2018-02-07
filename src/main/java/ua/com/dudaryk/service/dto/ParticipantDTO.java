@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ParticipantDTO implements Serializable {
 
-    private long participantId;
+    private int participantId;
 
     private List<Concert> concerts = new ArrayList<>();
 
@@ -42,11 +42,11 @@ public class ParticipantDTO implements Serializable {
         return participantDTOList;
     }
 
-    public long getParticipantId() {
+    public int getParticipantId() {
         return participantId;
     }
 
-    private ParticipantDTO setParticipantId(long participantId) {
+    private ParticipantDTO setParticipantId(int participantId) {
         this.participantId = participantId;
         return this;
     }

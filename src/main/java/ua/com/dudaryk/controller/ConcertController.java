@@ -21,64 +21,64 @@ public class ConcertController {
         this.concertService = concertService;
     }
 
-    @GetMapping(value = "all/")
-    public List<Concert> findAll() {
-        return concertService.findAll();
-    }
-
-    @RequestMapping(value = "update/", method = RequestMethod.POST)
-    public Concert update(@RequestBody Concert concert) {
-
-        if (concert.getConcertId() > 0)
-            concert = concertService.update(concert);
-        return concert;
-    }
-
-    @RequestMapping(value = "save/", method = RequestMethod.POST)
-    public Concert save(@RequestBody Concert concert) {
-
-        return concertService.save(concert);
-    }
-
-    @GetMapping(value = "delete/")
-    public void delete(@PathVariable("id") Long id) {
-        concertService.delete(id);
-    }
-
-    @GetMapping(value = "byId/")
-    public Concert findById(@PathVariable("id") Long id) {
-        return concertService.findById(id);
-    }
-
-    @GetMapping(value = "byParticipantId/")
-    public List<Concert> findByParticipant(@PathVariable("id") Long id) {
-        return concertService.findByParticipant(id);
-    }
-
-    @GetMapping(value = "byDate/")
-    public List<Concert> findByDate(@PathVariable("date") LocalDateTime date) {
-        return concertService.findByDate(date);
-    }
-
-    @GetMapping(value = "byName/")
-    public List<Concert> findByName(@PathVariable("name") String name) {
-        return concertService.findByName(name);
-    }
-
-//    @RequestMapping(value = "concert/",method = RequestMethod.GET)
-//    public  String displayConcertPage(Model model){
-//        Concert concert = new Concert();
-//
-//        model.addAttribute("concert",concert);
-//        return "concert";
+//    @GetMapping(value = "all/")
+//    public List<Concert> findAll() {
+//        return concertService.findAll();
 //    }
 //
-//    @RequestMapping(value="concert/", method = RequestMethod.POST)
-//    public String processConcert(@ModelAttribute("concert") Concert concert) {
-//        System.out.println(concert);
+//    @RequestMapping(value = "update/", method = RequestMethod.POST)
+//    public Concert update(@RequestBody Concert concert) {
 //
-//        return "redirect:index.html";
+//        if (concert.getConcertId() > 0)
+//            concert = concertService.update(concert);
+//        return concert;
 //    }
+//
+//    @RequestMapping(value = "save/", method = RequestMethod.POST)
+//    public Concert save(@RequestBody Concert concert) {
+//
+//        return concertService.save(concert);
+//    }
+//
+//    @GetMapping(value = "delete/")
+//    public void delete(@PathVariable("id") int id) {
+//        concertService.delete(id);
+//    }
+//
+//    @GetMapping(value = "byId/")
+//    public Concert findById(@PathVariable("id") int id) {
+//        return concertService.findById(id);
+//    }
+//
+//    @GetMapping(value = "byParticipantId/")
+//    public List<Concert> findByParticipant(@PathVariable("id") int id) {
+//        return concertService.findByParticipant(id);
+//    }
+//
+//    @GetMapping(value = "byDate/")
+//    public List<Concert> findByDate(@PathVariable("date") LocalDateTime date) {
+//        return concertService.findByDate(date);
+//    }
+//
+//    @GetMapping(value = "byName/")
+//    public List<Concert> findByName(@PathVariable("name") String name) {
+//        return concertService.findByName(name);
+//    }
+//
+////    @RequestMapping(value = "concert/",method = RequestMethod.GET)
+////    public  String displayConcertPage(Model model){
+////        Concert concert = new Concert();
+////
+////        model.addAttribute("concert",concert);
+////        return "concert";
+////    }
+////
+////    @RequestMapping(value="concert/", method = RequestMethod.POST)
+////    public String processConcert(@ModelAttribute("concert") Concert concert) {
+////        System.out.println(concert);
+////
+////        return "redirect:index.html";
+////    }
 
 
 }

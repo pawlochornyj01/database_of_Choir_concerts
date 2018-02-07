@@ -20,7 +20,7 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
     }
 
     @Override
-    public Communication findByCommunicationId(Long id) {
+    public Communication findByCommunicationId(int id) {
         return findById(id);
     }
 
@@ -46,7 +46,7 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
 
 
     @Override
-    public List<Communication> findByConcertId(Long id) {
+    public List<Communication> findByConcertId(int id) {
         String query = "select Communication from communication  where Communication.CONCERT_ID=" + id;
         return entityManager.createQuery(query).getResultList();
     }

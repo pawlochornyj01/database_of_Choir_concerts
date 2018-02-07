@@ -26,7 +26,7 @@ public class CommunicationServiceImpl implements CommunicationService {
         this.communicationDAO = communicationDAO;
     }
 
-    public Communication findById(Long id) {
+    public Communication findById(int id) {
         return communicationDAO.findByCommunicationId(id);
     }
 
@@ -39,7 +39,7 @@ public class CommunicationServiceImpl implements CommunicationService {
         return communicationDAO.updateCommunication(communication);
     }
 
-    public void delete(Long id) {
+    public void delete(int id) {
         communicationDAO.deleteCommunication(communicationDAO.findByCommunicationId(id));
     }
 
@@ -50,7 +50,7 @@ public class CommunicationServiceImpl implements CommunicationService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Communication> findByConcertId(Long id) {
+    public List<Communication> findByConcertId(int id) {
         return communicationDAO.findByConcertId(id);
     }
 

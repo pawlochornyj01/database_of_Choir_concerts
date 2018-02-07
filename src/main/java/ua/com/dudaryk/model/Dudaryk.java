@@ -16,7 +16,7 @@ public class Dudaryk implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "DUDARYK_ID")
-    private long dudarykId;
+    private int dudarykId;
 
     @ManyToMany(mappedBy = "dudaryks")
     private List<Concert> concerts;
@@ -111,11 +111,11 @@ public class Dudaryk implements Serializable {
         return this;
     }
 
-    public long getDudarykId() {
+    public int getDudarykId() {
         return dudarykId;
     }
 
-    private Dudaryk setDudarykId(long dudarykId) {
+    private Dudaryk setDudarykId(int dudarykId) {
         this.dudarykId = dudarykId;
         return this;
     }

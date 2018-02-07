@@ -11,12 +11,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "category")
-public class Category implements Serializable {
+public class Category implements Serializable, Comparable<Category> {
 
     @Id
     @GeneratedValue
     @Column(name = "CATEGORY_ID")
-    private long categoryId;
+    private int categoryId;
 
     @Column(name = "NAME", unique = true)
     @NotEmpty
@@ -53,11 +53,11 @@ public class Category implements Serializable {
         return this;
     }
 
-    public long getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public Category setCategoryId(long categoryId) {
+    public Category setCategoryId(int categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -68,5 +68,10 @@ public class Category implements Serializable {
                 "categoryId=" + categoryId +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Category category) {
+        return this.getCategoryId() - category.getCategoryId();
     }
 }

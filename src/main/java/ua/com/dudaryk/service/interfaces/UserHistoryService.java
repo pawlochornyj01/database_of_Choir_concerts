@@ -7,15 +7,15 @@ import java.util.List;
 
 public interface UserHistoryService {
 
-    List<UserHistory> findByDudarykId(Long id);
+    List<UserHistory> findByDudarykId(int id);
 
     UserHistory save(UserHistory userHistory);
 
     UserHistory update(UserHistory userHistory);
 
-    void delete(Long id);
+    void delete(int id);
 
-    UserHistory findById(Long id);
+    UserHistory findById(int id);
 
     List<UserHistory> findAll();
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface AbstractDAO<T> {
 
-    T findById(Long id);
+    T findById(int id);
 
     T save(T entity);
 

@@ -34,7 +34,7 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
     }
 
     @Override
-    public Participant findParticipantById(Long id) {
+    public Participant findParticipantById(int id) {
         return findById(id);
     }
 

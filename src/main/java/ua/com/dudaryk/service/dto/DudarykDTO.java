@@ -10,7 +10,7 @@ import java.util.List;
 public class DudarykDTO implements Serializable {
 
 
-    private long dudarykId;
+    private int dudarykId;
 
     private List<Concert> concerts;
 
@@ -61,11 +61,11 @@ public class DudarykDTO implements Serializable {
         return dudarykDTOList;
     }
 
-    public long getDudarykId() {
+    public int getDudarykId() {
         return dudarykId;
     }
 
-    private DudarykDTO setDudarykId(long dudarykId) {
+    private DudarykDTO setDudarykId(int dudarykId) {
         this.dudarykId = dudarykId;
         return this;
     }

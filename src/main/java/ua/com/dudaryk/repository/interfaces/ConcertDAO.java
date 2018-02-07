@@ -14,7 +14,7 @@ public interface ConcertDAO {
 
     void deleteConcert(Concert concert);
 
-    Concert findConcertById(Long id);
+    Concert findConcertById(int id);
 
     List<Concert> findAllConcerts();
 
@@ -22,6 +22,6 @@ public interface ConcertDAO {
 
     List<Concert> findByDate(LocalDateTime date);
 
-    List<Concert> findByParticipant(Long id);
+    List<Concert> findByParticipant(int id);
 
 }

@@ -42,13 +42,13 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
-    public String deleteCategory(@PathVariable long id) {
+    public String deleteCategory(@PathVariable int id) {
         categoryService.delete(new Category().setCategoryId(id));
         return "redirect:/category/all/";
     }
 
     @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
-    public String updateCategory(@PathVariable long id, @RequestParam(value = "name") String name,
+    public String updateCategory(@PathVariable int id, @RequestParam(value = "name") String name,
                                  @ModelAttribute("category") @Valid Category category, BindingResult result) {
         if (result.hasErrors()) {
             return "category_list";

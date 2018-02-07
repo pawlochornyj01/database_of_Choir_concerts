@@ -13,7 +13,7 @@ import java.util.List;
 public class ConcertDTO implements Serializable {
 
 
-    private long concertId;
+    private int concertId;
 
     private LocalDateTime date;
 
@@ -49,11 +49,11 @@ public class ConcertDTO implements Serializable {
 
     private List<Dudaryk> dudaryks;
 
-    public long getConcertId() {
+    public int getConcertId() {
         return concertId;
     }
 
-    private ConcertDTO setConcertId(long concertId) {
+    private ConcertDTO setConcertId(int concertId) {
         this.concertId = concertId;
         return this;
     }

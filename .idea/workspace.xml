@@ -8,10 +8,138 @@
   <component name="ChangeListManager">
     <list default="true" id="9b6004b9-d13c-4711-9e9e-73da58c1a980" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/classes/properties/hibernate.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/classes/ua/com/dudaryk/config/AppConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/classes/ua/com/dudaryk/config/WebAppInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/classes/ua/com/dudaryk/config/WebConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/classes/ua/com/dudaryk/controller/HelloController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/aether-api-1.0.2.v20150114.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/aether-impl-1.0.2.v20150114.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/aether-spi-1.0.2.v20150114.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/aether-util-1.0.2.v20150114.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/cdi-api-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/classworlds-1.1-alpha-2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/commons-lang3-3.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/guava-18.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/guice-4.0-no_aop.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-4.0.4.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-4.3.5.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/hibernate-entitymanager-4.3.8.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-5.2.3.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jandex-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.18.1-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/javax.inject-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/jta-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/junit-3.8.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-aether-provider-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-archiver-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-artifact-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-artifact-manager-2.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-builder-support-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-compiler-plugin-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-core-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-filtering-1.0-beta-2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-model-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-model-builder-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-monitor-2.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-plugin-api-3.2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-plugin-registry-2.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-profile-2.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-project-2.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-repository-metadata-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-settings-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-settings-builder-3.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-toolchain-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/maven-war-plugin-2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.40.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/org.eclipse.sisu.inject-0.3.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/org.eclipse.sisu.plexus-0.3.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-archiver-2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-cipher-1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-classworlds-2.5.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-compiler-api-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-compiler-javac-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-compiler-manager-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-component-annotations-1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-container-default-1.0-alpha-9-stable-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-interpolation-1.21.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-io-2.0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-sec-dispatcher-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/plexus-utils-3.0.22.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/wagon-provider-api-1.0-beta-2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/xpp3_min-1.1.4c.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dudaryk-1.0-SNAPSHOT/WEB-INF/lib/xstream-1.3.1.jar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ConcertController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ConcertController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/DudarykController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/DudarykController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/UserHistoryController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/UserHistoryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/UserHistory.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/UserHistory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CategoryDTO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CategoryDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CommunicationDTO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CommunicationDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ConcertDTO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ConcertDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/DudarykDTO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/DudarykDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ParticipantDTO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ParticipantDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/UserHistoryDTO.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/UserHistoryDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CommunicationService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CommunicationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ParticipantService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ParticipantService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/properties/hibernate.properties" afterPath="$PROJECT_DIR$/src/main/resources/properties/hibernate.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,57 +166,76 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="dudaryk@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="dudaryk@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="dudaryk" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="dudaryk@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="dudaryk" type="e3449647:DbNodeDescriptor" />
-        <item name="category" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CategoryController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="119">
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java">
+      <file leaf-file-name="CommunicationController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CommunicationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category_list.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp">
+      <file leaf-file-name="ConcertController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ConcertController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DudarykController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/DudarykController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1139">
+              <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelloController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/HelloController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticipantController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHistoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/UserHistoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,57 +284,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ParticipantDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communication/all.jsp" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar!/org/springframework/web/bind/annotation/ModelAttribute.class" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/save.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CategoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/properties/hibernate.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/UserHistoryDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/UserHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CommunicationDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ConcertDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/DudarykDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ParticipantDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/UserHistoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CommunicationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ParticipantService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8e380092-e712-48d1-b6a2-91d839d1247b/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/categoryList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebAppInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ConcertController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/DudarykController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/UserHistoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_save.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/byDudarykId.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CommunicationController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communication/all.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java" />
-        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar!/org/springframework/web/bind/annotation/ModelAttribute.class" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/save.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CategoryDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/hibernate.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java" />
       </list>
     </option>
   </component>
@@ -288,6 +435,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,6 +490,92 @@
               <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dudaryk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_of_Choir_concerts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -382,10 +618,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -698,12 +931,13 @@
       <workItem from="1517663579683" duration="2167000" />
       <workItem from="1517819878085" duration="11806000" />
       <workItem from="1517848706221" duration="7165000" />
-      <workItem from="1517913308494" duration="6732000" />
+      <workItem from="1517913308494" duration="8165000" />
+      <workItem from="1517997390899" duration="2110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260979000" />
+    <option name="totallyTimeSpent" value="264522000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -729,9 +963,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15522876" sideWeight="0.48940998" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7630719" sideWeight="0.48940998" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -741,7 +975,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2647059" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25567323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -830,317 +1064,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/byDudarykId.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar!/org/springframework/web/bind/annotation/ModelAttribute.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/save.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communication/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="60" column="2" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/c6b759e1/cda570ef-8ea5-496b-b21c-74b8e9e723ad/dudaryk.category">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/UserHistoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CommunicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CategoryDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jquery-3.3.1.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/jquery-3.3.1.js" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/jquery/2.1.1/jquery-2.1.1.jar!/META-INF/resources/webjars/jquery/2.1.1/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/ServletRegistration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebAppInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/hibernate.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="205" column="21" lean-forward="false" selection-start-line="205" selection-start-column="21" selection-end-line="205" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="e#2950#2951#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,32 +1075,406 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="e#3212#3213#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/hibernate.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="32" column="64" lean-forward="true" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Communication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Concert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-485">
+          <caret line="91" column="49" lean-forward="true" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Dudaryk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Participant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/UserHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-553">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/model/Voice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CommunicationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="48" column="50" lean-forward="false" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/CategoryDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ConcertDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/ParticipantDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/DudarykDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/AbstractDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/implementations/UserHistoryDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/UserHistoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ParticipantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/DudarykDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/ConcertDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CommunicationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/CategoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/repository/interfaces/AbstractDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CommunicationDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="49" column="14" lean-forward="false" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/CategoryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ConcertDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/DudarykDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/UserHistoryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/dto/ParticipantDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-578">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/CommunicationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ConcertServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/DudarykServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="69" column="42" lean-forward="false" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/ParticipantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/implementations/UserHistoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding>
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CommunicationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/DudarykService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ConcertService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/ParticipantService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/service/interfaces/UserHistoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="119">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category_list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ConcertController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/DudarykController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/UserHistoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/ParticipantController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/dudaryk/controller/CommunicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           <folding />
         </state>
       </provider>

@@ -31,11 +31,11 @@ public class ConcertServiceImpl implements ConcertService {
         return concertDAO.updateConcert(concert);
     }
 
-    public void delete(Long id) {
+    public void delete(int id) {
         concertDAO.deleteConcert(concertDAO.findConcertById(id));
     }
 
-    public Concert findById(Long id) {
+    public Concert findById(int id) {
         return concertDAO.findConcertById(id);
     }
 
@@ -57,7 +57,7 @@ public class ConcertServiceImpl implements ConcertService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Concert> findByParticipant(Long id) {
+    public List<Concert> findByParticipant(int id) {
         return concertDAO.findByParticipant(id);
     }
 }

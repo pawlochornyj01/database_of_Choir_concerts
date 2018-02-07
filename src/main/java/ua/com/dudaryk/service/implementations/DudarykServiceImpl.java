@@ -29,11 +29,11 @@ public class DudarykServiceImpl implements DudarykService {
         return dudarykDAO.updateDudaryk(dudaryk);
     }
 
-    public void delete(Long id) {
+    public void delete(int id) {
         dudarykDAO.deleteDudaryk(dudarykDAO.findDudarykById(id));
     }
 
-    public Dudaryk findById(Long id) {
+    public Dudaryk findById(int id) {
         return dudarykDAO.findDudarykById(id);
     }
 
@@ -67,7 +67,7 @@ public class DudarykServiceImpl implements DudarykService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Dudaryk> findByConcert(Long id) {
+    public List<Dudaryk> findByConcert(int id) {
         return dudarykDAO.findByConcert(id);
 
     }

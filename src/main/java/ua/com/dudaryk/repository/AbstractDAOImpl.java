@@ -18,7 +18,7 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
     }
 
     @Transactional(readOnly = true)
-    public T findById(Long id) {
+    public T findById(int id) {
         return entityManager.find(clazz, id);
     }
 

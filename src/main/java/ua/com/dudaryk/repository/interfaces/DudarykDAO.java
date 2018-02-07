@@ -14,7 +14,7 @@ public interface DudarykDAO {
 
     void deleteDudaryk(Dudaryk dudaryk);
 
-    Dudaryk findDudarykById(Long id);
+    Dudaryk findDudarykById(int id);
 
     List<Dudaryk> findAllDudaryks();
 
@@ -26,6 +26,6 @@ public interface DudarykDAO {
 
     List<Dudaryk> findAction();
 
-    List<Dudaryk> findByConcert(Long id);
+    List<Dudaryk> findByConcert(int id);
 
 }

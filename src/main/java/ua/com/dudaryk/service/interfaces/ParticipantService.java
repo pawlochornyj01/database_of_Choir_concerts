@@ -11,7 +11,7 @@ public interface ParticipantService {
 
     Participant save(Participant participant);
 
-    void delete(Long id);
+    void delete(int id);
 
-    Participant findById(Long id);
+    Participant findById(int id);
 }

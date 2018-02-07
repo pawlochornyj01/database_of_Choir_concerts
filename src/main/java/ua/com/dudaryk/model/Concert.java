@@ -15,7 +15,7 @@ public class Concert implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "CONCERT_ID")
-    private long concertId;
+    private int concertId;
 
     @Column(name = "DATE")
     private LocalDateTime date;
@@ -85,11 +85,11 @@ public class Concert implements Serializable {
         return this;
     }
 
-    public long getConcertId() {
+    public int getConcertId() {
         return concertId;
     }
 
-    private Concert setConcertId(long concertId) {
+    private Concert setConcertId(int concertId) {
         this.concertId = concertId;
         return this;
     }

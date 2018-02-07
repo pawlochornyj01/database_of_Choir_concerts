@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CommunicationDTO implements Serializable {
 
-    private long communicationId;
+    private int communicationId;
 
     private String name;
 
@@ -47,11 +47,11 @@ public class CommunicationDTO implements Serializable {
         return communicationDTOList;
     }
 
-    public long getCommunicationId() {
+    public int getCommunicationId() {
         return communicationId;
     }
 
-    private CommunicationDTO setCommunicationId(long communicationId) {
+    private CommunicationDTO setCommunicationId(int communicationId) {
         this.communicationId = communicationId;
         return this;
     }

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CategoryDTO implements Serializable {
 
-    private long categoryId;
+    private int categoryId;
 
     private String name;
 
@@ -31,11 +31,11 @@ public class CategoryDTO implements Serializable {
     }
 
 
-    public long getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    private CategoryDTO setCategoryId(long categoryId) {
+    private CategoryDTO setCategoryId(int categoryId) {
         this.categoryId = categoryId;
         return this;
     }

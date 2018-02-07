@@ -29,11 +29,11 @@ public class UserHistoryServiceImpl implements UserHistoryService {
         return userHistoryDAO.updateUserHistory(userHistory);
     }
 
-    public void delete(Long id) {
+    public void delete(int id) {
         userHistoryDAO.deleteUserHistory(userHistoryDAO.findByIdUserHistory(id));
     }
 
-    public UserHistory findById(Long id) {
+    public UserHistory findById(int id) {
         return userHistoryDAO.findByIdUserHistory(id);
     }
 
@@ -42,7 +42,7 @@ public class UserHistoryServiceImpl implements UserHistoryService {
     }
 
     @Transactional(readOnly = true)
-    public List<UserHistory> findByDudarykId(Long id) {
+    public List<UserHistory> findByDudarykId(int id) {
         return userHistoryDAO.findByDudarykId(id);
     }
 

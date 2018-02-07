@@ -9,6 +9,7 @@ import ua.com.dudaryk.service.interfaces.CategoryService;
 import ua.com.dudaryk.service.dto.CategoryDTO;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -31,15 +32,17 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     public List<Category> findAll() {
+        Collections.sort(categoryDAO.findAllCategory());
         return categoryDAO.findAllCategory();
     }
 
     @Override
     public void delete(Category category) {
-         categoryDAO.deleteCategory(category);
+        categoryDAO.deleteCategory(category);
     }
+
     @Transactional(readOnly = true)
-    public Category findByDudarykId(Long id) {
+    public Category findByDudarykId(int id) {
         return categoryDAO.findByDudarykId(id);
 
 

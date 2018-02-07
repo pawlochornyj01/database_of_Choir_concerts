@@ -11,7 +11,7 @@ import java.util.List;
 
 public class UserHistoryDTO implements Serializable {
 
-    private long userHistoryId;
+    private int userHistoryId;
 
     private Dudaryk dudaryk;
 
@@ -86,11 +86,11 @@ public class UserHistoryDTO implements Serializable {
         return this;
     }
 
-    public long getUserHistoryId() {
+    public int getUserHistoryId() {
         return userHistoryId;
     }
 
-    private UserHistoryDTO setUserHistoryId(long userHistoryId) {
+    private UserHistoryDTO setUserHistoryId(int userHistoryId) {
         this.userHistoryId = userHistoryId;
         return this;
     }

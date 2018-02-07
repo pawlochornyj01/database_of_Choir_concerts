@@ -10,7 +10,7 @@ public interface ParticipantDAO {
 
     void deleteParticipant(Participant participant);
 
-    Participant findParticipantById(Long id);
+    Participant findParticipantById(int id);
 
     List<Participant> findByName(String name);
 

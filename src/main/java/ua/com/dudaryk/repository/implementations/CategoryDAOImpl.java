@@ -36,7 +36,7 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
     //чи не кастити а лишити шо бметод повертав просто обджект?
 
     @Override
-    public Category findByDudarykId(Long id) {
+    public Category findByDudarykId(int id) {
         String query = "select Category from category  where Category.DUDARYK_ID=" + id;
         return (Category) entityManager.createQuery(query).getSingleResult();
     }

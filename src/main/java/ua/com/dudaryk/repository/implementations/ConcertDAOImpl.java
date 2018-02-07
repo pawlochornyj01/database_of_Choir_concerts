@@ -35,7 +35,7 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
     }
 
     @Override
-    public Concert findConcertById(Long id) {
+    public Concert findConcertById(int id) {
         return findById(id);
     }
 
@@ -62,7 +62,7 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
 
     @Override
-    public List<Concert> findByParticipant(Long id) {
+    public List<Concert> findByParticipant(int id) {
         String query = "select Concert from concert  where Concert.PARTICIPANT_ID=" + id;
         return entityManager.createQuery(query).getResultList();
     }

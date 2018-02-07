@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CommunicationDAO  {
 
-    Communication findByCommunicationId(Long id);
+    Communication findByCommunicationId(int id);
 
     Communication saveCommunication(Communication communication);
 
@@ -17,7 +17,7 @@ public interface CommunicationDAO  {
 
     List<Communication> findAllCommunication();
 
-    List<Communication> findByConcertId(Long id);
+    List<Communication> findByConcertId(int id);
 
     List<Communication> findByMembershipDate(LocalDateTime date);
 

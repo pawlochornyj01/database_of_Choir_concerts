@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserHistoryDAO  {
 
-    List<UserHistory> findByDudarykId(Long id);
+    List<UserHistory> findByDudarykId(int id);
 
     List<UserHistory> findAllUserHistory();
 
@@ -14,7 +14,7 @@ public interface UserHistoryDAO  {
 
     UserHistory updateUserHistory(UserHistory userHistory);
 
-    UserHistory findByIdUserHistory(Long id);
+    UserHistory findByIdUserHistory(int id);
 
     void deleteUserHistory(UserHistory userHistory);
 

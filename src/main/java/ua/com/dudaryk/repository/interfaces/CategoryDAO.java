@@ -13,7 +13,7 @@ public interface CategoryDAO {
 
     List<Category> findAllCategory();
 
-    Category findByDudarykId(Long id);
+    Category findByDudarykId(int id);
 
     void deleteCategory(Category category);
 
