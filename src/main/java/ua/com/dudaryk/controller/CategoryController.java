@@ -47,32 +47,40 @@ public class CategoryController {
         return "redirect:/category/all/";
     }
 
-    @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
-    public String updateCategory(@PathVariable int id, @RequestParam(value = "name") String name,
-                                 @ModelAttribute("category") @Valid Category category, BindingResult result) {
-        if (result.hasErrors()) {
-            return "category_list";
-        }
+    @RequestMapping(value = "update/{id}/", method = RequestMethod.POST)
+    public String updateCategory(@PathVariable("id") int id, @ModelAttribute("category") Category category) {
 
-        categoryService.update(new Category().setCategoryId(id).setName(name));
+        categoryService.update(category.setCategoryId(id));
         return "redirect:/category/all/";
     }
 
+//    @PostMapping(value = "update/")
+//    public String updateCategory(@RequestBody Category category,@RequestParam(value = "name") String name) {
+////        categoryService.update(category);
+//        categoryService.update(category.setName(name));
+//        return "redirect:/category/all/";
+//    }
 
+//    @RequestMapping(value = "update/", method = RequestMethod.POST)
+//    public String updateCategory(@ModelAttribute("category") @Valid Category category, BindingResult result) {
+//        if (result.hasErrors()) {
+//            return "category_list";
+//        }
+//        categoryService.update(category);
+//        return "redirect:/category/all/";
+//    }
+//
 //    @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
 //
-//    public ModelAndView update(@PathVariable long id, @RequestParam(value = "name") String name,
-//                               @ModelAttribute(value = "category") Category category, BindingResult result) {
-//        ModelAndView modelAndView = new ModelAndView("category_list");
-//        if (result.hasErrors()) {
-//            return modelAndView;
-//        }
+//    public ModelAndView update(@PathVariable int id, @RequestBody Category category) {
+//        ModelAndView modelAndView = new ModelAndView("update_category");
 //
-//        categoryService.update(new Category().setCategoryId(id).setName(name));
+//
+//        categoryService.update(new Category().setCategoryId(id));
 //        modelAndView.addObject("category", category);
 //        modelAndView.addObject("categoryList", categoryService.findAll());
 //        return modelAndView;
+//
 //    }
-
 
 }

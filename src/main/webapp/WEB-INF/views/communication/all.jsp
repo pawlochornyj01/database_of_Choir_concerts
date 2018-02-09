@@ -8,27 +8,56 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style type="text/css">
-        h1 {
-            color: firebrick;
-            font-family: Arial;
-            font-size: 50px;
-            text-align: center;
-        }
-        .class1 {
-            border: 4px outset firebrick;
-            padding: 10px;
-        }
-        th.class1 {
-            color: antiquewhite;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" media="screen">
+
+
+    <script type="text/javascript" src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <title>Index</title>
 </head>
 <body>
-<h1>All Communications</h1>
+
 <table border="1" class="class1">
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://dudaryk.ua/">Dudaryk</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/category/all/">Categories</a></li>
+                            <li><a href="/category/all/">Concerts</a></li>
+                            <li><a href="/category/all/">Workers</a></li>
+                            <li><a href="/category/all/">Participants</a></li>
+                            <li><a href="/communication/all/">Communications</a></li>
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://www.library.dudaryk.ua/">Lidrary</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h1>All Communications</h1>
+    </div>
     <tr>
         <th>Id</th>
         <th>Name</th>

@@ -1,11 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%--<%@ include file="category_update.jsp" %>--%>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" media="screen">
 
@@ -16,87 +17,97 @@
 
 </head>
 <body>
-<div class="container">
-<h1>Category list</h1>
-<table class="table table-striped">
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th></th>
-        <th></th>
-    </tr>
 
-    <c:forEach items="${categoryList}" var="category">
-        <tr>
+<div class="container-fluid">
+<div class="row">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://dudaryk.ua/">Dudaryk</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
 
-            <td>${category.categoryId}</td>
-            <td>${category.name}</td>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/category/all/">Categories</a></li>
+                    <li><a href="/category/all/">Concerts</a></li>
+                    <li><a href="/category/all/">Workers</a></li>
+                    <li><a href="/category/all/">Participants</a></li>
+                    <li><a href="/communication/all/">Communications</a></li>
 
-            <td>
-                <form:form action="/category/update/${category.categoryId}/" method="post" modelAttribute="category">
-                    <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#Update">
-                        Update
-                    </button>
-
-                    <div id="Update" class="modal fade">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button class="close" type="button" data-dismiss="modal">×</button>
-                                    <h4 class="modal-title">Please update category</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <table class="table table-striped">
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Name</th>
-                                        </tr>
-                                        <tr>
-
-                                            <td>${category.categoryId}</td>
-                                            <td><input type="text" name="name"/></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
-                                    <button type="submit" class="btn btn-primary">Save</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </form:form>
-            </td>
-
-            <td>
-                <form action="/category/delete/${category.categoryId}/" method="get">
-
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-
-            </td>
-        </tr>
-        <br/>
-    </c:forEach>
-</table>
-
-
-<h2>Add a new Category</h2>
-<form:form method="post" modelAttribute="category">
-    <p>
-        Name:
-        <input type="text" name="name"/>
-        <form:errors path="name" cssclass="error"><span id="name.errors"
-                                                        cssclass="error">may not be empty</span>
-        </form:errors>
-    </p>
-    <button type="submit" class="btn btn-success">Add</button>
-
-</form:form>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.library.dudaryk.ua/">Lidrary</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
+</div>
+
+<div class="container">
+    <h1>Category list</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <c:forEach var="category" items="${categoryList}" >
+<%--<c:set var="id" value="${category.categoryId}"></c:set>--%>
+
+            <tr>
+
+                <td><c:out value="${category.categoryId}"/></td>
+                <td><c:out value="${category.name}"/></td>
+
+                <td>
+                    <%@ include file="/WEB-INF/views/category_update.jsp" %>
+                    <%--<jsp:include page="category_update.jsp">--%>
+                        <%--<jsp:param name="categoryId" value="${category.categoryId}"/>--%>
+                    <%--</jsp:include>--%>
+                        <%--<c:import url="category_update.jsp" var = "category"></c:import>--%>
+
+                    <form action="/category/update/${category.categoryId}/" method="post" >
+                    <a class="btn btn-info btn-lg" href="/category/update/${category.categoryId}/" >Update</a>
+                            </form>
+
+                </td>
+
+                <td>
+                    <a class="btn btn-danger" href="/category/delete/${category.categoryId}/" >Delete</a>
+                </td>
+            </tr>
+
+        </c:forEach>
+    </table>
+
+
+    <h2>Add a new Category</h2>
+    <form:form method="post" modelAttribute="category">
+        <p>
+            Name:
+            <input type="text" name="name"/>
+        <div class="form-group">
+                <%--<label for="name">Name:</label>--%>
+                <%--<textarea class="form-control" rows="1"  id="name" name="name" ></textarea>--%>
+                <%--</div>--%>
+            <form:errors path="name" cssclass="error"><span id="name.errors"
+                                                            cssclass="error">may not be empty</span>
+            </form:errors>
+        </p>
+        <button type="submit" class="btn btn-success">Add</button>
+
+    </form:form>
+</div>
+
 
 </body>
 
