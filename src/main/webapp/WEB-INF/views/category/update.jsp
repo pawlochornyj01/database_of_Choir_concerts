@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="category_list.jsp" %>
+<%@ include file="all.jsp" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,9 @@
 
 </head>
 <body>
-<c:import url="category_list.jsp" var = "category"></c:import>
+<%--<c:import url="all.jsp" var = "category"></c:import>--%>
 
-<%--&lt;%&ndash;<%@ include file="category_list.jsp" %>&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;<%@ include file="all.jsp" %>&ndash;%&gt;&ndash;%&gt;--%>
 <form:form action="/category/update/${category.categoryId}/" method="post"  >
 
     <table class="table table-striped">

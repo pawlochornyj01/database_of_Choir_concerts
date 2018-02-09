@@ -31,13 +31,10 @@ public class CommunicationController {
         return modelAndView;
     }
 
-    @RequestMapping("all/")
-    public void add() {
 
-    }
 
-    @RequestMapping(value = "all/", method = RequestMethod.POST)
-    public String categoryAddSubmit(@ModelAttribute("communication") @Valid Communication communication, BindingResult result) {
+    @RequestMapping(value = "add/", method = RequestMethod.POST)
+    public String addCommunication(@ModelAttribute("communication") @Valid Communication communication, BindingResult result) {
         if (result.hasErrors()) {
             return "communication/all/";
         }
@@ -45,24 +42,11 @@ public class CommunicationController {
         return "redirect:communication/all/";
     }
 
-//    @GetMapping(value = "all/")
-//    public List<Communication> findAll() {
-//        return communicationService.findAll();
-//    }
-//
-//    @RequestMapping(value = "updateCategory/", method = RequestMethod.POST)
-//    public Communication updateCategory(@RequestBody Communication communication) {
-//
-//        if (communication.getCommunicationId() > 0)
-//            communication = communicationService.updateCategory(communication);
-//        return communication;
-//    }
-//
-//    @RequestMapping(value = "save/", method = RequestMethod.POST)
-//    public Communication save(@RequestBody Communication communication) {
-//
-//        return communicationService.save(communication);
-//    }
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public String deleteCategory(@PathVariable int id) {
+        communicationService.delete(new Communication().setCommunicationId(id));
+        return "redirect:/category/all/";
+    }
 //
 //    @GetMapping(value = "delete/")
 //    public void delete(@PathVariable("id") Long id) {

@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<%@ include file="category_update.jsp" %>--%>
+<%--<%@ include file="update.jsp" %>--%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +52,7 @@
 
 <div class="container">
     <h1>Category list</h1>
+
     <table class="table table-striped">
         <tr>
             <th>Id</th>
@@ -59,8 +60,8 @@
             <th></th>
             <th></th>
         </tr>
-
-        <c:forEach var="category" items="${categoryList}" >
+        <tbody>
+        <c:forEach  items="${categoryList}" var="category">
 <%--<c:set var="id" value="${category.categoryId}"></c:set>--%>
 
             <tr>
@@ -69,11 +70,12 @@
                 <td><c:out value="${category.name}"/></td>
 
                 <td>
-                    <%@ include file="/WEB-INF/views/category_update.jsp" %>
-                    <%--<jsp:include page="category_update.jsp">--%>
-                        <%--<jsp:param name="categoryId" value="${category.categoryId}"/>--%>
-                    <%--</jsp:include>--%>
-                        <%--<c:import url="category_update.jsp" var = "category"></c:import>--%>
+                    <%--<%@ include file="/WEB-INF/views/update.jsp" %>--%>
+                    <jsp:include page="/WEB-INF/views/category/update.jsp">
+                        <jsp:param name="categoryId" value="${category.categoryId}"/>
+                    </jsp:include>
+
+                        <%--<c:import url="update.jsp" var = "category"></c:import>--%>
 
                     <form action="/category/update/${category.categoryId}/" method="post" >
                     <a class="btn btn-info btn-lg" href="/category/update/${category.categoryId}/" >Update</a>
@@ -83,15 +85,18 @@
 
                 <td>
                     <a class="btn btn-danger" href="/category/delete/${category.categoryId}/" >Delete</a>
+
                 </td>
             </tr>
 
         </c:forEach>
+        </tbody>
     </table>
 
 
+
     <h2>Add a new Category</h2>
-    <form:form method="post" modelAttribute="category">
+    <form:form action="/category/add/" method="post" modelAttribute="category">
         <p>
             Name:
             <input type="text" name="name"/>

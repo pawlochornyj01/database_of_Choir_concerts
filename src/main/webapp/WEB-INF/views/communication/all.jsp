@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<table border="1" class="class1">
+
 
     <div class="container-fluid">
         <div class="row">
@@ -58,6 +58,7 @@
     <div class="container">
         <h1>All Communications</h1>
     </div>
+    <table class="table table-striped">
     <tr>
         <th>Id</th>
         <th>Name</th>
@@ -67,8 +68,9 @@
         <th>concert</th>
         <th>comment</th>
         <th>description</th>
+        <th></th>
     </tr>
-
+        <tbody>
     <c:forEach items="${communicationList}" var="communication">
         <tr>
 
@@ -80,52 +82,66 @@
             <td>${communication.concert}</td>
             <td>${communication.comment}</td>
             <td>${communication.description}</td>
+            <td>
+                <a class="btn btn-danger" href="/communication/delete/${communication.communicationId}/" >Delete</a>
+
+            </td>
 
         </tr>
         <br/>
     </c:forEach>
-</table>
+        </tbody>
+    </table>
 <h2>Add a new Communication</h2>
 
-<form:form method="post" modelAttribute="communication">
-    <p>
-        Name:
-        <input type="text" name="name"/>
-        <form:errors path="name" cssclass="error"><span id="name.errors"
-                                                        cssclass="error">may not be empty</span></form:errors>
-    </p>
-    <p>
-        email:
-        <input type="text" name="email"/>
-
-    </p>
-    <p>
-        phone:
-        <input type="text" name="phone"/>
-    </p>
-    <p>
-        Date of membership:
-        <input type="text" name="membershipDate"/>
-
-    </p>
-    <p>
-        first met :
-        <input type="text" name="concert"/>
-
-    </p>
-    <p>
-        other information:
-        <input type="text" name="comment"/>
-
-    </p><p>
-    Description:
-    <input type="text" name="description"/>
-
-</p>
+<form:form action="/communication/add/" method="post" modelAttribute="communication">
 
 
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Add">
+        Add
+    </button>
 
-    <input type="submit"/>
+    <!-- Modal -->
+    <div class="modal fade" id="Add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add new Communication</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">Name:
+                            <input type="text" name="name"/></div>
+                        <div class="col-md-4 col-md-offset-4">email:
+                            <input type="text" name="email"/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">phone:
+                            <input type="text" name="phone"/></div>
+                        <div class="col-md-4 col-md-offset-4">Date of membership:
+                            <input type="text" name="membershipDate"/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">first met :
+                            <input type="text" name="concert"/></div>
+                        <div class="col-md-4 col-md-offset-4"> Description:
+                            <input type="text" name="description"/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">first met :
+                            <input type="text" name="concert"/></div>
+                        <div class="col-md-4 col-md-offset-4"> other information:
+                            <input type="text" name="comment"/></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </form:form>
 </body>
 </html>

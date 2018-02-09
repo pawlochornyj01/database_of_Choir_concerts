@@ -20,7 +20,7 @@ public interface CommunicationService {
 
     Communication update(Communication communication);
 
-    void delete(int id);
+    void delete(Communication communication);
 
     List<Communication> findAll();
 }

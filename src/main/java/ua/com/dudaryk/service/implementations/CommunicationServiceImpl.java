@@ -40,8 +40,8 @@ public class CommunicationServiceImpl implements CommunicationService {
         return communicationDAO.updateCommunication(communication);
     }
 
-    public void delete(int id) {
-        communicationDAO.deleteCommunication(communicationDAO.findByCommunicationId(id));
+    public void delete(Communication communication) {
+        communicationDAO.deleteCommunication(communication);
     }
 
 

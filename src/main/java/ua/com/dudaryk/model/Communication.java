@@ -67,7 +67,7 @@ public class Communication implements Serializable {
         return communicationId;
     }
 
-    private Communication setCommunicationId(int communicationId) {
+    public Communication setCommunicationId(int communicationId) {
         this.communicationId = communicationId;
         return this;
     }

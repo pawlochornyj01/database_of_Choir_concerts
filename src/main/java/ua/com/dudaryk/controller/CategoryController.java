@@ -26,16 +26,16 @@ public class CategoryController {
 
     @GetMapping(value = "all/")
     public ModelAndView findAll() {
-        ModelAndView modelAndView = new ModelAndView("category_list");
+        ModelAndView modelAndView = new ModelAndView("category/all");
         modelAndView.addObject("categoryList", categoryService.findAll());
         return modelAndView;
     }
 
 
-    @RequestMapping(value = "all/", method = RequestMethod.POST)
+    @RequestMapping(value = "add/", method = RequestMethod.POST)
     public String addCategory(@ModelAttribute("category") @Valid Category category, BindingResult result) {
         if (result.hasErrors()) {
-            return "category_list";
+            return "category/all";
         }
         categoryService.save(category);
         return "redirect:/category/all/";
