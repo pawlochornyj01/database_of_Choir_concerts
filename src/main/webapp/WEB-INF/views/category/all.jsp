@@ -19,35 +19,35 @@
 <body>
 
 <div class="container-fluid">
-<div class="row">
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://dudaryk.ua/">Dudaryk</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
+    <div class="row">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://dudaryk.ua/">Dudaryk</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
 
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/category/all/">Categories</a></li>
-                    <li><a href="/category/all/">Concerts</a></li>
-                    <li><a href="/category/all/">Workers</a></li>
-                    <li><a href="/category/all/">Participants</a></li>
-                    <li><a href="/communication/all/">Communications</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/category/all/">Categories</a></li>
+                        <li><a href="/category/all/">Concerts</a></li>
+                        <li><a href="/category/all/">Workers</a></li>
+                        <li><a href="/category/all/">Participants</a></li>
+                        <li><a href="/communication/all/">Communications</a></li>
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://www.library.dudaryk.ua/">Lidrary</a></li>
-                </ul>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http://www.library.dudaryk.ua/">Lidrary</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 </div>
 
 <div class="container">
@@ -61,8 +61,9 @@
             <th></th>
         </tr>
         <tbody>
-        <c:forEach  items="${categoryList}" var="category">
-<%--<c:set var="id" value="${category.categoryId}"></c:set>--%>
+        <c:forEach items="${categoryList}" var="category">
+            <%--<c:set var="id" value="${category.categoryId}"></c:set>--%>
+
 
             <tr>
 
@@ -70,21 +71,25 @@
                 <td><c:out value="${category.name}"/></td>
 
                 <td>
-                    <%--<%@ include file="/WEB-INF/views/update.jsp" %>--%>
-                    <jsp:include page="/WEB-INF/views/category/update.jsp">
-                        <jsp:param name="categoryId" value="${category.categoryId}"/>
-                    </jsp:include>
 
-                        <%--<c:import url="update.jsp" var = "category"></c:import>--%>
+                    <%@ include file="/WEB-INF/views/category/update.jsp" %>
+                        <%--<jsp:include page="/category/update/${category.categoryId}/">--%>
+                        <%--<jsp:param name="id" value="${category.categoryId}"/>--%>
+                        <%--</jsp:include>--%>
+                        <%--<a class="btn btn-info btn-lg" href="/category/update/${category.categoryId}/" >Update</a>--%>
 
-                    <form action="/category/update/${category.categoryId}/" method="post" >
-                    <a class="btn btn-info btn-lg" href="/category/update/${category.categoryId}/" >Update</a>
-                            </form>
+                        <%--<c:import url="/WEB-INF/views/category/update.jsp" var = "category"></c:import>--%>
+
+                        <%--<form action="/category/update/${category.categoryId}/" method="post" >--%>
+
+                        <%--<a class="btn btn-info btn-lg" href="/category/update/${category.categoryId}/" >Update</a>--%>
+                        <%--</form>--%>
+
 
                 </td>
 
                 <td>
-                    <a class="btn btn-danger" href="/category/delete/${category.categoryId}/" >Delete</a>
+                    <a class="btn btn-danger" href="/category/delete/${category.categoryId}/">Delete</a>
 
                 </td>
             </tr>
@@ -92,7 +97,6 @@
         </c:forEach>
         </tbody>
     </table>
-
 
 
     <h2>Add a new Category</h2>

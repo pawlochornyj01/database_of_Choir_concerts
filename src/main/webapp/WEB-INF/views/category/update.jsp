@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="all.jsp" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,31 +15,33 @@
 
 </head>
 <body>
-<%--<c:import url="all.jsp" var = "category"></c:import>--%>
+<%--<c:import url="/WEB-INF/views/category/all.jsp" var = "category"></c:import>--%>
 
 <%--&lt;%&ndash;&lt;%&ndash;<%@ include file="all.jsp" %>&ndash;%&gt;&ndash;%&gt;--%>
-<form:form action="/category/update/${category.categoryId}/" method="post"  >
+<form:form action="/category/update/${category.categoryId}/" method="post" modelAttribute="category" >
+    <%--<c:set var = "categoryId" scope = "request" value = "${category.categoryId}"/>--%>
 
     <table class="table table-striped">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-        </tr>
-        <tr>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    </tr>
+    <tr>
 
-            <td><c:out value="${category.categoryId}"/></td>
-            <%--<td><input type="text" name="name"/>--%>
+   <td><c:out value="${category.categoryId}"/></td>
+    <%--<td><input type="text" name="name"/>--%>
 
-            <td><textarea class="form-control" id="name" name="name"></textarea>
-            </td>
-            <td>
-                <button type="submit" class="btn btn-primary">Save</button>
-            </td>
-        </tr>
+    <td>
+        <textarea class="form-control" id="name" name="name"></textarea>
+        <%--<form:input path="category.name" id="name" />--%>
+    </td>
+    <td>
+    <button type="submit" class="btn btn-primary">Save</button>
+    </td>
+    </tr>
     </table>
 
     <a class="btn btn-default" href="/category/all/">Cancel</a>
-
 
 </form:form>
 </body>
