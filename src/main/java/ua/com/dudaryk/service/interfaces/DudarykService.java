@@ -22,7 +22,7 @@ public interface DudarykService {
 
     Dudaryk update(Dudaryk dudaryk);
 
-    void delete(int id);
+    void delete(Dudaryk dudaryk);
 
     Dudaryk findById(int id);
 

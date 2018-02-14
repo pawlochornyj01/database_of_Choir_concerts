@@ -88,7 +88,7 @@ public class Dudaryk implements Serializable {
         return this;
     }
 
-    private Dudaryk setVoice(Voice voice) {
+    public Dudaryk setVoice(Voice voice) {
         this.voice = voice;
         return this;
     }
@@ -97,7 +97,7 @@ public class Dudaryk implements Serializable {
         return concerts;
     }
 
-    private Dudaryk setConcerts(List<Concert> concerts) {
+    public Dudaryk setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
         return this;
     }
@@ -106,7 +106,7 @@ public class Dudaryk implements Serializable {
         return categories;
     }
 
-    private Dudaryk setCategories(List<Category> categories) {
+    public Dudaryk setCategories(List<Category> categories) {
         this.categories = categories;
         return this;
     }
@@ -115,7 +115,7 @@ public class Dudaryk implements Serializable {
         return dudarykId;
     }
 
-    private Dudaryk setDudarykId(int dudarykId) {
+    public Dudaryk setDudarykId(int dudarykId) {
         this.dudarykId = dudarykId;
         return this;
     }
@@ -124,7 +124,7 @@ public class Dudaryk implements Serializable {
         return name;
     }
 
-    private Dudaryk setName(String name) {
+    public Dudaryk setName(String name) {
         this.name = name;
         return this;
     }
@@ -133,7 +133,7 @@ public class Dudaryk implements Serializable {
         return lastName;
     }
 
-    private Dudaryk setLastName(String lastName) {
+    public Dudaryk setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -151,7 +151,7 @@ public class Dudaryk implements Serializable {
         return phone;
     }
 
-    private Dudaryk setPhone(String phone) {
+    public Dudaryk setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -160,7 +160,7 @@ public class Dudaryk implements Serializable {
         return description;
     }
 
-    private Dudaryk setDescription(String description) {
+    public Dudaryk setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -169,7 +169,7 @@ public class Dudaryk implements Serializable {
         return birthday;
     }
 
-    private Dudaryk setBirthday(LocalDate dateOfBirthday) {
+    public Dudaryk setBirthday(LocalDate dateOfBirthday) {
         this.birthday = dateOfBirthday;
         return this;
     }
@@ -182,7 +182,7 @@ public class Dudaryk implements Serializable {
         return isAction;
     }
 
-    private Dudaryk setAction(boolean action) {
+    public Dudaryk setAction(boolean action) {
         isAction = action;
         return this;
     }
@@ -191,7 +191,7 @@ public class Dudaryk implements Serializable {
         return photo;
     }
 
-    private Dudaryk setPhoto(String photo) {
+    public Dudaryk setPhoto(String photo) {
         this.photo = photo;
         return this;
     }

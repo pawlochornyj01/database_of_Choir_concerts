@@ -30,8 +30,8 @@ public class DudarykServiceImpl implements DudarykService {
         return dudarykDAO.updateDudaryk(dudaryk);
     }
 
-    public void delete(int id) {
-        dudarykDAO.deleteDudaryk(dudarykDAO.findDudarykById(id));
+    public void delete(Dudaryk dudaryk) {
+        dudarykDAO.deleteDudaryk(dudaryk);
     }
 
     public Dudaryk findById(int id) {
