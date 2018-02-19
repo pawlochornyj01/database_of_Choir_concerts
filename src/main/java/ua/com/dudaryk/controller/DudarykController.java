@@ -31,16 +31,16 @@ public ModelAndView findAll() {
     return modelAndView;
 }
     @RequestMapping(value = "add/", method = RequestMethod.POST)
-    public String addDudaryk(@ModelAttribute("communication") @Valid Dudaryk dudaryk, BindingResult
+    public String addDudaryk(@ModelAttribute("dudaryk") @Valid Dudaryk dudaryk, BindingResult
     result) {
         if (result.hasErrors()) {
             return "singer/all/";
         }
         dudarykService.save(dudaryk);
-        return "redirect:singer/all/";
+        return "redirect:/singer/all/";
     }
 
-    @RequestMapping(value = "delete/{id}/", method = RequestMethod.GET)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
     public String deleteDudaryk(@PathVariable int id) {
         dudarykService.delete(new Dudaryk().setDudarykId(id));
         return "redirect:/singer/all/";
@@ -50,6 +50,34 @@ public ModelAndView findAll() {
 
         dudarykService.update(dudaryk.setDudarykId(id));
         return "redirect:/singer/all/";
+    }
+
+    @GetMapping(value = "search/")
+    public ModelAndView findByName(@RequestParam("searchMode") String searchMode,@RequestParam("searchParam")  Object object) {
+        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
+
+        switch (searchMode) {
+            case "ID":
+                modelAndView.addObject("dudarykList", dudarykService.findById((Integer)(object)));
+                break;
+            case "NAME":
+                modelAndView.addObject("dudarykList", dudarykService.findByName((String) (object)));
+                break;
+            case "CONCERT":
+                modelAndView.addObject("dudarykList", dudarykService.findByConcert((Integer)(object)));
+                break;
+            case "LASTNAME":
+                modelAndView.addObject("dudarykList", dudarykService.findByLastName((String)(object)));
+                break;
+            case "VOICE":
+                modelAndView.addObject("dudarykList", dudarykService.findByVoice((Voice) (object)));
+                break;
+            case "ACTION":
+                modelAndView.addObject("dudarykList", dudarykService.findAction());
+                break;
+
+        }
+        return modelAndView;
     }
 
 //    @GetMapping(value = "byId/{id}")
@@ -63,33 +91,33 @@ public ModelAndView findAll() {
 //        return dudarykService.findById(id);
 //    }
 
-    @GetMapping(value = "byName/")
-    public ModelAndView findByName(@RequestParam("name") String name) {
-        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
-        modelAndView.addObject("dudarykList", dudarykService.findByName(name));
-        return modelAndView;
-    }
-
-    @GetMapping(value = "byLastName/")
-    public ModelAndView byLastName(@RequestParam("lastName") String lastName) {
-        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
-        modelAndView.addObject("dudarykList", dudarykService.findByLastName(lastName));
-        return modelAndView;
-    }
-
-    @GetMapping(value = "byVoice/")
-    public ModelAndView findByVoice(@RequestParam("voice") Voice voice) {
-        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
-        modelAndView.addObject("dudarykList", dudarykService.findByVoice(voice));
-        return modelAndView;
-    }
-
-    @GetMapping(value = "action/")
-    public ModelAndView findAction() {
-        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
-        modelAndView.addObject("dudarykList", dudarykService.findAction());
-        return modelAndView;
-    }
+//    @GetMapping(value = "byName/")
+//    public ModelAndView findByName(@RequestParam("name") String name) {
+//        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
+//        modelAndView.addObject("dudarykList", dudarykService.findByName(name));
+//        return modelAndView;
+//    }
+//
+//    @GetMapping(value = "byLastName/")
+//    public ModelAndView byLastName(@RequestParam("lastName") String lastName) {
+//        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
+//        modelAndView.addObject("dudarykList", dudarykService.findByLastName(lastName));
+//        return modelAndView;
+//    }
+//
+//    @GetMapping(value = "byVoice/")
+//    public ModelAndView findByVoice(@RequestParam("voice") Voice voice) {
+//        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
+//        modelAndView.addObject("dudarykList", dudarykService.findByVoice(voice));
+//        return modelAndView;
+//    }
+//
+//    @GetMapping(value = "action/")
+//    public ModelAndView findAction() {
+//        ModelAndView modelAndView = new ModelAndView("dudaryk/searchList");
+//        modelAndView.addObject("dudarykList", dudarykService.findAction());
+//        return modelAndView;
+//    }
 
 //    @GetMapping(value = "byConcert/")
 //    public ModelAndView findByConcert(@PathVariable("id") int id) {

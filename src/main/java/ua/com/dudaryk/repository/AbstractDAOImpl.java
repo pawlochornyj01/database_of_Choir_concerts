@@ -38,7 +38,7 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T> {
     @Override
     @Transactional()
     public void delete(T entity) {
-        entityManager.remove(entity);
+        entityManager.remove(entityManager.contains(entity) ? entity : entityManager.merge(entity));
     }
 
     @Transactional(readOnly = true)

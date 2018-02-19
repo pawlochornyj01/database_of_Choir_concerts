@@ -1,5 +1,6 @@
 package ua.com.dudaryk.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import ua.com.dudaryk.service.dto.DudarykDTO;
 
 import javax.persistence.*;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "dudaryk")
+@Table(name = "dudaryk" ,schema= "dudaryk" )
 public class Dudaryk implements Serializable {
 
     @Id
@@ -30,9 +31,11 @@ public class Dudaryk implements Serializable {
     private List<Category> categories;
 
     @Column(name = "NAME")
+    @NotEmpty
     private String name;
 
     @Column(name = "LASTNAME")
+    @NotEmpty
     private String lastName;
 
     @Column(name = "EMAIL")

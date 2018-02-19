@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +39,7 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="http://www.library.dudaryk.ua/">Lidrary</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -85,7 +85,7 @@
 
                 <td>
 
-                    <%--<%@ include file="/WEB-INF/views/dudaryk/update.jsp" %>--%>
+                        <%--<%@ include file="/WEB-INF/views/dudaryk/update.jsp" %>--%>
                 </td>
 
                 <td>
@@ -130,13 +130,14 @@
                         <div class="col-md-4">Name:
                             <input type="text" name="name"/></div>
                         <div class="col-md-4 col-md-offset-4">LastName:
-                            <input type="text" name="lastname"/></div>
+                            <input type="text" name="lastName"/></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-4">phone:
                             <input type="text" name="phone"/></div>
                         <div class="col-md-4 col-md-offset-4">Birthday:
+                            (YYYY-MM-DD)
                             <input type="text" name="birthday"/></div>
                     </div>
                     <div class="row">
@@ -147,32 +148,57 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">action:
-                            <form:radiobutton path="isAction" value="true"/> true
-                            <form:radiobutton path="isAction" value="false"/> false
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="true" name="isAction">true</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="false" name="isAction">false</label>
+                            </div>
+                                <%--<form:radiobutton path="isAction" value="true"/> true--%>
+                                <%--<form:radiobutton path="isAction" value="false"/> false--%>
                         </div>
                         <div class="col-md-4 col-md-offset-4">Voice:
                             <div class="checkbox">
-                                <label><input type="checkbox" value="DISCANTO">DISCANTO</label>
+                                <label><input type="checkbox" value="DISCANTO" name="voice">DISCANTO</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="ALTO">ALTO</label>
+                                <label><input type="checkbox" value="ALTO" name="voice">ALTO</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="TENOR">TENOR</label>
+                                <label><input type="checkbox" value="TENOR" name="voice">TENOR</label>
                             </div>
-                            <div class="checkbox disabled">
-                                <label><input type="checkbox" value="BASS" disabled>BASS</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="BASS" name="voice">BASS</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
     </div>
     </form:form>
+<h2>Search Singer</h2>
+    <form:form action="/singer/search/" method="get">
+    <select class="mdb-select colorful-select dropdown-primary" searchable="Search here..">
+        <option value="ID" name="searchMode">by Id</option>
+        <option value="NAME" name="searchMode">by Name</option>
+        <option value="LASTNAME" name="searchMode">by LastName</option>
+        <option value="VOICE" name="searchMode">by Voice</option>
+        <option value="ACTION" name="searchMode">Action Singers</option>
+        <option value="CONCERT" name="searchMode">by Concert Id</option>
+    </select>
+    <label>please choose a mode of seaching </label>
+
+    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchParam">
+    <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
+
+
+    </form:form>
+
+
 </body>
 </html>
