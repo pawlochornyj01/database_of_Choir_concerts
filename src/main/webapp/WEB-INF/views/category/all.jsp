@@ -36,7 +36,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/category/all/">Categories</a></li>
                         <li><a href="/category/all/">Concerts</a></li>
-                        <li><a href="/category/all/">Workers</a></li>
+                        <li><a href="/singer/all/">Workers</a></li>
                         <li><a href="/category/all/">Participants</a></li>
                         <li><a href="/communication/all/">Communications</a></li>
 
@@ -51,7 +51,7 @@
 </div>
 
 <div class="container">
-    <h1>Category list</h1>
+    <h1>List of Singer</h1>
 
     <table class="table table-striped">
         <tr>

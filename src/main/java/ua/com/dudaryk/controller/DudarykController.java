@@ -9,6 +9,7 @@ import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.Voice;
 import ua.com.dudaryk.service.interfaces.DudarykService;
 
+import javax.enterprise.inject.Model;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -96,6 +97,13 @@ public ModelAndView findAll() {
 //        modelAndView.addObject("dudarykList", dudarykService.findByConcert(id));
 //        return modelAndView;
 //    }
+
+    @RequestMapping(value = "page/",method = RequestMethod.GET)
+    public  ModelAndView displayDudarykPage(@ModelAttribute("dudaryk") Dudaryk dudaryk){
+        ModelAndView modelAndView = new ModelAndView("dudaryk/page");
+        modelAndView.addObject("dudaryk");
+        return modelAndView;
+    }
 
 
 
