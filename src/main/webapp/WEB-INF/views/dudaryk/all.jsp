@@ -32,7 +32,7 @@
 
                         <li><a href="/">Home</a></li>
                         <li><a href="/category/all/">Categories</a></li>
-                        <li><a href="/category/all/">Concerts</a></li>
+                        <li><a href="/concert/all/">Concerts</a></li>
                         <li><a href="/singer/all/">Workers</a></li>
                         <li><a href="/category/all/">Participants</a></li>
                         <li><a href="/communication/all/">Communications</a></li>
@@ -83,14 +83,17 @@
                 </c:choose>
                 </td>
 
-                <td>
 
-                        <%--<%@ include file="/WEB-INF/views/dudaryk/update.jsp" %>--%>
-                </td>
 
                 <td>
                     <a class="btn btn-danger" href="/singer/delete/${dudaryk.dudarykId}/">Delete</a>
 
+                </td>
+                <td>
+
+                    <form:form action="/concert/participants/${dudaryk.dudarykId}" method="get" >
+                        <a class="btn btn-danger" href="/singer/delete/${dudaryk.dudarykId}/">Search Mutual Participants</a>
+                    </form:form>
                 </td>
             </tr>
 

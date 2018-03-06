@@ -1,5 +1,6 @@
 package ua.com.dudaryk.service.interfaces;
 
+import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.service.dto.ParticipantDTO;
 
@@ -16,4 +17,6 @@ public interface ParticipantService {
     Participant findById(int id);
 
     List<Participant> findByConcertId(int id);
+
+    List<Participant> findByConcertList(List<Concert> concertList);
 }

@@ -4,27 +4,46 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import ua.com.dudaryk.model.Concert;
+import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.service.interfaces.ConcertService;
+import ua.com.dudaryk.service.interfaces.ParticipantService;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("concert/")
 public class ConcertController {
 
     private ConcertService concertService;
+    private ParticipantService participantService;
 
     @Autowired
-    public ConcertController(ConcertService concertService) {
+    public ConcertController(ConcertService concertService, ParticipantService participantService) {
         this.concertService = concertService;
+        this.participantService = participantService;
     }
 
-//    @GetMapping(value = "all/")
-//    public List<Concert> findAll() {
-//        return concertService.findAll();
-//    }
+    @GetMapping(value = "all/")
+    public ModelAndView findAll() {
+        ModelAndView modelAndView = new ModelAndView("concert/all");
+        modelAndView.addObject("concertList", concertService.findAll());
+        return modelAndView;
+    }
+
+    @GetMapping(value = "participants/{id}")
+    public ModelAndView showMutualParticipants(@PathVariable int id) {
+        ModelAndView modelAndView = new ModelAndView("concert/mutual_participants");
+        modelAndView.addObject("participantList",
+                participantService.findByConcertList(concertService.findByDudarykId(id)));
+        return modelAndView;
+    }
+
 //
 //    @RequestMapping(value = "update/", method = RequestMethod.POST)
 //    public Concert update(@RequestBody Concert concert) {

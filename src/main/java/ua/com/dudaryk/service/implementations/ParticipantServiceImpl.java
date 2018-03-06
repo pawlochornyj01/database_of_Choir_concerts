@@ -3,15 +3,14 @@ package ua.com.dudaryk.service.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.repository.interfaces.ParticipantDAO;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
 import ua.com.dudaryk.service.dto.ParticipantDTO;
 
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Transactional
@@ -43,6 +42,19 @@ public class ParticipantServiceImpl implements ParticipantService {
         list.sort(Comparator.comparing(Participant::getParticipantId));
         return list;
     }
+    @Override
+    public List<Participant> findByConcertList(List<Concert> concertList) {
+
+        Set<Participant> participantSet = new TreeSet<>();
+        for (Concert concert : concertList) {
+            participantSet.addAll(findByConcertId(concert.getConcertId()));
+
+        }
+        List<Participant> list = new ArrayList<>(participantSet);
+        list.sort(Comparator.comparing(Participant::getParticipantId));
+        return list;
+    }
+
 
     @Transactional(readOnly = true)
     @Override

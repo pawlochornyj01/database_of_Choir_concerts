@@ -1,7 +1,13 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 06.03.2018
+  Time: 11:14
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +21,7 @@
     <title>Index</title>
 </head>
 <body>
+
 <div class="container-fluid">
     <div class="row">
         <nav class="navbar navbar-inverse">
@@ -39,63 +46,40 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-
+                        <li><a href="http://www.library.dudaryk.ua/">Lidrary</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 </div>
-
 <div class="container">
-    <h1>Category list</h1>
-
-    <table class="table table-striped">
+    <h1>All Concerts</h1>
+</div>
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>genre</th>
+        <th>date</th>
+        <th></th>
+    </tr>
+    <tbody>
+    <c:forEach items="${concertList}" var="concert">
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>LastName</th>
-            <th>email</th>
-            <th>phone</th>
-            <th>Voice</th>
-            <th>Action</th>
-            <th></th>
+
+            <td>${concert.concertId}</td>
+            <td>${concert.name}</td>
+            <td>${concert.genre}</td>
+            <td>${concert.date}</td>
+            <td></td>
+
+
         </tr>
-        <tbody>
-        <c:forEach items="${dudarykList}" var="dudaryk">
+        <br/>
+    </c:forEach>
+    </tbody>
 
-            <tr>
-
-                <td><c:out value="${dudaryk.dudarykId}"/></td>
-                <td><c:out value="${dudaryk.name}"/></td>
-                <td><c:out value="${dudaryk.lastName}"/></td>
-                <td><c:out value="${dudaryk.email}"/></td>
-                <td><c:out value="${dudaryk.phone}"/></td>
-                <td><c:out value="${dudaryk.voice}"/></td>
-                    <%--<td><c:out value="${dudaryk.action}"/></td>--%>
-                <td><c:choose>
-                    <c:when test="${dudaryk.action}">
-                        <p><span class="glyphicon glyphicon-ok"></span></p>
-                    </c:when>
-                    <c:otherwise>
-                        <p><span class="glyphicon glyphicon-remove"></span></p>
-                    </c:otherwise>
-                </c:choose>
-                </td>
-
-                <td>
-
-                        <%--<%@ include file="/WEB-INF/views/dudaryk/update.jsp" %>--%>
-                </td>
-
-                <td>
-                    <a class="btn btn-danger" href="/singer/delete/${dudaryk.dudarykId}/">Delete</a>
-
-                </td>
-            </tr>
-
-        </c:forEach>
-        </tbody>
-    </table>
+</table>
 </body>
 </html>
