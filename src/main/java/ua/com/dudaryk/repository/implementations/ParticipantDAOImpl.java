@@ -44,5 +44,11 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
         return entityManager.createQuery(query).getResultList();
     }
 
+    @Override
+    public List<Participant> findByConcertId(int id) {
+        String query = "select Participant from participant  where Participant.CONCERT_ID=" + id;
+        return entityManager.createQuery(query).getResultList();
+    }
+
 
 }

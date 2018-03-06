@@ -1,0 +1,14 @@
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'violinist', null, 'O.Bozhyk', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'O.Mukha', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'S.Solovii', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'T.Vakhnovska', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'M.Kornutjak', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'T.Riznyak', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'P.Cugovski', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'singer', null, 'A.Kurzak', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'composer', null, 'R.Cys', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'director', null, 'T.Crysa', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'director', null, 'O.Lyniv', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'orchestra', null, 'INSO', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'choir', null, 'Trembita', null);
+INSERT INTO dudaryk.participant (COMMENT, DESCRIPTION, EMAIL, NAME, PHONE) VALUES (null, 'choir', null, 'Gomin', null);

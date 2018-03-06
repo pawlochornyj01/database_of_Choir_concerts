@@ -14,4 +14,6 @@ public interface ParticipantService {
     void delete(int id);
 
     Participant findById(int id);
+
+    List<Participant> findByConcertId(int id);
 }

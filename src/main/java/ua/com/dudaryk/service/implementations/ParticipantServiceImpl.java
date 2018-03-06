@@ -37,6 +37,13 @@ public class ParticipantServiceImpl implements ParticipantService {
         return participantDAO.findParticipantById(id);
     }
 
+    @Override
+    public List<Participant> findByConcertId(int id) {
+        List<Participant> list = participantDAO.findByConcertId(id);
+        list.sort(Comparator.comparing(Participant::getParticipantId));
+        return list;
+    }
+
     @Transactional(readOnly = true)
     @Override
     public List<Participant> findByName(String name) {

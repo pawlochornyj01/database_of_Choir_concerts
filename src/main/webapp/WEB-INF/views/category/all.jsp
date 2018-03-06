@@ -51,7 +51,7 @@
 </div>
 
 <div class="container">
-    <h1>List of Singer</h1>
+    <h1>Category list</h1>
 
     <table class="table table-striped">
         <tr>

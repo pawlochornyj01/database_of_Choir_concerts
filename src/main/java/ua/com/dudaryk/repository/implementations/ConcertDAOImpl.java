@@ -67,5 +67,11 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
         return entityManager.createQuery(query).getResultList();
     }
 
+    @Override
+    public List<Concert> findByDudarykId(int id) {
+        String query = "select Concert from concert  where Concert.DUDARYK_ID=" + id;
+        return entityManager.createQuery(query).getResultList();
+    }
+
 
 }

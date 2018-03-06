@@ -2,6 +2,7 @@ package ua.com.dudaryk.repository.interfaces;
 
 
 import ua.com.dudaryk.model.Concert;
+import ua.com.dudaryk.model.Participant;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,5 +24,10 @@ public interface ConcertDAO {
     List<Concert> findByDate(LocalDateTime date);
 
     List<Concert> findByParticipant(int id);
+
+    List<Concert> findByDudarykId(int id);
+
+
+
 
 }

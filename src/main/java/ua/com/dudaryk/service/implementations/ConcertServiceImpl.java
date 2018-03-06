@@ -46,6 +46,13 @@ public class ConcertServiceImpl implements ConcertService {
         return list;
     }
 
+    @Override
+    public List<Concert> findByDudarykId(int id) {
+        List<Concert> list = concertDAO.findByDudarykId(id);
+        list.sort(Comparator.comparing(Concert::getConcertId));
+        return list;
+    }
+
     @Transactional(readOnly = true)
     @Override
     public List<Concert> findByName(String name) {

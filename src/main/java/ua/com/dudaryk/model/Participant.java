@@ -19,7 +19,7 @@ public class Participant implements Serializable {
     private int participantId;
 
     @ManyToMany(mappedBy = "participants")
-    private List<Concert> concerts = new ArrayList<>();
+    private List<Concert> concerts ;
 
     @Column(name = "NAME")
     private String name;

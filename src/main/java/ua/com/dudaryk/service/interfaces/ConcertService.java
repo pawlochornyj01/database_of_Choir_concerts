@@ -23,4 +23,6 @@ public interface ConcertService {
     Concert findById(int id);
 
     List<Concert> findAll();
+
+    List<Concert> findByDudarykId(int id);
 }

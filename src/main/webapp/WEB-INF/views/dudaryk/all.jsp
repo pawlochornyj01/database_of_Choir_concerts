@@ -48,7 +48,7 @@
 </div>
 
 <div class="container">
-    <h1>Category list</h1>
+    <h1> List of Singers</h1>
 
     <table class="table table-striped">
         <tr>
@@ -191,7 +191,7 @@
         <option value="ACTION" name="searchMode">Action Singers</option>
         <option value="CONCERT" name="searchMode">by Concert Id</option>
     </select>
-    <label>please choose a mode of seaching </label>
+    <label>please choose a mode of searching </label>
 
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchParam">
     <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
