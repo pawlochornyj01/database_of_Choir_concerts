@@ -2,6 +2,7 @@ package ua.com.dudaryk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
 
@@ -16,6 +17,13 @@ public class ParticipantController {
     @Autowired
     public ParticipantController(ParticipantService participantService) {
         this.participantService = participantService;
+    }
+
+    @GetMapping(value = "all/")
+    public ModelAndView findAll() {
+        ModelAndView modelAndView = new ModelAndView("participant/all");
+        modelAndView.addObject("participantList", participantService.findAll());
+        return modelAndView;
     }
 
 //    @RequestMapping(value = "save/", method = RequestMethod.POST)

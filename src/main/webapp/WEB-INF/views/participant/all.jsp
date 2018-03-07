@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 06.03.2018
-  Time: 11:14
+  Date: 07.03.2018
+  Time: 13:41
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -21,7 +21,6 @@
     <title>Index</title>
 </head>
 <body>
-
 <div class="container-fluid">
     <div class="row">
         <nav class="navbar navbar-inverse">
@@ -54,33 +53,38 @@
     </div>
 </div>
 <div class="container">
-    <h1>All Concerts</h1>
+    <h1>All Participants</h1>
 
 <table class="table table-striped">
     <tr>
         <th>Id</th>
         <th>Name</th>
-        <th>genre</th>
-        <th>date</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>membershipDate</th>
+        <th>concert</th>
+        <th>comment</th>
+        <th>description</th>
         <th></th>
     </tr>
     <tbody>
-    <c:forEach items="${concertList}" var="concert">
+    <c:forEach items="${participantList}" var="participant">
         <tr>
 
-            <td>${concert.concertId}</td>
-            <td>${concert.name}</td>
-            <td>${concert.genre}</td>
-            <td>${concert.date}</td>
-            <td></td>
+            <td>${participant.participantId}</td>
+            <td>${participant.name}</td>
+            <td>${participant.email}</td>
+            <td>${participant.phone}</td>
+            <td>${participant.comment}</td>
+            <td>${participant.description}</td>
 
 
         </tr>
         <br/>
     </c:forEach>
     </tbody>
-
 </table>
 </div>
 </body>
 </html>
+

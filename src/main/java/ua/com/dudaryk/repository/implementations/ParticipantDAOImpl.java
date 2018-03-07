@@ -50,5 +50,10 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
         return entityManager.createQuery(query).getResultList();
     }
 
+    @Override
+    public List<Participant> findAllParticipant() {
+        return findAll();
+    }
+
 
 }

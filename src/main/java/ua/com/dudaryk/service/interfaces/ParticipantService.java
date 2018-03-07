@@ -12,6 +12,8 @@ public interface ParticipantService {
 
     Participant save(Participant participant);
 
+    List<Participant> findAll();
+
     void delete(int id);
 
     Participant findById(int id);

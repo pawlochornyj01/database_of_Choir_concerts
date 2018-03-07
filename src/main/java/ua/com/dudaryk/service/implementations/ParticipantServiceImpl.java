@@ -28,6 +28,13 @@ public class ParticipantServiceImpl implements ParticipantService {
         return participantDAO.saveParticipant(participant);
     }
 
+    @Override
+    public List<Participant> findAll() {
+        List<Participant> list = participantDAO.findAllParticipant();
+        list.sort(Comparator.comparing(Participant::getParticipantId));
+        return list;
+    }
+
     public void delete(int id) {
         participantDAO.deleteParticipant(participantDAO.findParticipantById(id));
     }
@@ -42,6 +49,7 @@ public class ParticipantServiceImpl implements ParticipantService {
         list.sort(Comparator.comparing(Participant::getParticipantId));
         return list;
     }
+
     @Override
     public List<Participant> findByConcertList(List<Concert> concertList) {
 

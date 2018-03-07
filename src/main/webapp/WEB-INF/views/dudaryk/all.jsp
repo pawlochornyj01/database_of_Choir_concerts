@@ -34,7 +34,7 @@
                         <li><a href="/category/all/">Categories</a></li>
                         <li><a href="/concert/all/">Concerts</a></li>
                         <li><a href="/singer/all/">Workers</a></li>
-                        <li><a href="/category/all/">Participants</a></li>
+                        <li><a href="/participant/all/">Participants</a></li>
                         <li><a href="/communication/all/">Communications</a></li>
 
                     </ul>
@@ -92,7 +92,7 @@
                 <td>
 
                     <form:form action="/concert/participants/${dudaryk.dudarykId}" method="get" >
-                        <a class="btn btn-danger" href="/singer/delete/${dudaryk.dudarykId}/">Search Mutual Participants</a>
+                        <button type="submit" class="btn btn-success">Search Mutual Participants</button>
                     </form:form>
                 </td>
             </tr>

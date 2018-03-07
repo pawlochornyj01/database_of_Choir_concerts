@@ -16,4 +16,6 @@ public interface ParticipantDAO {
 
     List<Participant> findByConcertId(int id);
 
+    List<Participant> findAllParticipant();
+
 }

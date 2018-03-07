@@ -37,7 +37,7 @@
                         <li><a href="/category/all/">Categories</a></li>
                         <li><a href="/concert/all/">Concerts</a></li>
                         <li><a href="/singer/all/">Workers</a></li>
-                        <li><a href="/category/all/">Participants</a></li>
+                        <li><a href="/participant/all/">Participants</a></li>
                         <li><a href="/communication/all/">Communications</a></li>
 
                     </ul>
