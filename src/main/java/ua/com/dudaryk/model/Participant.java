@@ -5,7 +5,6 @@ import ua.com.dudaryk.service.dto.ParticipantDTO;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,7 +18,7 @@ public class Participant implements Serializable {
     private int participantId;
 
     @ManyToMany(mappedBy = "participants")
-    private List<Concert> concerts ;
+    private List<Concert> concerts;
 
     @Column(name = "NAME")
     private String name;

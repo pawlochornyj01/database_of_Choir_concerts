@@ -2,7 +2,6 @@ package ua.com.dudaryk.service.interfaces;
 
 import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Participant;
-import ua.com.dudaryk.service.dto.ParticipantDTO;
 
 import java.util.List;
 

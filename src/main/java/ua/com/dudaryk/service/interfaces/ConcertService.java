@@ -1,7 +1,6 @@
 package ua.com.dudaryk.service.interfaces;
 
 import ua.com.dudaryk.model.Concert;
-import ua.com.dudaryk.service.dto.ConcertDTO;
 
 import java.time.LocalDateTime;
 import java.util.List;

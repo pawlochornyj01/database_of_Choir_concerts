@@ -7,6 +7,7 @@ import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.ConcertDAO;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -50,6 +51,8 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
         String query = "select Concert from concert  where Concert.NAME=" + name;
         return entityManager.createQuery(query).getResultList();
 
+//             createNativeQuery(query).getResultList();
+
     }
 
 
@@ -63,14 +66,19 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
     @Override
     public List<Concert> findByParticipant(int id) {
-        String query = "select Concert from concert  where Concert.PARTICIPANT_ID=" + id;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Concert> query = entityManager.createQuery(
+                "select c from Concert c " +
+                        "join c.participants p where p.participantId= :id", Concert.class);
+        return query.setParameter("id", id).getResultList();
+
     }
 
     @Override
     public List<Concert> findByDudarykId(int id) {
-        String query = "select Concert from concert  where Concert.DUDARYK_ID=" + id;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Concert> query = entityManager.createQuery(
+                "select c from Concert c " +
+                        "join c.dudaryks d where d.dudarykId = :id", Concert.class);
+        return query.setParameter("id", id).getResultList();
     }
 
 

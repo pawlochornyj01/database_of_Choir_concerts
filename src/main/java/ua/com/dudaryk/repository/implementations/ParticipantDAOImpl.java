@@ -2,11 +2,13 @@ package ua.com.dudaryk.repository.implementations;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.ParticipantDAO;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -46,8 +48,10 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
 
     @Override
     public List<Participant> findByConcertId(int id) {
-        String query = "select Participant from participant  where Participant.CONCERT_ID=" + id;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Participant> query = entityManager.createQuery(
+                "select p from Participant p " +
+                        "join p.concerts c where c.concertId= :id", Participant.class);
+        return query.setParameter("id", id).getResultList();
     }
 
     @Override

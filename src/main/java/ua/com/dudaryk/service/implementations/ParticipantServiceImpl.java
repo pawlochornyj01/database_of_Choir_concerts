@@ -7,7 +7,6 @@ import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.repository.interfaces.ParticipantDAO;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
-import ua.com.dudaryk.service.dto.ParticipantDTO;
 
 
 import java.util.*;
@@ -53,11 +52,12 @@ public class ParticipantServiceImpl implements ParticipantService {
     @Override
     public List<Participant> findByConcertList(List<Concert> concertList) {
 
-        Set<Participant> participantSet = new TreeSet<>();
+        Set<Participant> participantSet = new TreeSet<>(Comparator.comparing(Participant::getParticipantId));
         for (Concert concert : concertList) {
             participantSet.addAll(findByConcertId(concert.getConcertId()));
 
         }
+
         List<Participant> list = new ArrayList<>(participantSet);
         list.sort(Comparator.comparing(Participant::getParticipantId));
         return list;

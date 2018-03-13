@@ -2,7 +2,6 @@ package ua.com.dudaryk.repository.interfaces;
 
 
 import ua.com.dudaryk.model.Concert;
-import ua.com.dudaryk.model.Participant;
 
 import java.time.LocalDateTime;
 import java.util.List;

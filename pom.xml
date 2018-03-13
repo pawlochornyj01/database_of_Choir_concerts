@@ -185,6 +185,17 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.transaction/jta &ndash;&gt;-->
         <dependency>
             <groupId>javax.transaction</groupId>
