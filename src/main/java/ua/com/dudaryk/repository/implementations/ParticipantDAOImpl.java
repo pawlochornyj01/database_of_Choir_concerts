@@ -42,8 +42,10 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
 
     @Override
     public List<Participant> findByName(String name) {
-        String query = "select Participant from participant  where Participant.NAME=" + name;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Participant> query = entityManager.createQuery(
+                "select p from Participant p " +
+                        "where p.name= :name", Participant.class);
+        return query.setParameter("name", name).getResultList();
     }
 
     @Override
@@ -58,8 +60,6 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
     public List<Participant> findAllParticipant() {
         return findAll();
     }
-
-
 
 
 }

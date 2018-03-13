@@ -57,14 +57,18 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
 
     @Override
     public List<Communication> findByMembershipDate(LocalDateTime date) {
-        String query = "select Communication from communication  where Communication.DATE_OF_MEMBERSHIP=" + date;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Communication> query = entityManager.createQuery(
+                "select cm from Communication cm " +
+                        " where cm.membershipDate= :date", Communication.class);
+        return query.setParameter("date", date).getResultList();
     }
 
 
     @Override
     public List<Communication> findByName(String name) {
-        String query = "select Communication from communication  where Communication.NAME=" + name;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Communication> query = entityManager.createQuery(
+                "select cm from Communication cm " +
+                        " where cm.name= :name", Communication.class);
+        return query.setParameter("name", name).getResultList();
     }
 }

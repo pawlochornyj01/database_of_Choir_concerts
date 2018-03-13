@@ -7,6 +7,7 @@ import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CategoryDAO;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -37,9 +38,12 @@ public class CategoryDAOImpl extends AbstractDAOImpl<Category> implements Catego
 
     @Override
     public Category findByDudarykId(int id) {
-        String query = "select Category from category  where Category.DUDARYK_ID=" + id;
-        return (Category) entityManager.createQuery(query).getSingleResult();
+        TypedQuery<Category> query = entityManager.createQuery(
+                "select c from Category c " +
+                        " where c.categoryId = :id", Category.class);
+        return query.setParameter("id", id).getSingleResult();
     }
+
 
     @Override
     public void deleteCategory(Category category) {

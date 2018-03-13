@@ -48,8 +48,10 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
     @Override
     public List<Concert> findByName(String name) {
-        String query = "select Concert from concert  where Concert.NAME=" + name;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Concert> query = entityManager.createQuery(
+                "select c from Concert c " +
+                        " where c.name = :name", Concert.class);
+        return query.setParameter("name", name).getResultList();
 
 //             createNativeQuery(query).getResultList();
 
@@ -58,8 +60,10 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
     @Override
     public List<Concert> findByDate(LocalDateTime date) {
-        String query = "select Concert from concert  where Concert.DATE=" + date;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Concert> query = entityManager.createQuery(
+                "select c from Concert c " +
+                        " where c.date = :date", Concert.class);
+        return query.setParameter("date", date).getResultList();
 
     }
 

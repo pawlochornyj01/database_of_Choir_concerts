@@ -68,13 +68,13 @@ public class ConcertServiceImpl implements ConcertService {
     public List<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk) {
 
         List<Concert> concerts = new ArrayList<>();
-        for(Concert concert: concertDAO.findByDudarykId(dudaryk.getDudarykId())){
-            for(Communication communication:communicationDAO.findByConcertId(concert.getConcertId())){
-               if(communication.getPhone()!=null){
-                   if(concert.getDate().getYear()==2018) {
-                       concerts.add(concert);
-                   }
-               }
+        for (Concert concert : concertDAO.findByDudarykId(dudaryk.getDudarykId())) {
+            for (Communication communication : communicationDAO.findByConcertId(concert.getConcertId())) {
+                if (communication.getPhone() != null) {
+                    if (concert.getDate().getYear() == 2018) {
+                        concerts.add(concert);
+                    }
+                }
             }
 
         }

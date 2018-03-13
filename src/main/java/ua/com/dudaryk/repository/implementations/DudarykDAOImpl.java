@@ -8,6 +8,7 @@ import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.DudarykDAO;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -52,35 +53,45 @@ public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykD
 
     @Override
     public List<Dudaryk> findByName(String name) {
-        String query = "select Dudaryk from dudaryk  where Dudaryk.NAME=" + name;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Dudaryk> query = entityManager.createQuery(
+                "select d from Dudaryk d " +
+                        " where d.name= :name", Dudaryk.class);
+        return query.setParameter("name", name).getResultList();
     }
 
 
     @Override
     public List<Dudaryk> findByLastName(String lastName) {
-        String query = "select Dudaryk from dudaryk  where Dudaryk.LASTNAME=" + lastName;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Dudaryk> query = entityManager.createQuery(
+                "select d from Dudaryk d " +
+                        " where d.lastName= :lastName", Dudaryk.class);
+        return query.setParameter("lastName", lastName).getResultList();
     }
 
 
     @Override
     public List<Dudaryk> findByVoice(Voice voice) {
-        String query = "select Dudaryk from dudaryk  where Dudaryk.Voice =" + voice;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Dudaryk> query = entityManager.createQuery(
+                "select d from Dudaryk d " +
+                        " where d.voice= :voice", Dudaryk.class);
+        return query.setParameter("voice", voice).getResultList();
     }
 
 
     @Override
     public List<Dudaryk> findAction() {
-        String query = "select Dudaryk from dudaryk  where Dudaryk.IS_ACTION=" + true;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Dudaryk> query = entityManager.createQuery(
+                "select d from Dudaryk d " +
+                        " where d.isAction= :true", Dudaryk.class);
+        return query.getResultList();
     }
 
 
     @Override
     public List<Dudaryk> findByConcert(int id) {
-        String query = "select Dudaryk from dudaryk  where Dudaryk.CONCERT_ID=" + id;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Dudaryk> query = entityManager.createQuery(
+                "select d from Dudaryk d " +
+                        "join d.concerts c where c.concertId= :id", Dudaryk.class);
+        return query.setParameter("id", id).getResultList();
     }
 }

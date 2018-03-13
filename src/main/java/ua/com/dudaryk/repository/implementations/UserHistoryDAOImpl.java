@@ -7,6 +7,7 @@ import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.UserHistoryDAO;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -20,8 +21,10 @@ public class UserHistoryDAOImpl extends AbstractDAOImpl<UserHistory> implements 
 
     @Override
     public List<UserHistory> findByDudarykId(int id) {
-        String query = "select UserHistory from user_history  where UserHistory.DUDARYK_ID=" + id;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<UserHistory> query = entityManager.createQuery(
+                "select uh from UserHistory uh " +
+                        "join uh.dudaryk d where d.dudarykId= :id", UserHistory.class);
+        return query.setParameter("id", id).getResultList();
     }
 
     @Override
