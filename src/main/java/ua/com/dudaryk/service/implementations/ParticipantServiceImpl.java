@@ -57,10 +57,34 @@ public class ParticipantServiceImpl implements ParticipantService {
             participantSet.addAll(findByConcertId(concert.getConcertId()));
 
         }
-
         List<Participant> list = new ArrayList<>(participantSet);
         list.sort(Comparator.comparing(Participant::getParticipantId));
         return list;
+    }
+
+    @Override
+    public List<String> findNamesOfParticipants(List<Participant> participantList) {
+        List<String> names = new ArrayList<>();
+        for (Participant participant : participantList) {
+            names.add(participant.getName());
+        }
+        return names;
+    }
+
+    @Override
+    public List<Participant> findByConcertListWithEmailCondition(List<Concert> concertList) {
+        Set<Participant> participantSet = new TreeSet<>(Comparator.comparing(Participant::getParticipantId));
+        for (Concert concert : concertList) {
+            participantSet.addAll(findByConcertId(concert.getConcertId()));
+
+        }
+        List<Participant> participantsWithEmail = new ArrayList<>();
+        for (Participant participant : participantSet) {
+            if (participant.getEmail() != null) {
+                participantsWithEmail.add(participant);
+            }
+        }
+        return participantsWithEmail;
     }
 
 

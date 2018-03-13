@@ -4,6 +4,7 @@ import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Participant;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ParticipantService {
 
@@ -20,4 +21,9 @@ public interface ParticipantService {
     List<Participant> findByConcertId(int id);
 
     List<Participant> findByConcertList(List<Concert> concertList);
+
+    List<String> findNamesOfParticipants(List<Participant> participantList);
+
+    List<Participant> findByConcertListWithEmailCondition(List<Concert> concertList);
+
 }

@@ -60,4 +60,6 @@ public class ParticipantDAOImpl extends AbstractDAOImpl<Participant> implements 
     }
 
 
+
+
 }

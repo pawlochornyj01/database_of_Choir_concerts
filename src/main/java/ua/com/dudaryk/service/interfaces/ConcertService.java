@@ -1,6 +1,7 @@
 package ua.com.dudaryk.service.interfaces;
 
 import ua.com.dudaryk.model.Concert;
+import ua.com.dudaryk.model.Dudaryk;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -24,4 +25,8 @@ public interface ConcertService {
     List<Concert> findAll();
 
     List<Concert> findByDudarykId(int id);
+
+    List<Concert> findByDudaryk(Dudaryk dudaryk);
+
+    List<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk);
 }

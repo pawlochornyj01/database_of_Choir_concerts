@@ -3,12 +3,16 @@ package ua.com.dudaryk.service.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ua.com.dudaryk.model.Communication;
 import ua.com.dudaryk.model.Concert;
+import ua.com.dudaryk.model.Dudaryk;
+import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 import ua.com.dudaryk.repository.interfaces.ConcertDAO;
 import ua.com.dudaryk.service.interfaces.ConcertService;
 
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -17,11 +21,13 @@ import java.util.List;
 public class ConcertServiceImpl implements ConcertService {
 
     private ConcertDAO concertDAO;
+    private CommunicationDAO communicationDAO;
 
 
     @Autowired
-    public ConcertServiceImpl(ConcertDAO concertDAO) {
+    public ConcertServiceImpl(ConcertDAO concertDAO, CommunicationDAO communicationDAO) {
         this.concertDAO = concertDAO;
+        this.communicationDAO = communicationDAO;
     }
 
     public Concert save(Concert concert) {
@@ -51,6 +57,28 @@ public class ConcertServiceImpl implements ConcertService {
         List<Concert> list = concertDAO.findByDudarykId(id);
         list.sort(Comparator.comparing(Concert::getConcertId));
         return list;
+    }
+
+    @Override
+    public List<Concert> findByDudaryk(Dudaryk dudaryk) {
+        return findByDudarykId(dudaryk.getDudarykId());
+    }
+
+    @Override
+    public List<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk) {
+
+        List<Concert> concerts = new ArrayList<>();
+        for(Concert concert: concertDAO.findByDudarykId(dudaryk.getDudarykId())){
+            for(Communication communication:communicationDAO.findByConcertId(concert.getConcertId())){
+               if(communication.getPhone()!=null){
+                   if(concert.getDate().getYear()==2018) {
+                       concerts.add(concert);
+                   }
+               }
+            }
+
+        }
+        return concerts;
     }
 
     @Transactional(readOnly = true)

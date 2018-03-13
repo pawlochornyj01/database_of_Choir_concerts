@@ -7,6 +7,7 @@ import ua.com.dudaryk.repository.AbstractDAOImpl;
 import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.TypedQuery;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -47,9 +48,12 @@ public class CommunicationDAOImpl extends AbstractDAOImpl<Communication> impleme
 
     @Override
     public List<Communication> findByConcertId(int id) {
-        String query = "select Communication from communication  where Communication.CONCERT_ID=" + id;
-        return entityManager.createQuery(query).getResultList();
+        TypedQuery<Communication> query = entityManager.createQuery(
+                "select cm from Communication cm " +
+                        "join cm.concert ct where ct.concertId= :id", Communication.class);
+        return query.setParameter("id", id).getResultList();
     }
+
 
     @Override
     public List<Communication> findByMembershipDate(LocalDateTime date) {

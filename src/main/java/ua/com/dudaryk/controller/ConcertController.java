@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.service.interfaces.ConcertService;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
@@ -47,60 +48,12 @@ public class ConcertController {
         return new ResponseEntity<>(participantsByDudaryk, HttpStatus.OK);
     }
 
-//
-//    @RequestMapping(value = "update/", method = RequestMethod.POST)
-//    public Concert update(@RequestBody Concert concert) {
-//
-//        if (concert.getConcertId() > 0)
-//            concert = concertService.update(concert);
-//        return concert;
-//    }
-//
-//    @RequestMapping(value = "save/", method = RequestMethod.POST)
-//    public Concert save(@RequestBody Concert concert) {
-//
-//        return concertService.save(concert);
-//    }
-//
-//    @GetMapping(value = "delete/")
-//    public void delete(@PathVariable("id") int id) {
-//        concertService.delete(id);
-//    }
-//
-//    @GetMapping(value = "byId/")
-//    public Concert findById(@PathVariable("id") int id) {
-//        return concertService.findById(id);
-//    }
-//
-//    @GetMapping(value = "byParticipantId/")
-//    public List<Concert> findByParticipant(@PathVariable("id") int id) {
-//        return concertService.findByParticipant(id);
-//    }
-//
-//    @GetMapping(value = "byDate/")
-//    public List<Concert> findByDate(@PathVariable("date") LocalDateTime date) {
-//        return concertService.findByDate(date);
-//    }
-//
-//    @GetMapping(value = "byName/")
-//    public List<Concert> findByName(@PathVariable("name") String name) {
-//        return concertService.findByName(name);
-//    }
-//
-////    @RequestMapping(value = "concert/",method = RequestMethod.GET)
-////    public  String displayConcertPage(Model model){
-////        Concert concert = new Concert();
-////
-////        model.addAttribute("concert",concert);
-////        return "concert";
-////    }
-////
-////    @RequestMapping(value="concert/", method = RequestMethod.POST)
-////    public String processConcert(@ModelAttribute("concert") Concert concert) {
-////        System.out.println(concert);
-////
-////        return "redirect:index.html";
-////    }
-
+    @GetMapping(value = "get-names-participants/")
+    public ResponseEntity<List<String>> getNamesParticipantsbyDudaryk(@RequestBody Dudaryk dudaryk) {
+        List<String> participantsByDudaryk = participantService.findNamesOfParticipants(
+                participantService.findByConcertListWithEmailCondition(
+                concertService.findWithCommunicationAndDateOfConcertConditionByDudaryk(dudaryk)));
+        return new ResponseEntity<>(participantsByDudaryk, HttpStatus.OK);
+    }
 
 }

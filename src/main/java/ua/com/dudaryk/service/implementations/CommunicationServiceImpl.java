@@ -6,14 +6,13 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.com.dudaryk.model.Communication;
 
 
+import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.repository.interfaces.CommunicationDAO;
 import ua.com.dudaryk.service.interfaces.CommunicationService;
 import ua.com.dudaryk.service.dto.CommunicationDTO;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Transactional
@@ -55,7 +54,22 @@ public class CommunicationServiceImpl implements CommunicationService {
     @Transactional(readOnly = true)
     @Override
     public List<Communication> findByConcertId(int id) {
-        return communicationDAO.findByConcertId(id);
+        List<Communication> list = communicationDAO.findByConcertId(id);
+        list.sort(Comparator.comparing(Communication::getCommunicationId));
+        return list;
+
+    }
+
+    @Override
+    public List<Communication> findByConcertList(List<Concert> concertList) {
+        Set<Communication> communicationSet = new TreeSet<>(Comparator.comparing(Communication::getCommunicationId));
+        for (Concert concert : concertList) {
+            communicationSet.addAll(findByConcertId(concert.getConcertId()));
+
+        }
+        List<Communication> list = new ArrayList<>(communicationSet);
+        list.sort(Comparator.comparing(Communication::getCommunicationId));
+        return list;
     }
 
     @Transactional(readOnly = true)
