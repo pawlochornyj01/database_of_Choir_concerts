@@ -3,6 +3,7 @@ package ua.com.dudaryk.repository.interfaces;
 
 import ua.com.dudaryk.model.Concert;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

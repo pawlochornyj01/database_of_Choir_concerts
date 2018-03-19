@@ -8,6 +8,7 @@ import ua.com.dudaryk.repository.interfaces.ConcertDAO;
 
 import javax.annotation.PostConstruct;
 import javax.persistence.TypedQuery;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -67,8 +68,7 @@ public class ConcertDAOImpl extends AbstractDAOImpl<Concert> implements ConcertD
 
     }
 
-
-    @Override
+   @Override
     public List<Concert> findByParticipant(int id) {
         TypedQuery<Concert> query = entityManager.createQuery(
                 "select c from Concert c " +

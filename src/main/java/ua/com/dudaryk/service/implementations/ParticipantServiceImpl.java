@@ -62,8 +62,8 @@ public class ParticipantServiceImpl implements ParticipantService {
         return list;
     }
 
-    @Override
-    public List<String> findNamesOfParticipants(List<Participant> participantList) {
+
+    private List<String> findNamesOfParticipants(List<Participant> participantList) {
         List<String> names = new ArrayList<>();
         for (Participant participant : participantList) {
             names.add(participant.getName());
@@ -72,9 +72,9 @@ public class ParticipantServiceImpl implements ParticipantService {
     }
 
     @Override
-    public List<Participant> findByConcertListWithEmailCondition(List<Concert> concertList) {
+    public List<String> findByConcertSetWithEmailCondition(Set<Concert> concertSet) {
         Set<Participant> participantSet = new TreeSet<>(Comparator.comparing(Participant::getParticipantId));
-        for (Concert concert : concertList) {
+        for (Concert concert : concertSet) {
             participantSet.addAll(findByConcertId(concert.getConcertId()));
 
         }
@@ -84,7 +84,7 @@ public class ParticipantServiceImpl implements ParticipantService {
                 participantsWithEmail.add(participant);
             }
         }
-        return participantsWithEmail;
+        return findNamesOfParticipants(participantsWithEmail);
     }
 
 

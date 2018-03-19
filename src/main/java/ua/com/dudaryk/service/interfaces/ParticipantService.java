@@ -22,8 +22,7 @@ public interface ParticipantService {
 
     List<Participant> findByConcertList(List<Concert> concertList);
 
-    List<String> findNamesOfParticipants(List<Participant> participantList);
 
-    List<Participant> findByConcertListWithEmailCondition(List<Concert> concertList);
+    List<String> findByConcertSetWithEmailCondition(Set<Concert> concertSet);
 
 }

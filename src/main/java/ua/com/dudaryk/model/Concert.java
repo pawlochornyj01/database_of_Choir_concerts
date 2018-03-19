@@ -1,9 +1,12 @@
 package ua.com.dudaryk.model;
 
+import javafx.util.converter.LocalDateTimeStringConverter;
+import ua.com.dudaryk.config.LocalDateTimeConverter;
 import ua.com.dudaryk.service.dto.ConcertDTO;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,7 @@ public class Concert implements Serializable {
     private int concertId;
 
     @Column(name = "DATE")
+    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime date;
 
     @Column(name = "NAME")
@@ -94,6 +98,7 @@ public class Concert implements Serializable {
         return this;
     }
 
+    @Transient
     public LocalDateTime getDate() {
         return date;
     }

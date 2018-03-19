@@ -3,22 +3,25 @@ package ua.com.dudaryk.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.service.interfaces.ConcertService;
+import ua.com.dudaryk.service.interfaces.DudarykService;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
 
 import java.util.Collections;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("concert/")
 public class ConcertController {
 
     private ConcertService concertService;
     private ParticipantService participantService;
+    private DudarykService dudarykService;
 
     @Autowired
     public ConcertController(ConcertService concertService, ParticipantService participantService) {
@@ -40,7 +43,7 @@ public class ConcertController {
                 participantService.findByConcertList(concertService.findByDudarykId(id)));
         return modelAndView;
     }
-
+    @ResponseBody
     @GetMapping(value = "get-participants/{dudarykId}")
     public ResponseEntity<List<Participant>> getMutualParticipants(@PathVariable int dudarykId) {
         List<Participant> participantsByDudaryk =
@@ -48,11 +51,12 @@ public class ConcertController {
         return new ResponseEntity<>(participantsByDudaryk, HttpStatus.OK);
     }
 
-    @GetMapping(value = "get-names-participants/")
-    public ResponseEntity<List<String>> getNamesParticipantsbyDudaryk(@RequestBody Dudaryk dudaryk) {
-        List<String> participantsByDudaryk = participantService.findNamesOfParticipants(
-                participantService.findByConcertListWithEmailCondition(
-                concertService.findWithCommunicationAndDateOfConcertConditionByDudaryk(dudaryk)));
+    @ResponseBody
+    @GetMapping(value = "get-names-participants/{dudarykId}")
+    public ResponseEntity<List<String>> getNamesParticipantsByDudaryk(@PathVariable int dudarykId) {
+        List<String> participantsByDudaryk =
+                participantService.findByConcertSetWithEmailCondition(
+                        concertService.findWithCommunicationAndDateOfConcertConditionByDudaryk(dudarykService.findById(dudarykId)));
         return new ResponseEntity<>(participantsByDudaryk, HttpStatus.OK);
     }
 

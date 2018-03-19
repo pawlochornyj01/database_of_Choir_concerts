@@ -5,6 +5,7 @@ ua\com\dudaryk\service\implementations\CommunicationServiceImpl.class
 ua\com\dudaryk\controller\ConcertController.class
 ua\com\dudaryk\repository\AbstractDAOImpl.class
 ua\com\dudaryk\service\interfaces\ConcertService.class
+ua\com\dudaryk\config\LocalDateConverter.class
 ua\com\dudaryk\model\SearchMode.class
 ua\com\dudaryk\service\interfaces\DudarykService.class
 ua\com\dudaryk\controller\ParticipantController.class
@@ -33,6 +34,7 @@ ua\com\dudaryk\repository\implementations\ConcertDAOImpl.class
 ua\com\dudaryk\service\interfaces\UserHistoryService.class
 ua\com\dudaryk\model\Category.class
 ua\com\dudaryk\service\dto\DudarykDTO.class
+ua\com\dudaryk\config\LocalDateTimeConverter.class
 ua\com\dudaryk\repository\implementations\DudarykDAOImpl.class
 ua\com\dudaryk\service\implementations\UserHistoryServiceImpl.class
 ua\com\dudaryk\service\dto\ConcertDTO.class

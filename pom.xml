@@ -121,6 +121,14 @@
             <version>${hibernate.version}</version>
         </dependency>
 
+        <!-- Hibernate Java 8 to load date into local date -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-java8 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-java8</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager &ndash;&gt;-->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -195,6 +203,8 @@
             <artifactId>jackson-core</artifactId>
             <version>2.8.1</version>
         </dependency>
+
+
 
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.transaction/jta &ndash;&gt;-->
         <dependency>

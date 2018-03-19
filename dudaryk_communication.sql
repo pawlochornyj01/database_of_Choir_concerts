@@ -1,0 +1,12 @@
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'O.Svitlyk', '0634515660', 1);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'O.Chorna', '0634515669', 1);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'U.Gnatyshun', '0634515661', 2);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'R.Gnatyshun', '0634515662', 2);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'I.Tromsa', null, 3);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'M.Pavliuk', '0634515663', 3);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'N.Lekh', null, 4);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'V.Zynych', '0634515664', 4);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'A.Moravskyy', null, 5);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'O.Zaricnyy', '0634515665', 5);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'M.Lysenko', null, 6);
+INSERT INTO dudaryk.communication (COMMENT, DESCRIPTION, EMAIL, DATE_OF_MEMBERSHIP, NAME, PHONE, CONCERT_ID) VALUES (null, null, null, null, 'O.Lyniv', '0634515666', 6);

@@ -3,8 +3,10 @@ package ua.com.dudaryk.service.interfaces;
 import ua.com.dudaryk.model.Concert;
 import ua.com.dudaryk.model.Dudaryk;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 public interface ConcertService {
 
@@ -28,5 +30,5 @@ public interface ConcertService {
 
     List<Concert> findByDudaryk(Dudaryk dudaryk);
 
-    List<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk);
+    Set<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk);
 }

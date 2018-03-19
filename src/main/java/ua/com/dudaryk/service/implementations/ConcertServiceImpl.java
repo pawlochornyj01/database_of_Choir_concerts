@@ -11,10 +11,9 @@ import ua.com.dudaryk.repository.interfaces.ConcertDAO;
 import ua.com.dudaryk.service.interfaces.ConcertService;
 
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Transactional
@@ -65,9 +64,9 @@ public class ConcertServiceImpl implements ConcertService {
     }
 
     @Override
-    public List<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk) {
+    public Set<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk) {
 
-        List<Concert> concerts = new ArrayList<>();
+        Set<Concert> concerts = new TreeSet<>(Comparator.comparing(Concert::getConcertId));
         for (Concert concert : concertDAO.findByDudarykId(dudaryk.getDudarykId())) {
             for (Communication communication : communicationDAO.findByConcertId(concert.getConcertId())) {
                 if (communication.getPhone() != null) {
@@ -78,6 +77,7 @@ public class ConcertServiceImpl implements ConcertService {
             }
 
         }
+
         return concerts;
     }
 
