@@ -14,6 +14,7 @@ import ua.com.dudaryk.service.interfaces.ConcertService;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -63,23 +64,6 @@ public class ConcertServiceImpl implements ConcertService {
         return findByDudarykId(dudaryk.getDudarykId());
     }
 
-    @Override
-    public Set<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk) {
-
-        Set<Concert> concerts = new TreeSet<>(Comparator.comparing(Concert::getConcertId));
-        for (Concert concert : concertDAO.findByDudarykId(dudaryk.getDudarykId())) {
-            for (Communication communication : communicationDAO.findByConcertId(concert.getConcertId())) {
-                if (communication.getPhone() != null) {
-                    if (concert.getDate().getYear() == 2018) {
-                        concerts.add(concert);
-                    }
-                }
-            }
-
-        }
-
-        return concerts;
-    }
 
     @Transactional(readOnly = true)
     @Override
@@ -105,5 +89,18 @@ public class ConcertServiceImpl implements ConcertService {
         List<Concert> list = concertDAO.findByParticipant(id);
         list.sort(Comparator.comparing(Concert::getConcertId));
         return list;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<Concert> filterByCommunicationCondition(int id){
+        List<Concert> concertList = concertDAO.findByDudarykId(id);
+        return concertList.stream()
+                .filter(concert ->
+                        concert.getCommunications()
+                                .stream()
+                                .anyMatch(communication -> communication.getPhone() != null)
+                )
+                .collect(Collectors.toList());
     }
 }

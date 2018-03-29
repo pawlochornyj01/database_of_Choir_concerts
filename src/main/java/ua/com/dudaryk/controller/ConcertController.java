@@ -6,13 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import ua.com.dudaryk.model.Dudaryk;
 import ua.com.dudaryk.model.Participant;
 import ua.com.dudaryk.service.interfaces.ConcertService;
 import ua.com.dudaryk.service.interfaces.DudarykService;
 import ua.com.dudaryk.service.interfaces.ParticipantService;
 
-import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -24,9 +22,10 @@ public class ConcertController {
     private DudarykService dudarykService;
 
     @Autowired
-    public ConcertController(ConcertService concertService, ParticipantService participantService) {
+    public ConcertController(ConcertService concertService, ParticipantService participantService, DudarykService dudarykService) {
         this.concertService = concertService;
         this.participantService = participantService;
+        this.dudarykService = dudarykService;
     }
 
     @GetMapping(value = "all/")
@@ -43,6 +42,7 @@ public class ConcertController {
                 participantService.findByConcertList(concertService.findByDudarykId(id)));
         return modelAndView;
     }
+
     @ResponseBody
     @GetMapping(value = "get-participants/{dudarykId}")
     public ResponseEntity<List<Participant>> getMutualParticipants(@PathVariable int dudarykId) {
@@ -55,8 +55,8 @@ public class ConcertController {
     @GetMapping(value = "get-names-participants/{dudarykId}")
     public ResponseEntity<List<String>> getNamesParticipantsByDudaryk(@PathVariable int dudarykId) {
         List<String> participantsByDudaryk =
-                participantService.findByConcertSetWithEmailCondition(
-                        concertService.findWithCommunicationAndDateOfConcertConditionByDudaryk(dudarykService.findById(dudarykId)));
+                participantService.findByConcertWithEmailCondition(concertService
+                        .filterByCommunicationCondition(dudarykId));
         return new ResponseEntity<>(participantsByDudaryk, HttpStatus.OK);
     }
 

@@ -42,7 +42,11 @@ public class DudarykDAOImpl extends AbstractDAOImpl<Dudaryk> implements DudarykD
 
     @Override
     public Dudaryk findDudarykById(int id) {
-        return findById(id);
+//        return findById(id);
+        TypedQuery<Dudaryk> query = entityManager.createQuery(
+                "select d from Dudaryk d " +
+                        " where d.id= :id", Dudaryk.class);
+        return query.setParameter("id", id).getSingleResult();
     }
 
     @Override

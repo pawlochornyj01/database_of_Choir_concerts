@@ -30,5 +30,5 @@ public interface ConcertService {
 
     List<Concert> findByDudaryk(Dudaryk dudaryk);
 
-    Set<Concert> findWithCommunicationAndDateOfConcertConditionByDudaryk(Dudaryk dudaryk);
+    List<Concert> filterByCommunicationCondition(int id);
 }

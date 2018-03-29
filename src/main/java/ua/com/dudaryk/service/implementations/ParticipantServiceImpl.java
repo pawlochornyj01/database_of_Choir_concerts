@@ -10,6 +10,7 @@ import ua.com.dudaryk.service.interfaces.ParticipantService;
 
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -71,20 +72,19 @@ public class ParticipantServiceImpl implements ParticipantService {
         return names;
     }
 
-    @Override
-    public List<String> findByConcertSetWithEmailCondition(Set<Concert> concertSet) {
-        Set<Participant> participantSet = new TreeSet<>(Comparator.comparing(Participant::getParticipantId));
-        for (Concert concert : concertSet) {
-            participantSet.addAll(findByConcertId(concert.getConcertId()));
 
-        }
-        List<Participant> participantsWithEmail = new ArrayList<>();
-        for (Participant participant : participantSet) {
-            if (participant.getEmail() != null) {
-                participantsWithEmail.add(participant);
-            }
-        }
-        return findNamesOfParticipants(participantsWithEmail);
+
+    @Override
+    public List<String> findByConcertWithEmailCondition(List<Concert> concertList) {
+        return concertList.stream()
+                .filter(concert -> concert.getDate().getYear() == 2018)
+                .flatMap(concert -> concert.getParticipants().stream())
+                .filter(participant -> participant.getEmail() != null)
+                .map(Participant::getName)
+                .distinct()
+                .limit(10)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
     }
 
 

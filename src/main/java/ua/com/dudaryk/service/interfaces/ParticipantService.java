@@ -23,6 +23,6 @@ public interface ParticipantService {
     List<Participant> findByConcertList(List<Concert> concertList);
 
 
-    List<String> findByConcertSetWithEmailCondition(Set<Concert> concertSet);
+    List<String> findByConcertWithEmailCondition(List<Concert> concertSet);
 
 }
